@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('/fonts/OpenSans-Variable.ttf') format('truetype');
+  font-weight: 300 800;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;
@@ -46,7 +54,7 @@
     --sidebar-ring: 72 75% 45%;
 
     --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 
     --gradient-green: linear-gradient(135deg, hsl(160 100% 14%), hsl(72 75% 45%));
     --gradient-dark: linear-gradient(180deg, hsl(160 30% 4%), hsl(160 25% 8%));
