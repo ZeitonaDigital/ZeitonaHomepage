@@ -144,8 +144,6 @@ a {
 
 .navbar-logo {
   height: 2.5rem;
-  /* If the user uses the white wordmark, no invert needed on dark bg */
-  filter: brightness(0) invert(1);
 }
 
 .navbar-links {
@@ -537,8 +535,6 @@ a {
 
 .footer-logo {
   height: 1.5rem;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
   transition: opacity 0.3s ease;
 }
 
