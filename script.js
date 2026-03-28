@@ -1,9 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Header shadow and blur on scroll
+    const header = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = 'rgba(1, 61, 47, 0.95)';
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+        } else {
+            header.style.backgroundColor = 'rgba(1, 61, 47, 0.85)';
+            header.style.boxShadow = 'none';
+        }
+    });
+
     // Intersection Observer for scroll animations
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.15
     };
 
     const observer = new IntersectionObserver((entries, observer) => {
