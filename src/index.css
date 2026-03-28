@@ -54,7 +54,7 @@
     --sidebar-ring: 72 75% 45%;
 
     --font-heading: 'Space Grotesk', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
 
     --gradient-green: linear-gradient(135deg, hsl(160 100% 14%), hsl(72 75% 45%));
     --gradient-dark: linear-gradient(180deg, hsl(160 30% 4%), hsl(160 25% 8%));
