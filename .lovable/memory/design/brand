@@ -1,0 +1,10 @@
+---
+name: Brand colors
+description: Dark green + olive/lime + red palette from Zeitona logo
+type: design
+---
+Primary brand colors (hex → HSL):
+- #013D2F → hsl(163 97% 12%) — Primary dark green
+- #7FA800 → hsl(75 100% 33%) — Accent olive/lime
+- #EB0008 → hsl(359 100% 46%) — Destructive / red accent
+- #328217 → hsl(108 68% 30%) — Secondary green
