@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(1, 61, 47, 0.95)';
-            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+            header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
         } else {
-            header.style.backgroundColor = 'rgba(1, 61, 47, 0.85)';
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.85)';
             header.style.boxShadow = 'none';
         }
     });
