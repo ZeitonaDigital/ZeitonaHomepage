@@ -13,10 +13,56 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
+
+    <style>
+        /* Minimalist tweaks for whitepaper page */
+        .whitepaper-body {
+            background-color: #FFFFFF !important;
+        }
+        .minimal-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            padding: 4rem 1.5rem;
+            text-align: center;
+            background: #FFFFFF !important;
+        }
+        .minimal-title {
+            font-size: clamp(2.5rem, 6vw, 3.5rem);
+            color: var(--brand-dark-green);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+        .minimal-description {
+            max-width: 650px;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--muted);
+            margin: 0 auto 3rem;
+        }
+        .status-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border: 1px solid var(--brand-olive);
+            color: var(--brand-olive);
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 2rem;
+        }
+        .nav-minimal {
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            background: rgba(255,255,255,0.95);
+        }
+    </style>
 </head>
-<body class="light-theme">
+<body class="light-theme whitepaper-body">
     <!-- Nav -->
-    <nav class="header" id="navbar">
+    <nav class="header nav-minimal" id="navbar">
         <div class="navbar">
             <a href="index.html">
                 <img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" />
@@ -33,47 +79,44 @@
     </nav>
 
     <main>
-        <!-- Simplified Header/Hero Section -->
-        <section class="hero" style="min-height: 90vh;">
-            <div class="hero-background"></div>
-            <div class="hero-blob-1" style="opacity: 0.1;"></div>
-            <div class="hero-blob-2" style="opacity: 0.1;"></div>
+        <!-- Ultra Minimalist Content -->
+        <section class="minimal-section">
+            <div class="fade-up visible">
+                <span class="status-tag">Drafting Phase</span>
+            </div>
             
-            <div class="container hero-content" style="max-width: 800px;">
-                <div class="fade-up visible">
-                    <span class="badge" style="background-color: rgba(50, 130, 23, 0.05); color: var(--brand-forest); border-color: rgba(50, 130, 23, 0.1); letter-spacing: 0.2em;">Drafting Phase</span>
-                </div>
-                
-                <h1 class="hero-title fade-up visible delay-100" style="margin-bottom: 2rem; font-size: clamp(2.5rem, 8vw, 4rem);">
-                    The Zeitona <span class="text-accent">Whitepaper</span>
-                </h1>
-                
-                <p class="hero-description fade-up visible delay-200" style="max-width: 100%; margin-bottom: 3rem; font-size: 1.25rem; line-height: 1.8;">
-                    We are currently finalizing our technical whitepaper. This document will detail 
-                    our unique approach to integrating **BIM**, **Blockchain**, and **Smart Contracts** 
-                    to create a more transparent and efficient construction ecosystem.
-                </p>
+            <h1 class="minimal-title fade-up visible delay-100">
+                The Zeitona <strong>Whitepaper</strong>
+            </h1>
+            
+            <p class="minimal-description fade-up visible delay-200">
+                We are currently finalizing our technical whitepaper. This document will detail 
+                our unique approach to integrating BIM, Blockchain, and Smart Contracts 
+                to create a more transparent and efficient construction ecosystem.
+            </p>
 
-                <div class="hero-actions fade-up visible delay-300" style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                    <a href="mailto:contact@zeitona.pt" class="btn btn-primary btn-lg" style="min-width: 250px;">
-                        Request Early Access
-                    </a>
-                    <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors" style="text-decoration: underline; text-underline-offset: 4px;">
-                        Return to Homepage
-                    </a>
-                </div>
+            <div class="fade-up visible delay-300">
+                <a href="mailto:contact@zeitona.pt" class="btn btn-primary btn-lg" style="letter-spacing: normal;">
+                    Request Early Access
+                </a>
+            </div>
+            
+            <div class="fade-up visible delay-400" style="margin-top: 2rem;">
+                <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors" style="font-size: 0.875rem;">
+                    ← Back to Homepage
+                </a>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="background: transparent; border-top: 1px solid rgba(0,0,0,0.05);">
         <div class="footer-inner container">
             <a href="index.html">
                 <img src="assets/azeitona4.png" alt="Zeitona Wordmark" class="footer-logo" />
             </a>
             <p class="text-muted" style="font-size: 0.85rem; font-weight:300;">
-                &copy; <script>document.write(new Date().getFullYear())</script> Zeitona. Building the future of construction.
+                &copy; <script>document.write(new Date().getFullYear())</script> Zeitona. All rights reserved.
             </p>
             <div class="flex gap-6">
                 <a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors">
