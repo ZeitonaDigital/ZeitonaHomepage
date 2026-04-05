@@ -11,20 +11,8 @@
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
 </head>
 <body>
-    <!-- Nav -->
-    <nav class="header" id="navbar">
-        <div class="navbar">
-            <img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" />
-            <div class="navbar-links">
-                <a href="#services">Services</a>
-                <a href="about.html">About</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()">
-                Get in Touch
-            </button>
-        </div>
-    </nav>
+    <!-- Nav Placeholder -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero -->
     <main>
@@ -211,46 +199,6 @@
         </div>
     </footer>
 
-    <!-- Contact Modal -->
-    <div id="contact-modal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeContactModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-            <h3 class="modal-title">Request to be Contacted</h3>
-            <p class="modal-desc">Please provide your details below and we will reach out to you.</p>
-            
-            <form id="contact-form" class="modal-form" novalidate>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="contact-email" class="form-label">Email <span class="form-required">*</span></label>
-                        <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" required />
-                        <span class="form-error" id="email-error">Please enter a valid email address</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-phone" class="form-label">Phone <span class="form-optional">(optional)</span></label>
-                        <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+351 912 345 678" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-subject" class="form-label">Subject <span class="form-required">*</span></label>
-                    <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="How can we help you?" required />
-                    <span class="form-error" id="subject-error">Please enter a subject</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-description" class="form-label">Description <span class="form-optional">(optional)</span></label>
-                    <textarea id="contact-description" name="description" class="form-input form-textarea" placeholder="Tell us more about your project or inquiry..." rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-secondary btn-lg flex items-center justify-center gap-2" style="width: 100%; margin-top: 0.5rem;">
-                    Send Request
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                </button>
-            </form>
-        </div>
-    </div>
 
     <!-- Load scripts -->
     <script src="script.js"></script>
