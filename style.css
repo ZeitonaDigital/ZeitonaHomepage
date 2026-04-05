@@ -778,3 +778,18 @@ a {
 .delay-200 { transition-delay: 200ms; }
 .delay-300 { transition-delay: 300ms; }
 .delay-400 { transition-delay: 400ms; }
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}

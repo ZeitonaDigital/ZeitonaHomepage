@@ -86,41 +86,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!isValid) return;
 
-            // Build mailto
+            // Handle Loading State
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.innerHTML = 'Sending <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
+            submitBtn.disabled = true;
+
             const phoneVal = phoneInput.value.trim();
             const descVal = descriptionInput.value.trim();
 
-            let bodyText = `Contact request from: ${emailVal}\n`;
-            if (phoneVal) bodyText += `Phone: ${phoneVal}\n`;
-            bodyText += `\n`;
-            if (descVal) bodyText += `${descVal}`;
+            // Submit using formsubmit.co via AJAX
+            fetch("https://formsubmit.co/ajax/contact@zeitona.pt", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                    email: emailVal,
+                    _subject: subjectVal,
+                    phone: phoneVal || "Not provided",
+                    message: descVal || "No description provided"
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show success state in modal
+                const modalBody =  document.querySelector('.modal-content');
+                const originalContent = modalBody.innerHTML;
 
-            const mailtoLink = `mailto:contact@zeitona.pt?subject=${encodeURIComponent(subjectVal)}&body=${encodeURIComponent(bodyText)}`;
-
-            // Trigger mailto
-            window.location.href = mailtoLink;
-
-            // Show success state in modal
-            const modalBody =  document.querySelector('.modal-content');
-            const originalContent = modalBody.innerHTML;
-
-            modalBody.innerHTML = `
-                <div class="contact-success">
-                    <div class="contact-success-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                modalBody.innerHTML = `
+                    <div class="contact-success">
+                        <div class="contact-success-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                        </div>
+                        <h3 class="modal-title">Message Sent!</h3>
+                        <p class="modal-desc" style="margin-bottom: 0;">Thank you for reaching out. We will get back to you soon.</p>
                     </div>
-                    <h3 class="modal-title">Ready!</h3>
-                    <p class="modal-desc" style="margin-bottom: 0;">Your email client should open shortly.</p>
-                </div>
-            `;
+                `;
 
-            // Close automatically and reset later
-            setTimeout(() => {
-                closeContactModal();
+                // Close automatically and reset later
                 setTimeout(() => {
-                    modalBody.innerHTML = originalContent; // reset
-                }, 300); // after fade out
-            }, 3000);
+                    closeContactModal();
+                    setTimeout(() => {
+                        modalBody.innerHTML = originalContent; // reset
+                    }, 300); // after fade out
+                }, 4000);
+            })
+            .catch(error => {
+                console.error('Error submitting form:', error);
+                alert("There was an error sending your message. Please try again later.");
+            })
+            .finally(() => {
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            });
         });
     }
 });
