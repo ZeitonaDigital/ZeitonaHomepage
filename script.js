@@ -68,6 +68,31 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.insertAdjacentHTML('beforeend', modalHTML);
     }
 
+    // Inject Shared Footer
+    const currentYear = new Date().getFullYear();
+    const footerHTML = `
+    <footer class="footer">
+        <div class="footer-inner container">
+            <a href="index.html">
+                <img src="assets/azeitona4.png" alt="Zeitona Logo" class="footer-logo" />
+            </a>
+            <p class="text-muted" style="font-size: 0.85rem; font-weight:300;">
+                &copy; ${currentYear} Zeitona. Building the future of construction.
+            </p>
+            <div class="flex gap-6">
+                <a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+    `;
+
+    const footerPlaceholder = document.getElementById('footer-placeholder');
+    if (footerPlaceholder) {
+        footerPlaceholder.outerHTML = footerHTML;
+    }
+
     // Header shadow and blur on scroll
     const header = document.getElementById('navbar');
     
