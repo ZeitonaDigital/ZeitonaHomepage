@@ -213,21 +213,39 @@ function init() {
                 })
             })
                 .then(response => response.json())
-                .then(data => {
+                .then(_data => {
                     const modalBody = document.querySelector('.modal-content');
-                    const originalContent = modalBody.innerHTML;
-                    modalBody.innerHTML = `
-                    <div class="contact-success">
+
+                    // Hide existing children
+                    Array.from(modalBody.children).forEach(child => {
+                        if (!child.classList.contains('modal-close')) {
+                            child.style.display = 'none';
+                        }
+                    });
+
+                    // Create success message
+                    const successDiv = document.createElement('div');
+                    successDiv.className = 'contact-success';
+                    successDiv.id = 'contact-success-message';
+                    successDiv.innerHTML = `
                         <div class="contact-success-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
                         </div>
                         <h3 class="modal-title">Message Sent!</h3>
                         <p class="modal-desc" style="margin-bottom: 0;">Thank you for reaching out. We will get back to you soon.</p>
-                    </div>
-                `;
+                    `;
+                    modalBody.appendChild(successDiv);
+
                     setTimeout(() => {
                         closeContactModal();
-                        setTimeout(() => { modalBody.innerHTML = originalContent; }, 300);
+                        setTimeout(() => {
+                            // Remove success message and restore visibility
+                            const msg = document.getElementById('contact-success-message');
+                            if (msg) msg.remove();
+                            Array.from(modalBody.children).forEach(child => {
+                                child.style.display = '';
+                            });
+                        }, 300);
                     }, 4000);
                 })
                 .catch(error => {
