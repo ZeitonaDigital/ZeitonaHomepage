@@ -4,14 +4,21 @@ function init() {
     <nav class="header" id="navbar">
         <div class="navbar">
             <a href="index.html"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
-            <div class="navbar-links">
+
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <div class="navbar-links" id="nav-links">
                 <a href="index.html#services">Services</a>
                 <a href="about.html">About</a>
                 <a href="index.html#contact">Contact</a>
+                <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()">
+                    Get in Touch
+                </button>
             </div>
-            <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()">
-                Get in Touch
-            </button>
         </div>
     </nav>
     `;
@@ -91,6 +98,16 @@ function init() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (footerPlaceholder) {
         footerPlaceholder.outerHTML = footerHTML;
+    }
+
+    // Mobile Menu Toggle Logic
+    const menu = document.getElementById('mobile-menu');
+    const menuLinks = document.getElementById('nav-links');
+    if (menu && menuLinks) {
+        menu.addEventListener('click', function () {
+            menuLinks.classList.toggle('active');
+            menu.classList.toggle('is-active');
+        });
     }
 
     // Header shadow and blur on scroll
@@ -184,7 +201,7 @@ function init() {
 
             fetch("https://formsubmit.co/ajax/contact@zeitona.pt", {
                 method: "POST",
-                headers: { 
+                headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json'
                 },
@@ -195,11 +212,11 @@ function init() {
                     message: descriptionInput.value.trim() || "No description provided"
                 })
             })
-            .then(response => response.json())
-            .then(data => {
-                const modalBody = document.querySelector('.modal-content');
-                const originalContent = modalBody.innerHTML;
-                modalBody.innerHTML = `
+                .then(response => response.json())
+                .then(data => {
+                    const modalBody = document.querySelector('.modal-content');
+                    const originalContent = modalBody.innerHTML;
+                    modalBody.innerHTML = `
                     <div class="contact-success">
                         <div class="contact-success-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
@@ -208,22 +225,23 @@ function init() {
                         <p class="modal-desc" style="margin-bottom: 0;">Thank you for reaching out. We will get back to you soon.</p>
                     </div>
                 `;
-                setTimeout(() => {
-                    closeContactModal();
-                    setTimeout(() => { modalBody.innerHTML = originalContent; }, 300);
-                }, 4000);
-            })
-            .catch(error => {
-                console.error('Error submitting form:', error);
-                alert("There was an error sending your message.");
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
-            });
+                    setTimeout(() => {
+                        closeContactModal();
+                        setTimeout(() => { modalBody.innerHTML = originalContent; }, 300);
+                    }, 4000);
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                    alert("There was an error sending your message.");
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
         });
     }
 }
+
 
 // Run init based on readyState
 if (document.readyState === 'loading') {
@@ -244,24 +262,7 @@ window.closeContactModal = () => {
         modal.classList.remove('open');
         const form = document.getElementById('contact-form');
         if (form) form.reset();
-        document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-        document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-    }
-};
 
-// Global functions for modal UI
-window.openContactModal = () => {
-    const modal = document.getElementById('contact-modal');
-    if (modal) modal.classList.add('open');
-};
-
-window.closeContactModal = () => {
-    const modal = document.getElementById('contact-modal');
-    if (modal) {
-        modal.classList.remove('open');
-        const form = document.getElementById('contact-form');
-        if (form) form.reset();
-        
         // Remove error states if present
         document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
         document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));

@@ -132,7 +132,7 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 1000; /* Increased to ensure it stays above everything */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   background-color: rgba(255, 255, 255, 0.85);
@@ -147,14 +147,18 @@ a {
   padding: 1rem 1.5rem;
   max-width: 1280px;
   margin: 0 auto;
+  position: relative; /* Context for mobile menu positioning */
 }
 
 .navbar-logo {
   height: 2.5rem;
+  z-index: 1001; /* Keeps logo above the mobile overlay */
 }
 
+/* Base Links Style */
 .navbar-links {
   display: flex;
+  align-items: center;
   gap: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
@@ -163,18 +167,63 @@ a {
 
 .navbar-links a {
   transition: color 0.2s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .navbar-links a:hover {
   color: var(--foreground);
 }
 
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-  }
+/* Sandwich Menu Icon */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 1001;
+  padding: 5px;
 }
 
+.bar {
+  width: 25px;
+  height: 2px;
+  background-color: var(--foreground, #000);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Adjustments (Tablet and below) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show sandwich button */
+  }
+
+  .navbar-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Sits flush under the header */
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  /* This class is toggled via JavaScript */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-action {
+    width: 100%; /* Make button full width on mobile */
+    margin-top: 0.5rem;
+  }
+}
 /* Buttons */
 .btn {
   display: inline-flex;
