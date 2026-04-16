@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whitepaper | Zeitona - Under Development</title>
+    <title data-i18n="page.whitepaperTitle">Whitepaper | Zeitona</title>
     <meta name="description" content="The Zeitona Whitepaper is currently under development. Stay tuned for our deep dive into the future of construction." />
-    
+
     <!-- Open Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +15,6 @@
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
 
     <style>
-        /* Minimalist tweaks for whitepaper page */
         .whitepaper-body {
             background-color: #FFFFFF !important;
         }
@@ -67,18 +66,19 @@
     <main>
         <!-- Ultra Minimalist Content -->
         <section class="minimal-section">
-            <h1 class="minimal-title fade-up visible delay-100">
+            <h1 class="minimal-title fade-up visible delay-100" data-i18n-html="whitepaper.heading">
                 The Zeitona <strong>Whitepaper</strong>
             </h1>
-            
-            <p class="minimal-description fade-up visible delay-200">
-                Our technical whitepaper is currently in the final stages of refinement. <br />
+
+            <p class="minimal-description fade-up visible delay-200" data-i18n-html="whitepaper.description">
+                Our technical whitepaper is currently in the final stages of refinement.<br />
                 Stay tuned; we will be sharing more updates soon.
             </p>
 
             <div class="fade-up visible delay-300" style="margin-top: 1rem;">
-                <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors" style="font-size: 0.875rem;">
-                    ← Back to Homepage
+                <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors"
+                    style="font-size: 0.875rem;" data-i18n="nav.backToHomepage">
+                    &larr; Back to Homepage
                 </a>
             </div>
         </section>
@@ -88,6 +88,7 @@
     <div id="footer-placeholder"></div>
 
     <!-- Load Script -->
-    <script src="script.js?v=3"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>

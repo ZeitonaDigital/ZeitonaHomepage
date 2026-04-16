@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Zeitona - Under Development</title>
+    <title data-i18n="page.aboutTitle">About | Zeitona</title>
     <meta name="description" content="Discover more about Zeitona, our mission, and our team." />
 
     <!-- Open Sans Font -->
@@ -16,7 +16,6 @@
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
 
     <style>
-        /* Minimalist tweaks for whitepaper page */
         .whitepaper-body {
             background-color: #FFFFFF !important;
         }
@@ -73,26 +72,26 @@
     <main>
         <!-- About Us -->
         <section class="minimal-section" style="min-height: auto; padding-top: 8rem; padding-bottom: 4rem;">
-            <h1 class="minimal-title fade-up visible delay-100">
+            <h1 class="minimal-title fade-up visible delay-100" data-i18n-html="aboutPage.heading">
                 About <strong><span class="text-accent">Zeitona</span></strong>
             </h1>
 
             <div class="fade-up visible delay-200 text-muted"
                 style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1000px; text-align: left; margin: 0 auto; line-height: 1.8; font-size: 1rem;">
                 <div>
-                    <p style="margin-bottom: 1.5rem;">
+                    <p style="margin-bottom: 1.5rem;" data-i18n="aboutPage.p1">
                         Zeitona is a pioneer in Construction 5.0, transforming how the
                         industry builds, manages, and delivers projects through integrated
                         digital technologies.
                     </p>
-                    <p>
+                    <p data-i18n="aboutPage.p2">
                         Founded by engineers and innovators who understand both construction
                         and code, we're committed to solving the industry's greatest challenges:
                         inefficiency, lack of transparency, and contractual disputes.
                     </p>
                 </div>
                 <div>
-                    <p>
+                    <p data-i18n-html="aboutPage.p3">
                         Our mission is to create a human-centric, sustainable, and digitally
                         sovereign construction ecosystem where every stakeholder — architects,
                         engineers, suppliers, contractors, and regulators — operates from a
@@ -108,10 +107,10 @@
         <!-- Founders -->
         <section class="section container">
             <div class="section-header fade-up visible">
-                <h2 class="section-title">
+                <h2 class="section-title" data-i18n-html="aboutPage.meetOurFounders">
                     Meet Our <span class="text-accent">Founders</span>
                 </h2>
-                <p class="section-description">
+                <p class="section-description" data-i18n="aboutPage.foundersDesc">
                     Innovators combining expertise in construction, engineering, and technology.
                 </p>
             </div>
@@ -125,8 +124,8 @@
                                 alt="Founder 1" /></a>
                     </div>
                     <h3 class="founder-name">Diogenes Vaz de Melo</h3>
-                    <p class="founder-role">Role & Expertise</p>
-                    <p class="text-muted founder-bio">Bachelor's in Information Systems (BSIS) with data engineering &
+                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
+                    <p class="text-muted founder-bio" data-i18n="aboutPage.founder1Bio">Bachelor's in Information Systems (BSIS) with data engineering &amp;
                         analytics experience across diverse industries. Skilled at collaborating with multidisciplinary
                         international teams to deliver actionable, data-driven solutions.</p>
                 </div>
@@ -139,8 +138,8 @@
                                 alt="Founder 2" /></a>
                     </div>
                     <h3 class="founder-name">Fabricio Henrique Galvão de Oliveira</h3>
-                    <p class="founder-role">Role & Expertise</p>
-                    <p class="text-muted founder-bio">Software architect specialized in distributed systems and scalable
+                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
+                    <p class="text-muted founder-bio" data-i18n-html="aboutPage.founder2Bio">Software architect specialized in distributed systems and scalable
                         solutions. Focused on system integration, technical standards, and strategic architecture
                         decisions.<br /> Experienced in international collaboration across Latin America and Europe.</p>
                 </div>
@@ -153,9 +152,9 @@
                                 alt="Founder 3" /></a>
                     </div>
                     <h3 class="founder-name">Vanessa Valadares</h3>
-                    <p class="founder-role">Role & Expertise</p>
-                    <p class="text-muted founder-bio">Civil engineer (MSc) with experience in contract management,
-                        foundation engineering, and structural analysis, complemented by a Bachelor’s degree in
+                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
+                    <p class="text-muted founder-bio" data-i18n="aboutPage.founder3Bio">Civil engineer (MSc) with experience in contract management,
+                        foundation engineering, and structural analysis, complemented by a Bachelor's degree in
                         Mathematics.</p>
                 </div>
             </div>
@@ -163,8 +162,8 @@
 
         <div class="fade-up visible delay-300" style="text-align: center; margin: 3rem 0;">
             <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors"
-                style="font-size: 0.875rem;">
-                ← Back to Homepage
+                style="font-size: 0.875rem;" data-i18n="nav.backToHomepage">
+                &larr; Back to Homepage
             </a>
         </div>
     </main>
@@ -173,7 +172,8 @@
     <div id="footer-placeholder"></div>
 
     <!-- Load Script -->
-    <script src="script.js?v=3"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js?v=4"></script>
     <script>
         // Scroll to top on page load
         window.scrollTo(0, 0);
