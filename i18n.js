@@ -637,10 +637,16 @@
         for (var i = 0; i < els.length; i++) {
             els[i].textContent = t(els[i].getAttribute('data-i18n'));
         }
-        // innerHTML (mixed HTML)
+        // innerHTML (mixed HTML — only used for hardcoded trusted translations)
         var htmlEls = document.querySelectorAll('[data-i18n-html]');
         for (var j = 0; j < htmlEls.length; j++) {
-            htmlEls[j].innerHTML = t(htmlEls[j].getAttribute('data-i18n-html'));
+            var raw = t(htmlEls[j].getAttribute('data-i18n-html'));
+            // Strip script tags and event-handler attributes before setting innerHTML
+            var safe = raw
+                .replace(/<script[\s\S]*?\/script>/gi, '')
+                .replace(/\s+on\w+\s*=\s*"[^"]*"/gi, '')
+                .replace(/\s+on\w+\s*=\s*'[^']*'/gi, '');
+            htmlEls[j].innerHTML = safe;
         }
         // placeholder
         var phEls = document.querySelectorAll('[data-i18n-placeholder]');

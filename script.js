@@ -131,11 +131,11 @@ function init() {
     const langCurrent = document.getElementById('lang-current');
 
     if (langBtn && langDropdown) {
-        const locale = window.i18n ? window.i18n.getCurrentLocale() : 'en-us';
-        if (langCurrent) langCurrent.textContent = locale.toUpperCase();
+        const currentLocale = window.i18n ? window.i18n.getCurrentLocale() : 'en-us';
+        if (langCurrent) langCurrent.textContent = currentLocale.toUpperCase();
 
         langDropdown.querySelectorAll('.lang-option').forEach(btn => {
-            if (btn.dataset.locale === locale) btn.classList.add('active');
+            if (btn.dataset.locale === currentLocale) btn.classList.add('active');
             btn.addEventListener('click', () => {
                 langDropdown.classList.remove('open');
                 if (window.i18n) window.i18n.setLocale(btn.dataset.locale);
