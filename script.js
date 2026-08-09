@@ -5,33 +5,37 @@ function init() {
         <div class="navbar">
             <a href="index.html"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
 
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" data-i18n-aria-label="nav.openMenu">
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+                <span class="bar" aria-hidden="true"></span>
+            </button>
 
             <div class="navbar-links" id="nav-links">
                 <a href="index.html#services" data-i18n="nav.services">Services</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
-                <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
                 <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()" data-i18n="nav.getInTouch">
                     Get in Touch
                 </button>
+                <div class="global-controls">
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                    <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
+                    <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.4 8.4 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
+                </button>
                 <div class="lang-switcher" id="lang-switcher">
-                    <button class="lang-btn" id="lang-btn" aria-label="Select language">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                        <span id="lang-current">EN-US</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    <button class="lang-btn" id="lang-btn" type="button" aria-label="Select language: English (US)" aria-haspopup="listbox" aria-expanded="false">
+                        <img id="lang-current-flag" class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" />
+                        <span id="lang-current-label" class="sr-only">English (US)</span>
+                        <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
                     </button>
-                    <div class="lang-dropdown" id="lang-dropdown" role="listbox">
-                        <button class="lang-option" data-locale="en-us" role="option">English (US)</button>
-                        <button class="lang-option" data-locale="en-gb" role="option">English (GB)</button>
-                        <button class="lang-option" data-locale="es"    role="option">Español</button>
-                        <button class="lang-option" data-locale="pt-pt" role="option">Português (PT)</button>
-                        <button class="lang-option" data-locale="pt-br" role="option">Português (BR)</button>
-                        <button class="lang-option" data-locale="de"    role="option">Deutsch</button>
+                    <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
+                        <button class="lang-option" type="button" data-locale="en-us" data-language="English (US)" data-flag="assets/flags/us.svg" role="option" aria-selected="false" title="English (US)"><img class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" /><span>English (US)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                        <button class="lang-option" type="button" data-locale="en-gb" data-language="English (UK)" data-flag="assets/flags/gb.svg" role="option" aria-selected="false" title="English (UK)"><img class="flag-icon" src="assets/flags/gb.svg" alt="" aria-hidden="true" /><span>English (UK)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                        <button class="lang-option" type="button" data-locale="es" data-language="Español" data-flag="assets/flags/es.svg" role="option" aria-selected="false" title="Español"><img class="flag-icon" src="assets/flags/es.svg" alt="" aria-hidden="true" /><span>Español</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                        <button class="lang-option" type="button" data-locale="pt-pt" data-language="Português (Portugal)" data-flag="assets/flags/pt.svg" role="option" aria-selected="false" title="Português (Portugal)"><img class="flag-icon" src="assets/flags/pt.svg" alt="" aria-hidden="true" /><span>Português (Portugal)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                        <button class="lang-option" type="button" data-locale="pt-br" data-language="Português (Brasil)" data-flag="assets/flags/br.svg" role="option" aria-selected="false" title="Português (Brasil)"><img class="flag-icon" src="assets/flags/br.svg" alt="" aria-hidden="true" /><span>Português (Brasil)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
@@ -45,13 +49,13 @@ function init() {
 
     // Inject Shared Contact Modal
     const modalHTML = `
-    <div id="contact-modal" class="modal-overlay">
+    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" aria-describedby="contact-modal-description">
         <div class="modal-content">
-            <button class="modal-close" onclick="closeContactModal()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <button class="modal-close" type="button" onclick="closeContactModal()" aria-label="Close contact form" data-i18n-aria-label="modal.close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
-            <h3 class="modal-title" data-i18n="modal.title">Request to be Contacted</h3>
-            <p class="modal-desc" data-i18n="modal.desc">Please provide your details below and we will reach out to you.</p>
+            <h3 class="modal-title" id="contact-modal-title" data-i18n="modal.title">Request to be Contacted</h3>
+            <p class="modal-desc" id="contact-modal-description" data-i18n="modal.desc">Please provide your details below and we will reach out to you.</p>
             
             <form id="contact-form" class="modal-form" novalidate>
                 <div class="form-row">
@@ -99,7 +103,7 @@ function init() {
                 <img src="assets/azeitona4.png" alt="Zeitona Logo" class="footer-logo" />
             </a>
             <p class="text-muted" style="font-size: 0.85rem; font-weight:300;">
-                &copy; ${currentYear} Zeitona. <span data-i18n="footer.tagline">Building the future of construction.</span>
+                &copy; ${currentYear} Zeitona. <span data-i18n="footer.tagline">Technology shaped around real needs.</span>
             </p>
             <div class="flex gap-6">
                 <a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors">
@@ -115,41 +119,118 @@ function init() {
         footerPlaceholder.outerHTML = footerHTML;
     }
 
+    // Theme preference is explicit-only: a missing or invalid value always resolves to Light.
+    const themeToggle = document.getElementById('theme-toggle');
+    const updateThemeControl = () => {
+        if (!themeToggle) return;
+        const isDark = document.documentElement.dataset.theme === 'dark';
+        const labelKey = isDark ? 'theme.switchToLight' : 'theme.switchToDark';
+        const fallback = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+        const label = window.i18n ? window.i18n.t(labelKey) : fallback;
+        themeToggle.setAttribute('aria-label', label);
+        themeToggle.setAttribute('title', label);
+        themeToggle.setAttribute('aria-pressed', String(isDark));
+    };
+
+    if (themeToggle) {
+        updateThemeControl();
+        themeToggle.addEventListener('click', () => {
+            const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+            document.documentElement.dataset.theme = nextTheme;
+            try { localStorage.setItem('zeitona-theme', nextTheme); } catch (_error) { /* Theme still applies for this visit. */ }
+            updateThemeControl();
+        });
+        document.addEventListener('zeitona:locale-changed', updateThemeControl);
+    }
+
     // Mobile Menu Toggle Logic
     const menu = document.getElementById('mobile-menu');
     const menuLinks = document.getElementById('nav-links');
     if (menu && menuLinks) {
         menu.addEventListener('click', function () {
-            menuLinks.classList.toggle('active');
-            menu.classList.toggle('is-active');
+            const isOpen = menuLinks.classList.toggle('active');
+            menu.classList.toggle('is-active', isOpen);
+            menu.setAttribute('aria-expanded', String(isOpen));
+            const labelKey = isOpen ? 'nav.closeMenu' : 'nav.openMenu';
+            menu.setAttribute('aria-label', window.i18n ? window.i18n.t(labelKey) : (isOpen ? 'Close navigation' : 'Open navigation'));
+        });
+
+        menu.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape' && menuLinks.classList.contains('active')) {
+                menuLinks.classList.remove('active');
+                menu.classList.remove('is-active');
+                menu.setAttribute('aria-expanded', 'false');
+                menu.setAttribute('aria-label', window.i18n ? window.i18n.t('nav.openMenu') : 'Open navigation');
+            }
         });
     }
 
     // Language Switcher Logic
     const langBtn = document.getElementById('lang-btn');
     const langDropdown = document.getElementById('lang-dropdown');
-    const langCurrent = document.getElementById('lang-current');
+    const langSwitcher = document.getElementById('lang-switcher');
 
     if (langBtn && langDropdown) {
-        const currentLocale = window.i18n ? window.i18n.getCurrentLocale() : 'en-us';
-        if (langCurrent) langCurrent.textContent = currentLocale.toUpperCase();
+        const options = Array.from(langDropdown.querySelectorAll('.lang-option'));
 
-        langDropdown.querySelectorAll('.lang-option').forEach(btn => {
-            if (btn.dataset.locale === currentLocale) btn.classList.add('active');
+        const closeLanguageMenu = (returnFocus = false) => {
+            langDropdown.classList.remove('open');
+            langBtn.setAttribute('aria-expanded', 'false');
+            if (returnFocus) langBtn.focus();
+        };
+
+        const openLanguageMenu = (focusSelected = false) => {
+            langDropdown.classList.add('open');
+            langBtn.setAttribute('aria-expanded', 'true');
+            if (focusSelected) {
+                const selected = options.find(option => option.getAttribute('aria-selected') === 'true');
+                (selected || options[0])?.focus();
+            }
+        };
+
+        options.forEach((btn, index) => {
             btn.addEventListener('click', () => {
-                langDropdown.classList.remove('open');
                 if (window.i18n) window.i18n.setLocale(btn.dataset.locale);
+                closeLanguageMenu(true);
+            });
+
+            btn.addEventListener('keydown', (event) => {
+                let nextIndex = null;
+                if (event.key === 'ArrowDown') nextIndex = (index + 1) % options.length;
+                if (event.key === 'ArrowUp') nextIndex = (index - 1 + options.length) % options.length;
+                if (event.key === 'Home') nextIndex = 0;
+                if (event.key === 'End') nextIndex = options.length - 1;
+                if (event.key === 'Escape') {
+                    event.preventDefault();
+                    closeLanguageMenu(true);
+                    return;
+                }
+                if (nextIndex !== null) {
+                    event.preventDefault();
+                    options[nextIndex].focus();
+                }
             });
         });
 
         langBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            langDropdown.classList.toggle('open');
+            if (langDropdown.classList.contains('open')) {
+                closeLanguageMenu();
+            } else {
+                openLanguageMenu();
+            }
+        });
+
+        langBtn.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+                openLanguageMenu(true);
+            }
         });
 
         document.addEventListener('click', (e) => {
-            if (!langBtn.contains(e.target)) {
-                langDropdown.classList.remove('open');
+            if (langSwitcher && !langSwitcher.contains(e.target)) {
+                closeLanguageMenu();
             }
         });
     }
@@ -157,15 +238,9 @@ function init() {
     // Header shadow and blur on scroll
     const header = document.getElementById('navbar');
     if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
-            } else {
-                header.style.backgroundColor = 'rgba(255, 255, 255, 0.85)';
-                header.style.boxShadow = 'none';
-            }
-        });
+        const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 50);
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader();
     }
 
     // Intersection Observer for scroll animations
