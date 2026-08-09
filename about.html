@@ -1,181 +1,156 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
+    <script>(function(){try{var t=localStorage.getItem('zeitona-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}}());</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="page.aboutTitle">About | Zeitona</title>
-    <meta name="description" content="Discover more about Zeitona, our mission, and our team." />
-
-    <!-- Open Sans Font -->
+    <meta name="description" data-i18n-content="page.aboutDescription"
+        content="Meet Zeitona, a technology company focused on practical software and digital solutions." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Load styles -->
     <link rel="stylesheet" href="style.css" />
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
-
-    <style>
-        .whitepaper-body {
-            background-color: #FFFFFF !important;
-        }
-
-        .minimal-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 80vh;
-            padding: 4rem 1.5rem;
-            text-align: center;
-            background: #FFFFFF !important;
-        }
-
-        .minimal-title {
-            font-size: clamp(2.5rem, 6vw, 3.5rem);
-            color: var(--brand-dark-green);
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.01em;
-        }
-
-        .minimal-description {
-            max-width: 650px;
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--muted);
-            margin: 0 auto 3rem;
-        }
-
-        .status-tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border: 1px solid var(--brand-olive);
-            color: var(--brand-olive);
-            border-radius: 4px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 2rem;
-        }
-
-        .nav-minimal {
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            background: rgba(255, 255, 255, 0.95);
-        }
-    </style>
 </head>
 
-<body class="light-theme whitepaper-body">
-    <!-- Nav Placeholder -->
+<body>
     <div id="header-placeholder"></div>
+
     <main>
-        <!-- About Us -->
-        <section class="minimal-section" style="min-height: auto; padding-top: 8rem; padding-bottom: 4rem;">
-            <h1 class="minimal-title fade-up visible delay-100" data-i18n-html="aboutPage.heading">
-                About <strong><span class="text-accent">Zeitona</span></strong>
-            </h1>
-
-            <div class="fade-up visible delay-200 text-muted"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; max-width: 1000px; text-align: left; margin: 0 auto; line-height: 1.8; font-size: 1rem;">
-                <div>
-                    <p style="margin-bottom: 1.5rem;" data-i18n="aboutPage.p1">
-                        Zeitona is a pioneer in Construction 5.0, transforming how the
-                        industry builds, manages, and delivers projects through integrated
-                        digital technologies.
-                    </p>
-                    <p data-i18n="aboutPage.p2">
-                        Founded by engineers and innovators who understand both construction
-                        and code, we're committed to solving the industry's greatest challenges:
-                        inefficiency, lack of transparency, and contractual disputes.
-                    </p>
-                </div>
-                <div>
-                    <p data-i18n-html="aboutPage.p3">
-                        Our mission is to create a human-centric, sustainable, and digitally
-                        sovereign construction ecosystem where every stakeholder — architects,
-                        engineers, suppliers, contractors, and regulators — operates from a
-                        single verifiable source of truth. We deliver <strong>full compliance</strong> with
-                        regulatory standards, <strong>complete transparency</strong> across the supply chain,
-                        <strong>comprehensive auditability</strong> with full audit trails, and
-                        <strong>verified trust</strong> through secure, blockchain-backed systems.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Founders -->
-        <section class="section container">
-            <div class="section-header fade-up visible">
-                <h2 class="section-title" data-i18n-html="aboutPage.meetOurFounders">
-                    Meet Our <span class="text-accent">Founders</span>
-                </h2>
-                <p class="section-description" data-i18n="aboutPage.foundersDesc">
-                    Innovators combining expertise in construction, engineering, and technology.
+        <section class="about-hero">
+            <div class="container about-hero-inner">
+                <p class="about-eyebrow fade-up visible" data-i18n="aboutPage.eyebrow">Technology shaped around real needs</p>
+                <h1 class="about-hero-title fade-up visible delay-100" data-i18n-html="aboutPage.heading">
+                    About <span class="text-accent">Zeitona</span>
+                </h1>
+                <p class="about-hero-lead fade-up visible delay-200" data-i18n="aboutPage.intro">
+                    Zeitona is a technology company that turns ideas and complex needs into practical software and digital solutions.
                 </p>
             </div>
+        </section>
 
-            <div class="founders-grid">
-                <div class="founder-card fade-up visible">
-                    <div class="founder-image">
-                        <a href="https://www.linkedin.com/in/diogenesvazmelo/" target="_blank"
-                            rel="noopener noreferrer"><img
-                                src="https://media.licdn.com/dms/image/v2/C4E03AQEr66zFMlT0qw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1628470496740?e=1776902400&v=beta&t=nLQvKaLQ7G_a6Lu5PvQyG84H1fb7zeTuDB90efhZ2gw"
-                                alt="Founder 1" /></a>
-                    </div>
-                    <h3 class="founder-name">Diogenes Vaz de Melo</h3>
-                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
-                    <p class="text-muted founder-bio" data-i18n="aboutPage.founder1Bio">Bachelor's in Information Systems (BSIS) with data engineering &amp;
-                        analytics experience across diverse industries. Skilled at collaborating with multidisciplinary
-                        international teams to deliver actionable, data-driven solutions.</p>
+        <section class="about-perspective section">
+            <div class="container about-perspective-grid">
+                <div class="about-section-heading fade-up visible">
+                    <p class="about-eyebrow" data-i18n="aboutPage.perspectiveEyebrow">Our perspective</p>
+                    <h2 class="section-title text-left" data-i18n-html="aboutPage.perspectiveTitle">
+                        Technology with a <span class="text-accent">clear purpose</span>
+                    </h2>
                 </div>
-
-                <div class="founder-card fade-up visible delay-100">
-                    <div class="founder-image">
-                        <a href="https://www.linkedin.com/in/fabriciohgalvaoliveira/" target="_blank"
-                            rel="noopener noreferrer"><img
-                                src="https://media.licdn.com/dms/image/v2/D4D03AQGCPIv3rToESQ/profile-displayphoto-scale_400_400/B4DZsxufNYJYAk-/0/1766065830223?e=1776902400&v=beta&t=hmjp0TnK61gKajeEf9C-uiMr_NTBbNxcfPo4FIwDFYM"
-                                alt="Founder 2" /></a>
-                    </div>
-                    <h3 class="founder-name">Fabricio Henrique Galvão de Oliveira</h3>
-                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
-                    <p class="text-muted founder-bio" data-i18n-html="aboutPage.founder2Bio">Software architect specialized in distributed systems and scalable
-                        solutions. Focused on system integration, technical standards, and strategic architecture
-                        decisions.<br /> Experienced in international collaboration across Latin America and Europe.</p>
-                </div>
-
-                <div class="founder-card fade-up visible delay-200">
-                    <div class="founder-image">
-                        <a href="https://www.linkedin.com/in/vanessa-aparecida-valadares/" target="_blank"
-                            rel="noopener noreferrer"><img
-                                src="https://media.licdn.com/dms/image/v2/D4D03AQGyia7iykc3BQ/profile-displayphoto-scale_400_400/B4DZ06KT8xJoAg-/0/1774797280054?e=1776902400&v=beta&t=w6zOIdc3UpjR8_qOqvz9yGDRCGgdfrcsE5aslTS9lYM"
-                                alt="Founder 3" /></a>
-                    </div>
-                    <h3 class="founder-name">Vanessa Valadares</h3>
-                    <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
-                    <p class="text-muted founder-bio" data-i18n="aboutPage.founder3Bio">Civil engineer (MSc) with experience in contract management,
-                        foundation engineering, and structural analysis, complemented by a Bachelor's degree in
-                        Mathematics.</p>
+                <div class="about-copy fade-up visible delay-100">
+                    <p data-i18n="aboutPage.p1">Technology is most useful when it begins with a clear understanding of the problem.</p>
+                    <p data-i18n="aboutPage.p2">Zeitona brings together software, data, systems, and automation to shape solutions around the way people and organisations actually work.</p>
+                    <p data-i18n="aboutPage.p3">Our focus is practical innovation: making complex needs clearer and turning them into technology that can create meaningful progress.</p>
                 </div>
             </div>
         </section>
 
-        <div class="fade-up visible delay-300" style="text-align: center; margin: 3rem 0;">
-            <a href="index.html" class="text-muted hover:text-accent font-semibold transition-colors"
-                style="font-size: 0.875rem;" data-i18n="nav.backToHomepage">
+        <section class="about-approach section">
+            <div class="container">
+                <div class="section-header fade-up visible">
+                    <p class="about-eyebrow" data-i18n="aboutPage.approachEyebrow">How we approach technology</p>
+                    <h2 class="section-title" data-i18n-html="aboutPage.approachTitle">
+                        Start with the problem. <span class="text-accent">Build with purpose.</span>
+                    </h2>
+                    <p class="section-description" data-i18n="aboutPage.approachIntro">
+                        Our approach keeps real needs at the centre of every technology decision.
+                    </p>
+                </div>
+                <div class="about-principles">
+                    <article class="about-principle card fade-up visible">
+                        <span class="about-principle-number">01</span>
+                        <h3 data-i18n="aboutPage.principle1Title">Understand the context</h3>
+                        <p data-i18n="aboutPage.principle1Desc">Look closely at the need, the people involved, and the systems already in place.</p>
+                    </article>
+                    <article class="about-principle card fade-up visible delay-100">
+                        <span class="about-principle-number">02</span>
+                        <h3 data-i18n="aboutPage.principle2Title">Shape the right solution</h3>
+                        <p data-i18n="aboutPage.principle2Desc">Choose technology in service of the problem, with clarity and integration in mind.</p>
+                    </article>
+                    <article class="about-principle card fade-up visible delay-200">
+                        <span class="about-principle-number">03</span>
+                        <h3 data-i18n="aboutPage.principle3Title">Keep it useful</h3>
+                        <p data-i18n="aboutPage.principle3Desc">Focus on practical outcomes and digital experiences that make work simpler and clearer.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-founders section">
+            <div class="container">
+                <div class="section-header fade-up visible">
+                    <p class="about-eyebrow" data-i18n="aboutPage.foundersEyebrow">The people behind Zeitona</p>
+                    <h2 class="section-title" data-i18n-html="aboutPage.meetOurFounders">
+                        Meet Our <span class="text-accent">Founders</span>
+                    </h2>
+                    <p class="section-description" data-i18n="aboutPage.foundersDesc">
+                        Different areas of technology, brought together by a shared focus on solving real problems.
+                    </p>
+                </div>
+
+                <div class="founders-grid">
+                    <article class="founder-card fade-up visible">
+                        <div class="founder-image">
+                            <a href="https://www.linkedin.com/in/diogenesvazmelo/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/team/founders/diogenes-vaz-melo.jpg"
+                                    alt="Diógenes Vaz de Melo" />
+                            </a>
+                        </div>
+                        <div class="founder-content">
+                            <p class="founder-kicker" data-i18n="aboutPage.founder1Focus">Data &amp; Technology</p>
+                            <h3 class="founder-name">Diógenes Vaz de Melo</h3>
+                            <p class="text-muted founder-bio" data-i18n="aboutPage.founder1Bio1">Diógenes has a background in Information Systems, with experience in data engineering and analytics across different industries.</p>
+                            <p class="text-muted founder-bio" data-i18n="aboutPage.founder1Bio2">His work includes collaboration with multidisciplinary international teams to develop practical, data-informed solutions.</p>
+                            <a class="founder-link" href="https://www.linkedin.com/in/diogenesvazmelo/" target="_blank" rel="noopener noreferrer" data-i18n="aboutPage.viewProfile">View LinkedIn profile</a>
+                        </div>
+                    </article>
+
+                    <article class="founder-card founder-card-reverse fade-up visible delay-100">
+                        <div class="founder-image">
+                            <a href="https://www.linkedin.com/in/fabriciohgalvaoliveira/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/team/founders/fabricio-oliveira.jpg"
+                                    alt="Fabrício Henrique Galvão de Oliveira" />
+                            </a>
+                        </div>
+                        <div class="founder-content">
+                            <p class="founder-kicker" data-i18n="aboutPage.founder2Focus">Software Architecture</p>
+                            <h3 class="founder-name">Fabrício Henrique Galvão de Oliveira</h3>
+                            <p class="text-muted founder-bio" data-i18n="aboutPage.founder2Bio1">Fabrício is a software architect focused on distributed systems, scalable solutions, systems integration, and technical standards.</p>
+                            <p class="text-muted founder-bio" data-i18n="aboutPage.founder2Bio2">His experience includes strategic architecture decisions and international collaboration across Latin America and Europe.</p>
+                            <a class="founder-link" href="https://www.linkedin.com/in/fabriciohgalvaoliveira/" target="_blank" rel="noopener noreferrer" data-i18n="aboutPage.viewProfile">View LinkedIn profile</a>
+                        </div>
+                    </article>
+
+                    <!-- Vanessa profile intentionally hidden for the current phase.
+                    <div class="founder-card fade-up visible delay-200">
+                        <div class="founder-image">
+                            <a href="https://www.linkedin.com/in/vanessa-aparecida-valadares/" target="_blank" rel="noopener noreferrer">
+                                <img src="assets/team/founders/vanessa-valadares.jpg"
+                                    alt="Vanessa Valadares" />
+                            </a>
+                        </div>
+                        <h3 class="founder-name">Vanessa Valadares</h3>
+                        <p class="founder-role" data-i18n="aboutPage.roleExpertise">Role &amp; Expertise</p>
+                        <p class="text-muted founder-bio" data-i18n="aboutPage.founder3Bio">Civil engineer (MSc) with experience in contract management, foundation engineering, and structural analysis, complemented by a Bachelor's degree in Mathematics.</p>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </section>
+
+        <div class="about-back-link fade-up visible delay-300">
+            <a href="index.html" class="text-muted font-semibold" data-i18n="nav.backToHomepage">
                 ← Back to Homepage
             </a>
         </div>
     </main>
 
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Load Script -->
     <script src="i18n.js"></script>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
     <script>
-        // Scroll to top on page load
         window.scrollTo(0, 0);
     </script>
 </body>

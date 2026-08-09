@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" data-theme="light">
 <head>
     <meta charset="UTF-8" />
+    <script>(function(){try{var t=localStorage.getItem('zeitona-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}}());</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="page.whitepaperTitle">Whitepaper | Zeitona</title>
-    <meta name="description" content="The Zeitona Whitepaper is currently under development. Stay tuned for our deep dive into the future of construction." />
+    <meta name="description" data-i18n-content="page.whitepaperDescription"
+        content="The Zeitona technical whitepaper is currently in the final stages of refinement." />
 
     <!-- Open Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,7 +18,7 @@
 
     <style>
         .whitepaper-body {
-            background-color: #FFFFFF !important;
+            background-color: var(--background) !important;
         }
         .minimal-section {
             display: flex;
@@ -26,11 +28,11 @@
             min-height: 80vh;
             padding: 4rem 1.5rem;
             text-align: center;
-            background: #FFFFFF !important;
+            background: var(--background) !important;
         }
         .minimal-title {
             font-size: clamp(2.5rem, 6vw, 3.5rem);
-            color: var(--brand-dark-green);
+            color: var(--foreground);
             margin-bottom: 1.5rem;
             letter-spacing: -0.01em;
         }
@@ -55,11 +57,11 @@
         }
         .nav-minimal {
             border-bottom: 1px solid rgba(0,0,0,0.05);
-            background: rgba(255,255,255,0.95);
+            background: var(--background);
         }
     </style>
 </head>
-<body class="light-theme whitepaper-body">
+<body class="whitepaper-body">
     <!-- Nav Placeholder -->
     <div id="header-placeholder"></div>
 
@@ -89,6 +91,6 @@
 
     <!-- Load Script -->
     <script src="i18n.js"></script>
-    <script src="script.js?v=4"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
