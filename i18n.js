@@ -1,12 +1,12 @@
 /**
  * Zeitona i18n — client-side internationalisation
- * Supported locales: en-us | en-gb | es | pt-pt | pt-br | de
+ * Supported locales: en-us | en-gb | es | pt-pt | pt-br
  */
 (function () {
     'use strict';
 
     // ── Supported locales ────────────────────────────────────────────────────
-    var SUPPORTED = ['en-us', 'en-gb', 'es', 'pt-pt', 'pt-br', 'de'];
+    var SUPPORTED = ['en-us', 'en-gb', 'es', 'pt-pt', 'pt-br'];
     var DEFAULT   = 'en-us';
 
     // HTML lang attribute values
@@ -15,8 +15,7 @@
         'en-gb': 'en-GB',
         'es':    'es',
         'pt-pt': 'pt-PT',
-        'pt-br': 'pt-BR',
-        'de':    'de'
+        'pt-br': 'pt-BR'
     };
 
     // ── Translation strings ──────────────────────────────────────────────────
@@ -25,56 +24,65 @@
         // ── English (US) ────────────────────────────────────────────────────
         'en-us': {
             page: {
-                title: 'Zeitona - Building the Future Block by Block',
+                title: 'Zeitona - Technology for Real Needs',
+                description: 'Zeitona creates practical software and digital solutions around real business needs.',
                 aboutTitle: 'About | Zeitona',
-                whitepaperTitle: 'Whitepaper | Zeitona'
+                aboutDescription: 'Meet Zeitona, a technology company focused on practical software and digital solutions.',
+                whitepaperTitle: 'Whitepaper | Zeitona',
+                whitepaperDescription: 'The Zeitona technical whitepaper is currently in the final stages of refinement.'
             },
             nav: {
                 services:      'Services',
                 about:         'About',
-                contact:       'Contact',
                 getInTouch:    'Get in Touch',
-                backToHomepage:'← Back to Homepage'
+                backToHomepage:'← Back to Homepage',
+                openMenu:       'Open navigation',
+                closeMenu:      'Close navigation'
+            },
+            language: {
+                select: 'Select language'
+            },
+            theme: {
+                switchToLight: 'Switch to light mode',
+                switchToDark:  'Switch to dark mode'
             },
             hero: {
-                badge:         'Construction 5.0',
-                title:         'Building the Future',
-                titleAccent:   'Block by Block',
-                description:   'Zeitona merges BIM, Blockchain, and Smart Contracts to deliver transparent, efficient, and trustworthy construction ecosystems.',
+                badge:         'Technology for Real Needs',
+                title:         'Turning Ideas Into',
+                titleAccent:   'Practical Technology',
+                description:   'Zeitona creates software and digital solutions around real business needs, turning complex challenges into clear, useful technology.',
                 exploreBtn:    'Explore Our Vision',
                 whitepaperBtn: 'Read Whitepaper'
             },
             services: {
-                title:       'Three Pillars of',
-                titleAccent: 'Innovation',
-                description: 'An integrated platform where physical construction meets digital trust.',
+                title:       'Technology Built for',
+                titleAccent: 'Real Needs',
+                description: 'Practical ways to turn ideas, workflows, and complex requirements into useful digital solutions.',
                 bim: {
-                    title: 'BIM Integration',
-                    desc:  'Building Information Modeling (BIM) integration for complete management.'
+                    title: 'Digital Products',
+                    desc:  'Software shaped around real needs, from early ideas to useful digital experiences.'
                 },
                 blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Immutable and transparent audit trail that securely records every process, asset, and decision throughout the construction lifecycle.'
+                    title: 'Systems & Integrations',
+                    desc:  'Connected tools, data, and workflows that help technology work as a coherent whole.'
                 },
                 smartContracts: {
-                    title: 'Smart Contracts',
-                    desc:  'Designed to support the enablement of smart contracts for automated milestone payments and other features.'
+                    title: 'Automation',
+                    desc:  'Thoughtful automation that simplifies repeatable work and supports clearer processes.'
                 }
             },
             about: {
                 whyZeitona:          'Why <span class="text-accent">Zeitona</span>?',
-                p1: 'The AEC (Architecture, Engineering, and Construction) industry struggles to track and verify the authenticity of tasks performed throughout a construction project, leading to inefficiencies, rework, disputes, and a lack of trust among stakeholders.',
-                p2: 'Our mission is to solve this by connecting every stakeholder on a single, verifiable source of truth.',
-                p3: 'Zeitona: built by professionals who understand both concrete and code.',
-                transparency:        'Transparency',
-                automatedCompliance: 'Automated Compliance'
-            },
-            cta: {
-                title:       "Let's Build Together",
-                description: "Whether you're a developer, contractor, or innovator — we'd love to explore how Zeitona can transform your next project.",
-                btn:         'Request Contact'
+                p1: 'Complex business needs rarely fit neatly into off-the-shelf technology.',
+                p2: 'Zeitona approaches those needs with practical thinking, shaping software, systems, and automation around the problem at hand.',
+                p3: 'We focus on technology that is clear, useful, and grounded in how people actually work.',
+                clearValue:          'Clear',
+                transparency:        'Solutions',
+                practicalValue:      'Practical',
+                automatedCompliance: 'Innovation'
             },
             modal: {
+                close:                  'Close contact form',
                 title:                  'Request to be Contacted',
                 desc:                   'Please provide your details below and we will reach out to you.',
                 email:                  'Email',
@@ -97,18 +105,37 @@
                 noDescription:          'No description provided'
             },
             footer: {
-                tagline: 'Building the future of construction.'
+                tagline: 'Technology shaped around real needs.'
             },
             aboutPage: {
-                heading:          'About <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'Zeitona is a pioneer in Construction 5.0, transforming how the industry builds, manages, and delivers projects through integrated digital technologies.',
-                p2: "Founded by engineers and innovators who understand both construction and code, we're committed to solving the industry's greatest challenges: inefficiency, lack of transparency, and contractual disputes.",
-                p3: 'Our mission is to create a human-centric, sustainable, and digitally sovereign construction ecosystem where every stakeholder — architects, engineers, suppliers, contractors, and regulators — operates from a single verifiable source of truth. We deliver <strong>full compliance</strong> with regulatory standards, <strong>complete transparency</strong> across the supply chain, <strong>comprehensive auditability</strong> with full audit trails, and <strong>verified trust</strong> through secure, blockchain-backed systems.',
+                eyebrow:          'Technology shaped around real needs',
+                heading:          'About <span class="text-accent">Zeitona</span>',
+                intro:            'Zeitona is a technology company that turns ideas and complex needs into practical software and digital solutions.',
+                perspectiveEyebrow:'Our perspective',
+                perspectiveTitle: 'Technology with a <span class="text-accent">clear purpose</span>',
+                p1: 'Technology is most useful when it begins with a clear understanding of the problem.',
+                p2: 'Zeitona brings together software, data, systems, and automation to shape solutions around the way people and organisations actually work.',
+                p3: 'Our focus is practical innovation: making complex needs clearer and turning them into technology that can create meaningful progress.',
+                approachEyebrow:  'How we approach technology',
+                approachTitle:    'Start with the problem. <span class="text-accent">Build with purpose.</span>',
+                approachIntro:    'Our approach keeps real needs at the centre of every technology decision.',
+                principle1Title:  'Understand the context',
+                principle1Desc:   'Look closely at the need, the people involved, and the systems already in place.',
+                principle2Title:  'Shape the right solution',
+                principle2Desc:   'Choose technology in service of the problem, with clarity and integration in mind.',
+                principle3Title:  'Keep it useful',
+                principle3Desc:   'Focus on practical outcomes and digital experiences that make work simpler and clearer.',
+                foundersEyebrow:  'The people behind Zeitona',
                 meetOurFounders:  'Meet Our <span class="text-accent">Founders</span>',
-                foundersDesc:     'Innovators combining expertise in construction, engineering, and technology.',
+                foundersDesc:     'Different areas of technology, brought together by a shared focus on solving real problems.',
                 roleExpertise:    'Role & Expertise',
-                founder1Bio:      "Bachelor's in Information Systems (BSIS) with data engineering & analytics experience across diverse industries. Skilled at collaborating with multidisciplinary international teams to deliver actionable, data-driven solutions.",
-                founder2Bio:      'Software architect specialized in distributed systems and scalable solutions. Focused on system integration, technical standards, and strategic architecture decisions.<br /> Experienced in international collaboration across Latin America and Europe.',
+                founder1Focus:    'Data & Technology',
+                founder1Bio1:     'Diógenes has a background in Information Systems, with experience in data engineering and analytics across different industries.',
+                founder1Bio2:     'His work includes collaboration with multidisciplinary international teams to develop practical, data-informed solutions.',
+                founder2Focus:    'Software Architecture',
+                founder2Bio1:     'Fabrício is a software architect focused on distributed systems, scalable solutions, systems integration, and technical standards.',
+                founder2Bio2:     'His experience includes strategic architecture decisions and international collaboration across Latin America and Europe.',
+                viewProfile:      'View LinkedIn profile',
                 founder3Bio:      "Civil engineer (MSc) with experience in contract management, foundation engineering, and structural analysis, complemented by a Bachelor's degree in Mathematics."
             },
             whitepaper: {
@@ -120,56 +147,65 @@
         // ── English (GB) ────────────────────────────────────────────────────
         'en-gb': {
             page: {
-                title:          'Zeitona - Building the Future Block by Block',
+                title:          'Zeitona - Technology for Real Needs',
+                description:    'Zeitona creates practical software and digital solutions around real business needs.',
                 aboutTitle:     'About | Zeitona',
-                whitepaperTitle:'Whitepaper | Zeitona'
+                aboutDescription:'Meet Zeitona, a technology company focused on practical software and digital solutions.',
+                whitepaperTitle:'Whitepaper | Zeitona',
+                whitepaperDescription:'The Zeitona technical whitepaper is currently in the final stages of refinement.'
             },
             nav: {
                 services:      'Services',
                 about:         'About',
-                contact:       'Contact',
                 getInTouch:    'Get in Touch',
-                backToHomepage:'← Back to Homepage'
+                backToHomepage:'← Back to Homepage',
+                openMenu:       'Open navigation',
+                closeMenu:      'Close navigation'
+            },
+            language: {
+                select: 'Select language'
+            },
+            theme: {
+                switchToLight: 'Switch to light mode',
+                switchToDark:  'Switch to dark mode'
             },
             hero: {
-                badge:         'Construction 5.0',
-                title:         'Building the Future',
-                titleAccent:   'Block by Block',
-                description:   'Zeitona merges BIM, Blockchain, and Smart Contracts to deliver transparent, efficient, and trustworthy construction ecosystems.',
+                badge:         'Technology for Real Needs',
+                title:         'Turning Ideas Into',
+                titleAccent:   'Practical Technology',
+                description:   'Zeitona creates software and digital solutions around real business needs, turning complex challenges into clear, useful technology.',
                 exploreBtn:    'Explore Our Vision',
                 whitepaperBtn: 'Read Whitepaper'
             },
             services: {
-                title:       'Three Pillars of',
-                titleAccent: 'Innovation',
-                description: 'An integrated platform where physical construction meets digital trust.',
+                title:       'Technology Built for',
+                titleAccent: 'Real Needs',
+                description: 'Practical ways to turn ideas, workflows, and complex requirements into useful digital solutions.',
                 bim: {
-                    title: 'BIM Integration',
-                    desc:  'Building Information Modelling (BIM) integration for complete management.'
+                    title: 'Digital Products',
+                    desc:  'Software shaped around real needs, from early ideas to useful digital experiences.'
                 },
                 blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Immutable and transparent audit trail that securely records every process, asset, and decision throughout the construction lifecycle.'
+                    title: 'Systems & Integrations',
+                    desc:  'Connected tools, data, and workflows that help technology work as a coherent whole.'
                 },
                 smartContracts: {
-                    title: 'Smart Contracts',
-                    desc:  'Designed to support the enablement of smart contracts for automated milestone payments and other features.'
+                    title: 'Automation',
+                    desc:  'Thoughtful automation that simplifies repeatable work and supports clearer processes.'
                 }
             },
             about: {
                 whyZeitona:          'Why <span class="text-accent">Zeitona</span>?',
-                p1: 'The AEC (Architecture, Engineering, and Construction) industry struggles to track and verify the authenticity of tasks performed throughout a construction project, leading to inefficiencies, rework, disputes, and a lack of trust among stakeholders.',
-                p2: 'Our mission is to solve this by connecting every stakeholder on a single, verifiable source of truth.',
-                p3: 'Zeitona: built by professionals who understand both concrete and code.',
-                transparency:        'Transparency',
-                automatedCompliance: 'Automated Compliance'
-            },
-            cta: {
-                title:       "Let's Build Together",
-                description: "Whether you're a developer, contractor, or innovator — we'd love to explore how Zeitona can transform your next project.",
-                btn:         'Request Contact'
+                p1: 'Complex business needs rarely fit neatly into off-the-shelf technology.',
+                p2: 'Zeitona approaches those needs with practical thinking, shaping software, systems, and automation around the problem at hand.',
+                p3: 'We focus on technology that is clear, useful, and grounded in how people actually work.',
+                clearValue:          'Clear',
+                transparency:        'Solutions',
+                practicalValue:      'Practical',
+                automatedCompliance: 'Innovation'
             },
             modal: {
+                close:                  'Close contact form',
                 title:                  'Request to be Contacted',
                 desc:                   'Please provide your details below and we will reach out to you.',
                 email:                  'Email',
@@ -192,18 +228,37 @@
                 noDescription:          'No description provided'
             },
             footer: {
-                tagline: 'Building the future of construction.'
+                tagline: 'Technology shaped around real needs.'
             },
             aboutPage: {
-                heading:         'About <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'Zeitona is a pioneer in Construction 5.0, transforming how the industry builds, manages, and delivers projects through integrated digital technologies.',
-                p2: "Founded by engineers and innovators who understand both construction and code, we're committed to solving the industry's greatest challenges: inefficiency, lack of transparency, and contractual disputes.",
-                p3: 'Our mission is to create a human-centric, sustainable, and digitally sovereign construction ecosystem where every stakeholder — architects, engineers, suppliers, contractors, and regulators — operates from a single verifiable source of truth. We deliver <strong>full compliance</strong> with regulatory standards, <strong>complete transparency</strong> across the supply chain, <strong>comprehensive auditability</strong> with full audit trails, and <strong>verified trust</strong> through secure, blockchain-backed systems.',
-                meetOurFounders: 'Meet Our <span class="text-accent">Founders</span>',
-                foundersDesc:    'Innovators combining expertise in construction, engineering, and technology.',
+                eyebrow:          'Technology shaped around real needs',
+                heading:          'About <span class="text-accent">Zeitona</span>',
+                intro:            'Zeitona is a technology company that turns ideas and complex needs into practical software and digital solutions.',
+                perspectiveEyebrow:'Our perspective',
+                perspectiveTitle: 'Technology with a <span class="text-accent">clear purpose</span>',
+                p1: 'Technology is most useful when it begins with a clear understanding of the problem.',
+                p2: 'Zeitona brings together software, data, systems, and automation to shape solutions around the way people and organisations actually work.',
+                p3: 'Our focus is practical innovation: making complex needs clearer and turning them into technology that can create meaningful progress.',
+                approachEyebrow:  'How we approach technology',
+                approachTitle:    'Start with the problem. <span class="text-accent">Build with purpose.</span>',
+                approachIntro:    'Our approach keeps real needs at the centre of every technology decision.',
+                principle1Title:  'Understand the context',
+                principle1Desc:   'Look closely at the need, the people involved, and the systems already in place.',
+                principle2Title:  'Shape the right solution',
+                principle2Desc:   'Choose technology in service of the problem, with clarity and integration in mind.',
+                principle3Title:  'Keep it useful',
+                principle3Desc:   'Focus on practical outcomes and digital experiences that make work simpler and clearer.',
+                foundersEyebrow:  'The people behind Zeitona',
+                meetOurFounders:  'Meet Our <span class="text-accent">Founders</span>',
+                foundersDesc:     'Different areas of technology, brought together by a shared focus on solving real problems.',
                 roleExpertise:   'Role & Expertise',
-                founder1Bio:     "Bachelor's in Information Systems (BSIS) with data engineering & analytics experience across diverse industries. Skilled at collaborating with multidisciplinary international teams to deliver actionable, data-driven solutions.",
-                founder2Bio:     'Software architect specialised in distributed systems and scalable solutions. Focused on system integration, technical standards, and strategic architecture decisions.<br /> Experienced in international collaboration across Latin America and Europe.',
+                founder1Focus:    'Data & Technology',
+                founder1Bio1:     'Diógenes has a background in Information Systems, with experience in data engineering and analytics across different industries.',
+                founder1Bio2:     'His work includes collaboration with multidisciplinary international teams to develop practical, data-informed solutions.',
+                founder2Focus:    'Software Architecture',
+                founder2Bio1:     'Fabrício is a software architect focused on distributed systems, scalable solutions, systems integration, and technical standards.',
+                founder2Bio2:     'His experience includes strategic architecture decisions and international collaboration across Latin America and Europe.',
+                viewProfile:      'View LinkedIn profile',
                 founder3Bio:     "Civil engineer (MSc) with experience in contract management, foundation engineering, and structural analysis, complemented by a Bachelor's degree in Mathematics."
             },
             whitepaper: {
@@ -215,56 +270,65 @@
         // ── Spanish ──────────────────────────────────────────────────────────
         'es': {
             page: {
-                title:          'Zeitona - Construyendo el Futuro Bloque a Bloque',
+                title:          'Zeitona - Tecnología para Necesidades Reales',
+                description:    'Zeitona crea software y soluciones digitales prácticas en torno a necesidades empresariales reales.',
                 aboutTitle:     'Acerca de | Zeitona',
-                whitepaperTitle:'Whitepaper | Zeitona'
+                aboutDescription:'Conoce Zeitona, una empresa tecnológica centrada en software práctico y soluciones digitales.',
+                whitepaperTitle:'Whitepaper | Zeitona',
+                whitepaperDescription:'El whitepaper técnico de Zeitona se encuentra actualmente en las etapas finales de refinamiento.'
             },
             nav: {
                 services:      'Servicios',
                 about:         'Acerca de',
-                contact:       'Contacto',
                 getInTouch:    'Contáctenos',
-                backToHomepage:'← Volver a la Página Principal'
+                backToHomepage:'← Volver a la Página Principal',
+                openMenu:       'Abrir navegación',
+                closeMenu:      'Cerrar navegación'
+            },
+            language: {
+                select: 'Seleccionar idioma'
+            },
+            theme: {
+                switchToLight: 'Cambiar al modo claro',
+                switchToDark:  'Cambiar al modo oscuro'
             },
             hero: {
-                badge:         'Construcción 5.0',
-                title:         'Construyendo el Futuro',
-                titleAccent:   'Bloque a Bloque',
-                description:   'Zeitona integra BIM, Blockchain y Contratos Inteligentes para ofrecer ecosistemas de construcción transparentes, eficientes y confiables.',
+                badge:         'Tecnología para Necesidades Reales',
+                title:         'Convertimos Ideas en',
+                titleAccent:   'Tecnología Práctica',
+                description:   'Zeitona crea software y soluciones digitales en torno a necesidades empresariales reales, convirtiendo retos complejos en tecnología clara y útil.',
                 exploreBtn:    'Explorar Nuestra Visión',
                 whitepaperBtn: 'Leer Whitepaper'
             },
             services: {
-                title:       'Tres Pilares de la',
-                titleAccent: 'Innovación',
-                description: 'Una plataforma integrada donde la construcción física se encuentra con la confianza digital.',
+                title:       'Tecnología Creada para',
+                titleAccent: 'Necesidades Reales',
+                description: 'Formas prácticas de convertir ideas, flujos de trabajo y requisitos complejos en soluciones digitales útiles.',
                 bim: {
-                    title: 'Integración BIM',
-                    desc:  'Integración de Modelado de Información para la Construcción (BIM) para una gestión completa.'
+                    title: 'Productos Digitales',
+                    desc:  'Software adaptado a necesidades reales, desde las primeras ideas hasta experiencias digitales útiles.'
                 },
                 blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Registro de auditoría inmutable y transparente que registra de forma segura cada proceso, activo y decisión a lo largo del ciclo de vida de la construcción.'
+                    title: 'Sistemas e Integraciones',
+                    desc:  'Herramientas, datos y flujos de trabajo conectados para que la tecnología funcione como un conjunto coherente.'
                 },
                 smartContracts: {
-                    title: 'Contratos Inteligentes',
-                    desc:  'Diseñado para facilitar contratos inteligentes que automatizan pagos por hitos y otras funcionalidades.'
+                    title: 'Automatización',
+                    desc:  'Automatización bien pensada que simplifica el trabajo repetitivo y favorece procesos más claros.'
                 }
             },
             about: {
                 whyZeitona:          '¿Por qué <span class="text-accent">Zeitona</span>?',
-                p1: 'La industria AEC (Arquitectura, Ingeniería y Construcción) tiene dificultades para rastrear y verificar la autenticidad de las tareas realizadas a lo largo de un proyecto de construcción, lo que lleva a ineficiencias, reprocesos, disputas y falta de confianza entre las partes interesadas.',
-                p2: 'Nuestra misión es resolver esto conectando a cada parte interesada en una única fuente de verdad verificable.',
-                p3: 'Zeitona: construida por profesionales que entienden tanto el concreto como el código.',
-                transparency:        'Transparencia',
-                automatedCompliance: 'Cumplimiento Automatizado'
-            },
-            cta: {
-                title:       'Construyamos Juntos',
-                description: 'Tanto si eres desarrollador, contratista o innovador — nos encantaría explorar cómo Zeitona puede transformar tu próximo proyecto.',
-                btn:         'Solicitar Contacto'
+                p1: 'Las necesidades empresariales complejas rara vez encajan bien en la tecnología estándar.',
+                p2: 'Zeitona aborda esas necesidades con un enfoque práctico, adaptando software, sistemas y automatización al problema concreto.',
+                p3: 'Nos centramos en tecnología clara, útil y basada en la forma en que las personas trabajan realmente.',
+                clearValue:          'Claras',
+                transparency:        'Soluciones',
+                practicalValue:      'Práctica',
+                automatedCompliance: 'Innovación'
             },
             modal: {
+                close:                  'Cerrar formulario de contacto',
                 title:                  'Solicitar ser Contactado',
                 desc:                   'Por favor, proporcione sus datos a continuación y nos pondremos en contacto con usted.',
                 email:                  'Correo Electrónico',
@@ -287,18 +351,37 @@
                 noDescription:          'Sin descripción'
             },
             footer: {
-                tagline: 'Construyendo el futuro de la construcción.'
+                tagline: 'Tecnología adaptada a necesidades reales.'
             },
             aboutPage: {
-                heading:         'Acerca de <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'Zeitona es pionera en Construcción 5.0, transformando la forma en que la industria construye, gestiona y entrega proyectos mediante tecnologías digitales integradas.',
-                p2: 'Fundada por ingenieros e innovadores que entienden tanto la construcción como el código, estamos comprometidos a resolver los mayores desafíos de la industria: ineficiencia, falta de transparencia y disputas contractuales.',
-                p3: 'Nuestra misión es crear un ecosistema de construcción centrado en las personas, sostenible y digitalmente soberano donde cada parte interesada — arquitectos, ingenieros, proveedores, contratistas y reguladores — opera desde una única fuente verificable de verdad. Ofrecemos <strong>cumplimiento total</strong> con los estándares regulatorios, <strong>transparencia completa</strong> en la cadena de suministro, <strong>auditabilidad exhaustiva</strong> con registros de auditoría completos, y <strong>confianza verificada</strong> a través de sistemas seguros respaldados por blockchain.',
-                meetOurFounders: 'Conoce a Nuestros <span class="text-accent">Fundadores</span>',
-                foundersDesc:    'Innovadores que combinan experiencia en construcción, ingeniería y tecnología.',
+                eyebrow:          'Tecnología adaptada a necesidades reales',
+                heading:          'Acerca de <span class="text-accent">Zeitona</span>',
+                intro:            'Zeitona es una empresa tecnológica que convierte ideas y necesidades complejas en software práctico y soluciones digitales.',
+                perspectiveEyebrow:'Nuestra perspectiva',
+                perspectiveTitle: 'Tecnología con un <span class="text-accent">propósito claro</span>',
+                p1: 'La tecnología es más útil cuando parte de una comprensión clara del problema.',
+                p2: 'Zeitona reúne software, datos, sistemas y automatización para crear soluciones adaptadas a cómo trabajan realmente las personas y las organizaciones.',
+                p3: 'Nuestro enfoque es la innovación práctica: aclarar necesidades complejas y convertirlas en tecnología capaz de generar avances significativos.',
+                approachEyebrow:  'Cómo abordamos la tecnología',
+                approachTitle:    'Empezar por el problema. <span class="text-accent">Crear con propósito.</span>',
+                approachIntro:    'Nuestro enfoque mantiene las necesidades reales en el centro de cada decisión tecnológica.',
+                principle1Title:  'Entender el contexto',
+                principle1Desc:   'Observar de cerca la necesidad, las personas implicadas y los sistemas existentes.',
+                principle2Title:  'Diseñar la solución adecuada',
+                principle2Desc:   'Elegir la tecnología al servicio del problema, con claridad e integración.',
+                principle3Title:  'Mantenerla útil',
+                principle3Desc:   'Centrarse en resultados prácticos y experiencias digitales que hagan el trabajo más sencillo y claro.',
+                foundersEyebrow:  'Las personas detrás de Zeitona',
+                meetOurFounders:  'Conoce a Nuestros <span class="text-accent">Fundadores</span>',
+                foundersDesc:     'Diferentes áreas de la tecnología, unidas por el objetivo común de resolver problemas reales.',
                 roleExpertise:   'Rol y Experiencia',
-                founder1Bio:     'Licenciado en Sistemas de Información (BSIS) con experiencia en ingeniería de datos y analítica en diversas industrias. Hábil en la colaboración con equipos internacionales multidisciplinarios para ofrecer soluciones basadas en datos.',
-                founder2Bio:     'Arquitecto de software especializado en sistemas distribuidos y soluciones escalables. Enfocado en integración de sistemas, estándares técnicos y decisiones de arquitectura estratégica.<br /> Con experiencia en colaboración internacional en América Latina y Europa.',
+                founder1Focus:    'Datos y Tecnología',
+                founder1Bio1:     'Diógenes tiene formación en Sistemas de Información y experiencia en ingeniería de datos y analítica en diferentes sectores.',
+                founder1Bio2:     'Su trabajo incluye la colaboración con equipos internacionales multidisciplinares para desarrollar soluciones prácticas basadas en datos.',
+                founder2Focus:    'Arquitectura de Software',
+                founder2Bio1:     'Fabrício es arquitecto de software centrado en sistemas distribuidos, soluciones escalables, integración de sistemas y estándares técnicos.',
+                founder2Bio2:     'Su experiencia incluye decisiones estratégicas de arquitectura y colaboración internacional en América Latina y Europa.',
+                viewProfile:      'Ver perfil de LinkedIn',
                 founder3Bio:     'Ingeniera civil (MSc) con experiencia en gestión de contratos, ingeniería de cimentaciones y análisis estructural, complementada con una licenciatura en Matemáticas.'
             },
             whitepaper: {
@@ -310,56 +393,65 @@
         // ── Portuguese (PT) ──────────────────────────────────────────────────
         'pt-pt': {
             page: {
-                title:          'Zeitona - A Construir o Futuro Tijolo a Tijolo',
+                title:          'Zeitona - Tecnologia para Necessidades Reais',
+                description:    'A Zeitona cria software e soluções digitais práticas em torno de necessidades empresariais reais.',
                 aboutTitle:     'Sobre | Zeitona',
-                whitepaperTitle:'Whitepaper | Zeitona'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
+                whitepaperTitle:'Whitepaper | Zeitona',
+                whitepaperDescription:'O whitepaper técnico da Zeitona encontra-se atualmente nas fases finais de refinamento.'
             },
             nav: {
                 services:      'Serviços',
                 about:         'Sobre',
-                contact:       'Contacto',
                 getInTouch:    'Entrar em Contacto',
-                backToHomepage:'← Voltar à Página Inicial'
+                backToHomepage:'← Voltar à Página Inicial',
+                openMenu:       'Abrir navegação',
+                closeMenu:      'Fechar navegação'
+            },
+            language: {
+                select: 'Selecionar idioma'
+            },
+            theme: {
+                switchToLight: 'Mudar para o modo claro',
+                switchToDark:  'Mudar para o modo escuro'
             },
             hero: {
-                badge:         'Construção 5.0',
-                title:         'A Construir o Futuro',
-                titleAccent:   'Tijolo a Tijolo',
-                description:   'A Zeitona integra BIM, Blockchain e Contratos Inteligentes para criar ecossistemas de construção transparentes, eficientes e confiáveis.',
+                badge:         'Tecnologia para Necessidades Reais',
+                title:         'Transformamos Ideias em',
+                titleAccent:   'Tecnologia Prática',
+                description:   'A Zeitona cria software e soluções digitais em torno de necessidades empresariais reais, transformando desafios complexos em tecnologia clara e útil.',
                 exploreBtn:    'Explorar a Nossa Visão',
                 whitepaperBtn: 'Ler Whitepaper'
             },
             services: {
-                title:       'Três Pilares de',
-                titleAccent: 'Inovação',
-                description: 'Uma plataforma integrada onde a construção física encontra a confiança digital.',
+                title:       'Tecnologia Criada para',
+                titleAccent: 'Necessidades Reais',
+                description: 'Formas práticas de transformar ideias, fluxos de trabalho e requisitos complexos em soluções digitais úteis.',
                 bim: {
-                    title: 'Integração BIM',
-                    desc:  'Integração de Modelação de Informação de Construção (BIM) para uma gestão completa.'
+                    title: 'Produtos Digitais',
+                    desc:  'Software adaptado a necessidades reais, desde as primeiras ideias até experiências digitais úteis.'
                 },
                 blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Registo de auditoria imutável e transparente que regista de forma segura cada processo, ativo e decisão ao longo do ciclo de vida da construção.'
+                    title: 'Sistemas e Integrações',
+                    desc:  'Ferramentas, dados e fluxos de trabalho ligados para que a tecnologia funcione como um todo coerente.'
                 },
                 smartContracts: {
-                    title: 'Contratos Inteligentes',
-                    desc:  'Concebido para suportar a utilização de contratos inteligentes para pagamentos automáticos por marcos e outras funcionalidades.'
+                    title: 'Automatização',
+                    desc:  'Automatização ponderada que simplifica o trabalho repetitivo e apoia processos mais claros.'
                 }
             },
             about: {
                 whyZeitona:          'Porquê <span class="text-accent">Zeitona</span>?',
-                p1: 'A indústria AEC (Arquitetura, Engenharia e Construção) tem dificuldade em rastrear e verificar a autenticidade das tarefas realizadas ao longo de um projeto de construção, conduzindo a ineficiências, retrabalho, disputas e falta de confiança entre os intervenientes.',
-                p2: 'A nossa missão é resolver isto ligando todos os intervenientes numa única fonte de verdade verificável.',
-                p3: 'Zeitona: construída por profissionais que compreendem tanto o betão como o código.',
-                transparency:        'Transparência',
-                automatedCompliance: 'Conformidade Automatizada'
-            },
-            cta: {
-                title:       'Vamos Construir Juntos',
-                description: 'Seja desenvolvedor, empreiteiro ou inovador — adoraríamos explorar como a Zeitona pode transformar o seu próximo projeto.',
-                btn:         'Solicitar Contacto'
+                p1: 'As necessidades empresariais complexas raramente se enquadram bem em tecnologia pronta a usar.',
+                p2: 'A Zeitona aborda essas necessidades de forma prática, adaptando software, sistemas e automatização ao problema em causa.',
+                p3: 'Concentramo-nos em tecnologia clara, útil e baseada na forma como as pessoas realmente trabalham.',
+                clearValue:          'Claras',
+                transparency:        'Soluções',
+                practicalValue:      'Prática',
+                automatedCompliance: 'Inovação'
             },
             modal: {
+                close:                  'Fechar formulário de contacto',
                 title:                  'Solicitar Ser Contactado',
                 desc:                   'Por favor, forneça os seus dados abaixo e entraremos em contacto consigo.',
                 email:                  'Email',
@@ -382,18 +474,37 @@
                 noDescription:          'Sem descrição'
             },
             footer: {
-                tagline: 'A construir o futuro da construção.'
+                tagline: 'Tecnologia adaptada a necessidades reais.'
             },
             aboutPage: {
-                heading:         'Sobre <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'A Zeitona é uma pioneira na Construção 5.0, transformando a forma como a indústria constrói, gere e entrega projetos através de tecnologias digitais integradas.',
-                p2: 'Fundada por engenheiros e inovadores que compreendem tanto a construção como o código, estamos empenhados em resolver os maiores desafios da indústria: ineficiência, falta de transparência e disputas contratuais.',
-                p3: 'A nossa missão é criar um ecossistema de construção centrado no ser humano, sustentável e digitalmente soberano onde todos os intervenientes — arquitetos, engenheiros, fornecedores, empreiteiros e reguladores — operam a partir de uma única fonte de verdade verificável. Proporcionamos <strong>conformidade total</strong> com os padrões regulatórios, <strong>transparência completa</strong> em toda a cadeia de abastecimento, <strong>auditabilidade abrangente</strong> com registos de auditoria completos e <strong>confiança verificada</strong> através de sistemas seguros suportados por blockchain.',
-                meetOurFounders: 'Conheça os Nossos <span class="text-accent">Fundadores</span>',
-                foundersDesc:    'Inovadores que combinam experiência em construção, engenharia e tecnologia.',
+                eyebrow:          'Tecnologia adaptada a necessidades reais',
+                heading:          'Sobre a <span class="text-accent">Zeitona</span>',
+                intro:            'A Zeitona é uma empresa de tecnologia que transforma ideias e necessidades complexas em software prático e soluções digitais.',
+                perspectiveEyebrow:'A nossa perspetiva',
+                perspectiveTitle: 'Tecnologia com um <span class="text-accent">propósito claro</span>',
+                p1: 'A tecnologia é mais útil quando começa por uma compreensão clara do problema.',
+                p2: 'A Zeitona reúne software, dados, sistemas e automatização para criar soluções adaptadas à forma como as pessoas e organizações realmente trabalham.',
+                p3: 'O nosso foco é a inovação prática: tornar necessidades complexas mais claras e transformá-las em tecnologia capaz de gerar progresso significativo.',
+                approachEyebrow:  'Como abordamos a tecnologia',
+                approachTitle:    'Começar pelo problema. <span class="text-accent">Criar com propósito.</span>',
+                approachIntro:    'A nossa abordagem mantém as necessidades reais no centro de cada decisão tecnológica.',
+                principle1Title:  'Compreender o contexto',
+                principle1Desc:   'Observar atentamente a necessidade, as pessoas envolvidas e os sistemas existentes.',
+                principle2Title:  'Definir a solução certa',
+                principle2Desc:   'Escolher a tecnologia ao serviço do problema, com clareza e integração.',
+                principle3Title:  'Manter a utilidade',
+                principle3Desc:   'Focar resultados práticos e experiências digitais que tornem o trabalho mais simples e claro.',
+                foundersEyebrow:  'As pessoas por detrás da Zeitona',
+                meetOurFounders:  'Conheça os Nossos <span class="text-accent">Fundadores</span>',
+                foundersDesc:     'Diferentes áreas da tecnologia, unidas pelo objetivo comum de resolver problemas reais.',
                 roleExpertise:   'Função e Experiência',
-                founder1Bio:     'Licenciado em Sistemas de Informação (BSIS) com experiência em engenharia de dados e análise em diversas indústrias. Especializado em colaboração com equipas internacionais multidisciplinares para fornecer soluções baseadas em dados.',
-                founder2Bio:     'Arquiteto de software especializado em sistemas distribuídos e soluções escaláveis. Focado em integração de sistemas, padrões técnicos e decisões de arquitetura estratégica.<br /> Com experiência em colaboração internacional na América Latina e Europa.',
+                founder1Focus:    'Dados e Tecnologia',
+                founder1Bio1:     'Diógenes tem formação em Sistemas de Informação e experiência em engenharia de dados e análise em diferentes setores.',
+                founder1Bio2:     'O seu trabalho inclui colaboração com equipas internacionais multidisciplinares para desenvolver soluções práticas baseadas em dados.',
+                founder2Focus:    'Arquitetura de Software',
+                founder2Bio1:     'Fabrício é arquiteto de software focado em sistemas distribuídos, soluções escaláveis, integração de sistemas e padrões técnicos.',
+                founder2Bio2:     'A sua experiência inclui decisões estratégicas de arquitetura e colaboração internacional na América Latina e Europa.',
+                viewProfile:      'Ver perfil no LinkedIn',
                 founder3Bio:     'Engenheira civil (MSc) com experiência em gestão de contratos, engenharia de fundações e análise estrutural, complementada com uma licenciatura em Matemática.'
             },
             whitepaper: {
@@ -405,56 +516,65 @@
         // ── Portuguese (BR) ──────────────────────────────────────────────────
         'pt-br': {
             page: {
-                title:          'Zeitona - Construindo o Futuro Tijolo a Tijolo',
+                title:          'Zeitona - Tecnologia para Necessidades Reais',
+                description:    'A Zeitona cria software e soluções digitais práticas para necessidades reais de negócios.',
                 aboutTitle:     'Sobre | Zeitona',
-                whitepaperTitle:'Whitepaper | Zeitona'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
+                whitepaperTitle:'Whitepaper | Zeitona',
+                whitepaperDescription:'O whitepaper técnico da Zeitona está atualmente nas etapas finais de refinamento.'
             },
             nav: {
                 services:      'Serviços',
                 about:         'Sobre',
-                contact:       'Contato',
                 getInTouch:    'Entre em Contato',
-                backToHomepage:'← Voltar à Página Inicial'
+                backToHomepage:'← Voltar à Página Inicial',
+                openMenu:       'Abrir navegação',
+                closeMenu:      'Fechar navegação'
+            },
+            language: {
+                select: 'Selecionar idioma'
+            },
+            theme: {
+                switchToLight: 'Mudar para o modo claro',
+                switchToDark:  'Mudar para o modo escuro'
             },
             hero: {
-                badge:         'Construção 5.0',
-                title:         'Construindo o Futuro',
-                titleAccent:   'Tijolo a Tijolo',
-                description:   'A Zeitona integra BIM, Blockchain e Contratos Inteligentes para criar ecossistemas de construção transparentes, eficientes e confiáveis.',
+                badge:         'Tecnologia para Necessidades Reais',
+                title:         'Transformamos Ideias em',
+                titleAccent:   'Tecnologia Prática',
+                description:   'A Zeitona cria software e soluções digitais para necessidades reais de negócios, transformando desafios complexos em tecnologia clara e útil.',
                 exploreBtn:    'Explorar Nossa Visão',
                 whitepaperBtn: 'Ler Whitepaper'
             },
             services: {
-                title:       'Três Pilares de',
-                titleAccent: 'Inovação',
-                description: 'Uma plataforma integrada onde a construção física encontra a confiança digital.',
+                title:       'Tecnologia Criada para',
+                titleAccent: 'Necessidades Reais',
+                description: 'Formas práticas de transformar ideias, fluxos de trabalho e requisitos complexos em soluções digitais úteis.',
                 bim: {
-                    title: 'Integração BIM',
-                    desc:  'Integração de Modelagem da Informação da Construção (BIM) para gerenciamento completo.'
+                    title: 'Produtos Digitais',
+                    desc:  'Software adaptado a necessidades reais, das primeiras ideias a experiências digitais úteis.'
                 },
                 blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Trilha de auditoria imutável e transparente que registra com segurança cada processo, ativo e decisão ao longo do ciclo de vida da construção.'
+                    title: 'Sistemas e Integrações',
+                    desc:  'Ferramentas, dados e fluxos de trabalho conectados para que a tecnologia funcione como um todo coerente.'
                 },
                 smartContracts: {
-                    title: 'Contratos Inteligentes',
-                    desc:  'Projetado para suportar a habilitação de contratos inteligentes para pagamentos automáticos por marcos e outras funcionalidades.'
+                    title: 'Automação',
+                    desc:  'Automação bem planejada que simplifica o trabalho repetitivo e apoia processos mais claros.'
                 }
             },
             about: {
                 whyZeitona:          'Por que <span class="text-accent">Zeitona</span>?',
-                p1: 'A indústria AEC (Arquitetura, Engenharia e Construção) tem dificuldade em rastrear e verificar a autenticidade das tarefas realizadas ao longo de um projeto de construção, levando a ineficiências, retrabalho, disputas e falta de confiança entre os stakeholders.',
-                p2: 'Nossa missão é resolver isso conectando todos os stakeholders em uma única fonte verificável de verdade.',
-                p3: 'Zeitona: construída por profissionais que entendem tanto de concreto quanto de código.',
-                transparency:        'Transparência',
-                automatedCompliance: 'Conformidade Automatizada'
-            },
-            cta: {
-                title:       'Vamos Construir Juntos',
-                description: 'Seja você desenvolvedor, empreiteiro ou inovador — adoraríamos explorar como a Zeitona pode transformar seu próximo projeto.',
-                btn:         'Solicitar Contato'
+                p1: 'Necessidades complexas de negócios raramente se encaixam bem em tecnologias prontas.',
+                p2: 'A Zeitona aborda essas necessidades de forma prática, adaptando software, sistemas e automação ao problema em questão.',
+                p3: 'Nosso foco é tecnologia clara, útil e baseada na forma como as pessoas realmente trabalham.',
+                clearValue:          'Claras',
+                transparency:        'Soluções',
+                practicalValue:      'Prática',
+                automatedCompliance: 'Inovação'
             },
             modal: {
+                close:                  'Fechar formulário de contato',
                 title:                  'Solicitar ser Contatado',
                 desc:                   'Por favor, forneça seus dados abaixo e entraremos em contato com você.',
                 email:                  'Email',
@@ -477,118 +597,42 @@
                 noDescription:          'Sem descrição'
             },
             footer: {
-                tagline: 'Construindo o futuro da construção.'
+                tagline: 'Tecnologia adaptada a necessidades reais.'
             },
             aboutPage: {
-                heading:         'Sobre <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'A Zeitona é pioneira na Construção 5.0, transformando como a indústria constrói, gerencia e entrega projetos por meio de tecnologias digitais integradas.',
-                p2: 'Fundada por engenheiros e inovadores que entendem tanto de construção quanto de código, estamos comprometidos em resolver os maiores desafios da indústria: ineficiência, falta de transparência e disputas contratuais.',
-                p3: 'Nossa missão é criar um ecossistema de construção centrado no ser humano, sustentável e digitalmente soberano, onde todos os stakeholders — arquitetos, engenheiros, fornecedores, empreiteiros e reguladores — operam a partir de uma única fonte verificável de verdade. Entregamos <strong>conformidade total</strong> com os padrões regulatórios, <strong>transparência completa</strong> em toda a cadeia de suprimentos, <strong>auditabilidade abrangente</strong> com trilhas de auditoria completas e <strong>confiança verificada</strong> por meio de sistemas seguros apoiados em blockchain.',
-                meetOurFounders: 'Conheça Nossos <span class="text-accent">Fundadores</span>',
-                foundersDesc:    'Inovadores que combinam experiência em construção, engenharia e tecnologia.',
+                eyebrow:          'Tecnologia adaptada a necessidades reais',
+                heading:          'Sobre a <span class="text-accent">Zeitona</span>',
+                intro:            'A Zeitona é uma empresa de tecnologia que transforma ideias e necessidades complexas em software prático e soluções digitais.',
+                perspectiveEyebrow:'Nossa perspectiva',
+                perspectiveTitle: 'Tecnologia com um <span class="text-accent">propósito claro</span>',
+                p1: 'A tecnologia é mais útil quando começa com uma compreensão clara do problema.',
+                p2: 'A Zeitona reúne software, dados, sistemas e automação para criar soluções adaptadas à forma como pessoas e organizações realmente trabalham.',
+                p3: 'Nosso foco é a inovação prática: tornar necessidades complexas mais claras e transformá-las em tecnologia capaz de gerar avanços significativos.',
+                approachEyebrow:  'Como abordamos a tecnologia',
+                approachTitle:    'Começar pelo problema. <span class="text-accent">Criar com propósito.</span>',
+                approachIntro:    'Nossa abordagem mantém as necessidades reais no centro de cada decisão tecnológica.',
+                principle1Title:  'Entender o contexto',
+                principle1Desc:   'Observar de perto a necessidade, as pessoas envolvidas e os sistemas existentes.',
+                principle2Title:  'Definir a solução certa',
+                principle2Desc:   'Escolher a tecnologia a serviço do problema, com clareza e integração.',
+                principle3Title:  'Manter a utilidade',
+                principle3Desc:   'Focar resultados práticos e experiências digitais que tornem o trabalho mais simples e claro.',
+                foundersEyebrow:  'As pessoas por trás da Zeitona',
+                meetOurFounders:  'Conheça Nossos <span class="text-accent">Fundadores</span>',
+                foundersDesc:     'Diferentes áreas da tecnologia, unidas pelo objetivo comum de resolver problemas reais.',
                 roleExpertise:   'Função e Experiência',
-                founder1Bio:     'Bacharel em Sistemas de Informação (BSIS) com experiência em engenharia de dados e análise em diversas indústrias. Habilidoso em colaborar com equipes internacionais multidisciplinares para entregar soluções baseadas em dados.',
-                founder2Bio:     'Arquiteto de software especializado em sistemas distribuídos e soluções escaláveis. Focado em integração de sistemas, padrões técnicos e decisões de arquitetura estratégica.<br /> Com experiência em colaboração internacional na América Latina e Europa.',
+                founder1Focus:    'Dados e Tecnologia',
+                founder1Bio1:     'Diógenes tem formação em Sistemas de Informação e experiência em engenharia de dados e análise em diferentes setores.',
+                founder1Bio2:     'Seu trabalho inclui colaboração com equipes internacionais multidisciplinares para desenvolver soluções práticas baseadas em dados.',
+                founder2Focus:    'Arquitetura de Software',
+                founder2Bio1:     'Fabrício é arquiteto de software focado em sistemas distribuídos, soluções escaláveis, integração de sistemas e padrões técnicos.',
+                founder2Bio2:     'Sua experiência inclui decisões estratégicas de arquitetura e colaboração internacional na América Latina e Europa.',
+                viewProfile:      'Ver perfil no LinkedIn',
                 founder3Bio:     'Engenheira civil (MSc) com experiência em gestão de contratos, engenharia de fundações e análise estrutural, complementada por uma graduação em Matemática.'
             },
             whitepaper: {
                 heading:     'O <strong>Whitepaper</strong> da Zeitona',
                 description: 'Nosso whitepaper técnico está atualmente nas etapas finais de refinamento.<br />Fique ligado; em breve compartilharemos mais atualizações.'
-            }
-        },
-
-        // ── German ───────────────────────────────────────────────────────────
-        'de': {
-            page: {
-                title:          'Zeitona - Die Zukunft Stein für Stein aufbauen',
-                aboutTitle:     'Über uns | Zeitona',
-                whitepaperTitle:'Whitepaper | Zeitona'
-            },
-            nav: {
-                services:      'Leistungen',
-                about:         'Über uns',
-                contact:       'Kontakt',
-                getInTouch:    'Kontakt aufnehmen',
-                backToHomepage:'← Zurück zur Startseite'
-            },
-            hero: {
-                badge:         'Construction 5.0',
-                title:         'Die Zukunft aufbauen',
-                titleAccent:   'Stein für Stein',
-                description:   'Zeitona verbindet BIM, Blockchain und Smart Contracts, um transparente, effiziente und vertrauenswürdige Bauprojekt-Ökosysteme zu schaffen.',
-                exploreBtn:    'Unsere Vision erkunden',
-                whitepaperBtn: 'Whitepaper lesen'
-            },
-            services: {
-                title:       'Drei Säulen der',
-                titleAccent: 'Innovation',
-                description: 'Eine integrierte Plattform, auf der physisches Bauen auf digitales Vertrauen trifft.',
-                bim: {
-                    title: 'BIM-Integration',
-                    desc:  'Building Information Modeling (BIM)-Integration für ein vollständiges Projektmanagement.'
-                },
-                blockchain: {
-                    title: 'Blockchain',
-                    desc:  'Unveränderliche und transparente Prüfspur, die jeden Prozess, jedes Asset und jede Entscheidung im gesamten Bauprojektzyklus sicher erfasst.'
-                },
-                smartContracts: {
-                    title: 'Smart Contracts',
-                    desc:  'Entwickelt zur Unterstützung von Smart Contracts für automatisierte Meilensteinzahlungen und weitere Funktionen.'
-                }
-            },
-            about: {
-                whyZeitona:          'Warum <span class="text-accent">Zeitona</span>?',
-                p1: 'Die AEC-Branche (Architektur, Ingenieurwesen und Bauwesen) hat Schwierigkeiten, die Authentizität von Aufgaben im Laufe eines Bauprojekts zu verfolgen und zu verifizieren, was zu Ineffizienzen, Nacharbeit, Streitigkeiten und mangelndem Vertrauen unter den Beteiligten führt.',
-                p2: 'Unsere Mission ist es, dieses Problem zu lösen, indem wir alle Beteiligten mit einer einzigen, verifizierbaren Quelle der Wahrheit verbinden.',
-                p3: 'Zeitona: entwickelt von Fachleuten, die sowohl Beton als auch Code verstehen.',
-                transparency:        'Transparenz',
-                automatedCompliance: 'Automatisierte Compliance'
-            },
-            cta: {
-                title:       'Gemeinsam bauen',
-                description: 'Ob Entwickler, Auftragnehmer oder Innovator — wir würden gerne erkunden, wie Zeitona Ihr nächstes Projekt transformieren kann.',
-                btn:         'Kontakt anfragen'
-            },
-            modal: {
-                title:                  'Kontaktanfrage senden',
-                desc:                   'Bitte geben Sie Ihre Daten unten ein und wir werden uns bei Ihnen melden.',
-                email:                  'E-Mail',
-                emailPlaceholder:       'ihre@email.de',
-                phone:                  'Telefon',
-                phonePlaceholder:       '+49 30 12345678',
-                optional:               '(optional)',
-                subject:                'Betreff',
-                subjectPlaceholder:     'Wie können wir Ihnen helfen?',
-                description:            'Beschreibung',
-                descriptionPlaceholder: 'Erzählen Sie uns mehr über Ihr Projekt oder Ihre Anfrage...',
-                sendRequest:            'Anfrage senden',
-                sending:                'Wird gesendet',
-                emailError:             'Bitte geben Sie eine gültige E-Mail-Adresse ein',
-                subjectError:           'Bitte geben Sie einen Betreff ein',
-                successTitle:           'Nachricht gesendet!',
-                successDesc:            'Vielen Dank für Ihre Kontaktaufnahme. Wir werden uns in Kürze bei Ihnen melden.',
-                errorAlert:             'Beim Senden Ihrer Nachricht ist ein Fehler aufgetreten.',
-                notProvided:            'Nicht angegeben',
-                noDescription:          'Keine Beschreibung'
-            },
-            footer: {
-                tagline: 'Die Zukunft des Bauwesens gestalten.'
-            },
-            aboutPage: {
-                heading:         'Über <strong><span class="text-accent">Zeitona</span></strong>',
-                p1: 'Zeitona ist ein Pionier in Construction 5.0 und transformiert die Art und Weise, wie die Branche Projekte baut, verwaltet und realisiert – durch integrierte digitale Technologien.',
-                p2: 'Gegründet von Ingenieuren und Innovatoren, die sowohl Bauwesen als auch Code verstehen, sind wir bestrebt, die größten Herausforderungen der Branche zu lösen: Ineffizienz, mangelnde Transparenz und Vertragsstreitigkeiten.',
-                p3: 'Unsere Mission ist es, ein menschenzentriertes, nachhaltiges und digital souveränes Bauprojekt-Ökosystem zu schaffen, in dem alle Beteiligten – Architekten, Ingenieure, Lieferanten, Auftragnehmer und Regulierungsbehörden – auf einer einzigen verifizierbaren Quelle der Wahrheit basieren. Wir bieten <strong>vollständige Compliance</strong> mit regulatorischen Standards, <strong>vollständige Transparenz</strong> in der gesamten Lieferkette, <strong>umfassende Prüfbarkeit</strong> mit vollständigen Prüfprotokollen und <strong>verifizierbares Vertrauen</strong> durch sichere, blockchain-gestützte Systeme.',
-                meetOurFounders: 'Unsere <span class="text-accent">Gründer</span>',
-                foundersDesc:    'Innovatoren, die Expertise in Bauwesen, Ingenieurwesen und Technologie kombinieren.',
-                roleExpertise:   'Rolle & Expertise',
-                founder1Bio:     'Bachelor in Informationssystemen (BSIS) mit Erfahrung in Datentechnik und Analytik in verschiedenen Branchen. Kompetent in der Zusammenarbeit mit multidisziplinären internationalen Teams zur Bereitstellung datengesteuerter Lösungen.',
-                founder2Bio:     'Softwarearchitekt, spezialisiert auf verteilte Systeme und skalierbare Lösungen. Fokussiert auf Systemintegration, technische Standards und strategische Architekturentscheidungen.<br /> Erfahren in internationaler Zusammenarbeit in Lateinamerika und Europa.',
-                founder3Bio:     'Bauingenieurin (MSc) mit Erfahrung in Vertragsmanagement, Grundbauingenieurwesen und Strukturanalyse, ergänzt durch einen Bachelor in Mathematik.'
-            },
-            whitepaper: {
-                heading:     'Das Zeitona <strong>Whitepaper</strong>',
-                description: 'Unser technisches Whitepaper befindet sich derzeit in den abschließenden Phasen der Fertigstellung.<br />Bleiben Sie dran; wir werden in Kürze weitere Updates teilen.'
             }
         }
     };
@@ -598,11 +642,13 @@
         var stored = '';
         try { stored = localStorage.getItem('zeitona-locale') || ''; } catch (_) {}
         if (stored && SUPPORTED.indexOf(stored) !== -1) return stored;
+        if (stored) {
+            try { localStorage.removeItem('zeitona-locale'); } catch (_) {}
+        }
 
         var lang = (navigator.language || navigator.userLanguage || '').toLowerCase();
         if (lang === 'pt-br' || lang.indexOf('pt-br') === 0) return 'pt-br';
         if (lang.indexOf('pt') === 0) return 'pt-pt';
-        if (lang.indexOf('de') === 0) return 'de';
         if (lang.indexOf('es') === 0) return 'es';
         if (lang === 'en-gb' || lang.indexOf('en-gb') === 0) return 'en-gb';
         return DEFAULT;
@@ -631,6 +677,34 @@
         return typeof result === 'string' ? result : key;
     }
 
+    function updateLanguageSelector() {
+        var options = document.querySelectorAll('.lang-option');
+        var currentOption = null;
+        for (var i = 0; i < options.length; i++) {
+            var isActive = options[i].dataset.locale === currentLocale;
+            options[i].classList.toggle('active', isActive);
+            options[i].setAttribute('aria-selected', isActive ? 'true' : 'false');
+            if (isActive) currentOption = options[i];
+        }
+
+        if (!currentOption) return;
+
+        var languageName = currentOption.dataset.language;
+        var currentFlag = document.getElementById('lang-current-flag');
+        var currentLabel = document.getElementById('lang-current-label');
+        var langBtn = document.getElementById('lang-btn');
+        var langDropdown = document.getElementById('lang-dropdown');
+        var selectLabel = t('language.select');
+
+        if (currentFlag) currentFlag.src = currentOption.dataset.flag;
+        if (currentLabel) currentLabel.textContent = languageName;
+        if (langBtn) {
+            langBtn.setAttribute('aria-label', selectLabel + ': ' + languageName);
+            langBtn.title = languageName;
+        }
+        if (langDropdown) langDropdown.setAttribute('aria-label', selectLabel);
+    }
+
     function applyTranslations() {
         // textContent
         var els = document.querySelectorAll('[data-i18n]');
@@ -653,11 +727,22 @@
         for (var k = 0; k < phEls.length; k++) {
             phEls[k].placeholder = t(phEls[k].getAttribute('data-i18n-placeholder'));
         }
+        // element content attributes (used for localised metadata)
+        var contentEls = document.querySelectorAll('[data-i18n-content]');
+        for (var l = 0; l < contentEls.length; l++) {
+            contentEls[l].setAttribute('content', t(contentEls[l].getAttribute('data-i18n-content')));
+        }
+        // accessible labels for icon-only and compact controls
+        var ariaEls = document.querySelectorAll('[data-i18n-aria-label]');
+        for (var m = 0; m < ariaEls.length; m++) {
+            ariaEls[m].setAttribute('aria-label', t(ariaEls[m].getAttribute('data-i18n-aria-label')));
+        }
         // <title>
         var titleEl = document.querySelector('title[data-i18n]');
         if (titleEl) { document.title = t(titleEl.getAttribute('data-i18n')); }
         // html lang attribute
         document.documentElement.lang = LANG_ATTR[currentLocale] || currentLocale;
+        updateLanguageSelector();
     }
 
     function setLocale(locale) {
@@ -665,12 +750,7 @@
         currentLocale = locale;
         try { localStorage.setItem('zeitona-locale', locale); } catch (_) {}
         applyTranslations();
-        // Update lang-switcher UI if present
-        var langCurrent = document.getElementById('lang-current');
-        if (langCurrent) langCurrent.textContent = locale.toUpperCase();
-        document.querySelectorAll('.lang-option').forEach(function (btn) {
-            btn.classList.toggle('active', btn.dataset.locale === locale);
-        });
+        document.dispatchEvent(new CustomEvent('zeitona:locale-changed'));
     }
 
     function getCurrentLocale() { return currentLocale; }
