@@ -24,15 +24,14 @@
         // ── English (US) ────────────────────────────────────────────────────
         'en-us': {
             page: {
-                title: 'Zeitona - Technology for Real Needs',
-                description: 'Zeitona creates practical software and digital solutions around real business needs.',
+                title: 'Zeitona',
+                description: 'Zeitona. Growing change through innovation.',
                 aboutTitle: 'About | Zeitona',
-                aboutDescription: 'Meet Zeitona, a technology company focused on practical software and digital solutions.',
-                whitepaperTitle: 'Whitepaper | Zeitona',
-                whitepaperDescription: 'The Zeitona technical whitepaper is currently in the final stages of refinement.'
+                aboutDescription: 'Meet Zeitona, a technology company focused on practical software and digital solutions.'
             },
             nav: {
                 services:      'Services',
+                news:          'News',
                 about:         'About',
                 getInTouch:    'Get in Touch',
                 backToHomepage:'← Back to Homepage',
@@ -52,7 +51,16 @@
                 titleAccent:   'Practical Technology',
                 description:   'Zeitona creates software and digital solutions around real business needs, turning complex challenges into clear, useful technology.',
                 exploreBtn:    'Explore Our Vision',
-                whitepaperBtn: 'Read Whitepaper'
+                headline:      'Growing change through innovation'
+            },
+            aboutStrip: {
+                text: 'Meet the team behind Zeitona.',
+                link: 'About'
+            },
+            news: {
+                heading:   'News & updates',
+                empty:     'No updates yet.',
+                loadError: 'Unable to load updates.'
             },
             services: {
                 title:       'Technology Built for',
@@ -137,25 +145,20 @@
                 founder2Bio2:     'His experience includes strategic architecture decisions and international collaboration across Latin America and Europe.',
                 viewProfile:      'View LinkedIn profile',
                 founder3Bio:      "Civil engineer (MSc) with experience in contract management, foundation engineering, and structural analysis, complemented by a Bachelor's degree in Mathematics."
-            },
-            whitepaper: {
-                heading:     'The Zeitona <strong>Whitepaper</strong>',
-                description: 'Our technical whitepaper is currently in the final stages of refinement.<br />Stay tuned; we will be sharing more updates soon.'
             }
         },
 
         // ── English (GB) ────────────────────────────────────────────────────
         'en-gb': {
             page: {
-                title:          'Zeitona - Technology for Real Needs',
-                description:    'Zeitona creates practical software and digital solutions around real business needs.',
+                title:          'Zeitona',
+                description:    'Zeitona. Growing change through innovation.',
                 aboutTitle:     'About | Zeitona',
-                aboutDescription:'Meet Zeitona, a technology company focused on practical software and digital solutions.',
-                whitepaperTitle:'Whitepaper | Zeitona',
-                whitepaperDescription:'The Zeitona technical whitepaper is currently in the final stages of refinement.'
+                aboutDescription:'Meet Zeitona, a technology company focused on practical software and digital solutions.'
             },
             nav: {
                 services:      'Services',
+                news:          'News',
                 about:         'About',
                 getInTouch:    'Get in Touch',
                 backToHomepage:'← Back to Homepage',
@@ -175,7 +178,16 @@
                 titleAccent:   'Practical Technology',
                 description:   'Zeitona creates software and digital solutions around real business needs, turning complex challenges into clear, useful technology.',
                 exploreBtn:    'Explore Our Vision',
-                whitepaperBtn: 'Read Whitepaper'
+                headline:      'Growing change through innovation'
+            },
+            aboutStrip: {
+                text: 'Meet the team behind Zeitona.',
+                link: 'About'
+            },
+            news: {
+                heading:   'News & updates',
+                empty:     'No updates yet.',
+                loadError: 'Unable to load updates.'
             },
             services: {
                 title:       'Technology Built for',
@@ -260,25 +272,20 @@
                 founder2Bio2:     'His experience includes strategic architecture decisions and international collaboration across Latin America and Europe.',
                 viewProfile:      'View LinkedIn profile',
                 founder3Bio:     "Civil engineer (MSc) with experience in contract management, foundation engineering, and structural analysis, complemented by a Bachelor's degree in Mathematics."
-            },
-            whitepaper: {
-                heading:     'The Zeitona <strong>Whitepaper</strong>',
-                description: 'Our technical whitepaper is currently in the final stages of refinement.<br />Stay tuned; we will be sharing more updates soon.'
             }
         },
 
         // ── Spanish ──────────────────────────────────────────────────────────
         'es': {
             page: {
-                title:          'Zeitona - Tecnología para Necesidades Reales',
-                description:    'Zeitona crea software y soluciones digitales prácticas en torno a necesidades empresariales reales.',
+                title:          'Zeitona',
+                description:    'Zeitona. Impulsando el cambio a través de la innovación.',
                 aboutTitle:     'Acerca de | Zeitona',
-                aboutDescription:'Conoce Zeitona, una empresa tecnológica centrada en software práctico y soluciones digitales.',
-                whitepaperTitle:'Whitepaper | Zeitona',
-                whitepaperDescription:'El whitepaper técnico de Zeitona se encuentra actualmente en las etapas finales de refinamiento.'
+                aboutDescription:'Conoce Zeitona, una empresa tecnológica centrada en software práctico y soluciones digitales.'
             },
             nav: {
                 services:      'Servicios',
+                news:          'Noticias',
                 about:         'Acerca de',
                 getInTouch:    'Contáctenos',
                 backToHomepage:'← Volver a la Página Principal',
@@ -298,7 +305,16 @@
                 titleAccent:   'Tecnología Práctica',
                 description:   'Zeitona crea software y soluciones digitales en torno a necesidades empresariales reales, convirtiendo retos complejos en tecnología clara y útil.',
                 exploreBtn:    'Explorar Nuestra Visión',
-                whitepaperBtn: 'Leer Whitepaper'
+                headline:      'Impulsando el cambio a través de la innovación'
+            },
+            aboutStrip: {
+                text: 'Conoce al equipo detrás de Zeitona.',
+                link: 'Acerca'
+            },
+            news: {
+                heading:   'Noticias y actualizaciones',
+                empty:     'Aún no hay actualizaciones.',
+                loadError: 'No se pudieron cargar las actualizaciones.'
             },
             services: {
                 title:       'Tecnología Creada para',
@@ -383,25 +399,20 @@
                 founder2Bio2:     'Su experiencia incluye decisiones estratégicas de arquitectura y colaboración internacional en América Latina y Europa.',
                 viewProfile:      'Ver perfil de LinkedIn',
                 founder3Bio:     'Ingeniera civil (MSc) con experiencia en gestión de contratos, ingeniería de cimentaciones y análisis estructural, complementada con una licenciatura en Matemáticas.'
-            },
-            whitepaper: {
-                heading:     'El <strong>Whitepaper</strong> de Zeitona',
-                description: 'Nuestro whitepaper técnico se encuentra actualmente en las etapas finales de refinamiento.<br />Esté atento; pronto compartiremos más actualizaciones.'
             }
         },
 
         // ── Portuguese (PT) ──────────────────────────────────────────────────
         'pt-pt': {
             page: {
-                title:          'Zeitona - Tecnologia para Necessidades Reais',
-                description:    'A Zeitona cria software e soluções digitais práticas em torno de necessidades empresariais reais.',
+                title:          'Zeitona',
+                description:    'Zeitona. A crescer a mudança através da inovação.',
                 aboutTitle:     'Sobre | Zeitona',
-                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
-                whitepaperTitle:'Whitepaper | Zeitona',
-                whitepaperDescription:'O whitepaper técnico da Zeitona encontra-se atualmente nas fases finais de refinamento.'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.'
             },
             nav: {
                 services:      'Serviços',
+                news:          'Notícias',
                 about:         'Sobre',
                 getInTouch:    'Entrar em Contacto',
                 backToHomepage:'← Voltar à Página Inicial',
@@ -421,7 +432,16 @@
                 titleAccent:   'Tecnologia Prática',
                 description:   'A Zeitona cria software e soluções digitais em torno de necessidades empresariais reais, transformando desafios complexos em tecnologia clara e útil.',
                 exploreBtn:    'Explorar a Nossa Visão',
-                whitepaperBtn: 'Ler Whitepaper'
+                headline:      'A crescer a mudança através da inovação'
+            },
+            aboutStrip: {
+                text: 'Conheça a equipa por trás da Zeitona.',
+                link: 'Sobre'
+            },
+            news: {
+                heading:   'Notícias e atualizações',
+                empty:     'Ainda sem atualizações.',
+                loadError: 'Não foi possível carregar as atualizações.'
             },
             services: {
                 title:       'Tecnologia Criada para',
@@ -506,25 +526,20 @@
                 founder2Bio2:     'A sua experiência inclui decisões estratégicas de arquitetura e colaboração internacional na América Latina e Europa.',
                 viewProfile:      'Ver perfil no LinkedIn',
                 founder3Bio:     'Engenheira civil (MSc) com experiência em gestão de contratos, engenharia de fundações e análise estrutural, complementada com uma licenciatura em Matemática.'
-            },
-            whitepaper: {
-                heading:     'O <strong>Whitepaper</strong> da Zeitona',
-                description: 'O nosso whitepaper técnico encontra-se atualmente nas fases finais de refinamento.<br />Fique atento; partilharemos mais atualizações em breve.'
             }
         },
 
         // ── Portuguese (BR) ──────────────────────────────────────────────────
         'pt-br': {
             page: {
-                title:          'Zeitona - Tecnologia para Necessidades Reais',
-                description:    'A Zeitona cria software e soluções digitais práticas para necessidades reais de negócios.',
+                title:          'Zeitona',
+                description:    'Zeitona. Crescendo a mudança através da inovação.',
                 aboutTitle:     'Sobre | Zeitona',
-                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
-                whitepaperTitle:'Whitepaper | Zeitona',
-                whitepaperDescription:'O whitepaper técnico da Zeitona está atualmente nas etapas finais de refinamento.'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.'
             },
             nav: {
                 services:      'Serviços',
+                news:          'Notícias',
                 about:         'Sobre',
                 getInTouch:    'Entre em Contato',
                 backToHomepage:'← Voltar à Página Inicial',
@@ -544,7 +559,16 @@
                 titleAccent:   'Tecnologia Prática',
                 description:   'A Zeitona cria software e soluções digitais para necessidades reais de negócios, transformando desafios complexos em tecnologia clara e útil.',
                 exploreBtn:    'Explorar Nossa Visão',
-                whitepaperBtn: 'Ler Whitepaper'
+                headline:      'Crescendo a mudança através da inovação'
+            },
+            aboutStrip: {
+                text: 'Conheça a equipe por trás da Zeitona.',
+                link: 'Sobre'
+            },
+            news: {
+                heading:   'Notícias e atualizações',
+                empty:     'Ainda sem atualizações.',
+                loadError: 'Não foi possível carregar as atualizações.'
             },
             services: {
                 title:       'Tecnologia Criada para',
@@ -629,10 +653,6 @@
                 founder2Bio2:     'Sua experiência inclui decisões estratégicas de arquitetura e colaboração internacional na América Latina e Europa.',
                 viewProfile:      'Ver perfil no LinkedIn',
                 founder3Bio:     'Engenheira civil (MSc) com experiência em gestão de contratos, engenharia de fundações e análise estrutural, complementada por uma graduação em Matemática.'
-            },
-            whitepaper: {
-                heading:     'O <strong>Whitepaper</strong> da Zeitona',
-                description: 'Nosso whitepaper técnico está atualmente nas etapas finais de refinamento.<br />Fique ligado; em breve compartilharemos mais atualizações.'
             }
         }
     };
