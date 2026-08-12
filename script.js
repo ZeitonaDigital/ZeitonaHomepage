@@ -1,3 +1,97 @@
+window.ZeitonaNews = {
+    localizeField(field, locale) {
+        if (!field || typeof field !== 'object') return '';
+        const value = field[locale] || field['en-us'] || '';
+        return typeof value === 'string' ? value : '';
+    },
+    sortItems(items) {
+        return (items || []).slice().sort((a, b) => {
+            const da = Date.parse(a && a.date) || 0;
+            const db = Date.parse(b && b.date) || 0;
+            return db - da;
+        });
+    },
+    formatDate(isoDate, locale) {
+        const ms = Date.parse(isoDate);
+        if (!Number.isFinite(ms)) return isoDate || '';
+        try {
+            return new Intl.DateTimeFormat(locale || 'en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric'
+            }).format(new Date(ms));
+        } catch (_) {
+            return isoDate;
+        }
+    },
+    escapeHtml(text) {
+        return String(text)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;');
+    },
+    renderNewsList(container, items, locale, t) {
+        if (!container) return;
+        const sorted = this.sortItems(items);
+        if (!sorted.length) {
+            container.innerHTML = `<p class="news-empty">${this.escapeHtml(t('news.empty'))}</p>`;
+            return;
+        }
+        container.innerHTML = sorted.map((item) => {
+            const title = this.escapeHtml(this.localizeField(item.title, locale));
+            const summaryRaw = this.localizeField(item.summary, locale);
+            const summary = summaryRaw
+                ? `<p class="news-item-summary">${this.escapeHtml(summaryRaw)}</p>`
+                : '';
+            const dateLabel = this.escapeHtml(this.formatDate(item.date, locale));
+            const url = typeof item.url === 'string' && item.url.trim() ? item.url.trim() : null;
+            const titleHtml = url
+                ? `<a class="news-item-title" href="${this.escapeHtml(url)}">${title}</a>`
+                : `<span class="news-item-title">${title}</span>`;
+            return `<article class="news-item" data-news-id="${this.escapeHtml(item.id || '')}">
+                <time class="news-item-date" datetime="${this.escapeHtml(item.date || '')}">${dateLabel}</time>
+                ${titleHtml}
+                ${summary}
+            </article>`;
+        }).join('');
+    }
+};
+
+function initNews() {
+    const list = document.getElementById('news-list');
+    if (!list) return;
+
+    let cachedItems = null;
+    const t = (key) => (window.i18n ? window.i18n.t(key) : key);
+    const locale = () => (window.i18n ? window.i18n.getCurrentLocale() : 'en-us');
+
+    const paint = () => {
+        if (cachedItems === null) return;
+        window.ZeitonaNews.renderNewsList(list, cachedItems, locale(), t);
+    };
+
+    const showLoadError = () => {
+        list.innerHTML = `<p class="news-empty">${window.ZeitonaNews.escapeHtml(t('news.loadError'))}</p>`;
+    };
+
+    fetch('news.json', { cache: 'no-store' })
+        .then((res) => {
+            if (!res.ok) throw new Error('news fetch failed');
+            return res.json();
+        })
+        .then((data) => {
+            cachedItems = Array.isArray(data && data.items) ? data.items : [];
+            paint();
+        })
+        .catch(() => {
+            cachedItems = [];
+            showLoadError();
+        });
+
+    document.addEventListener('zeitona:locale-changed', paint);
+}
+
 function init() {
     // Inject Unified Header
     const headerHTML = `
@@ -380,6 +474,8 @@ function init() {
                 });
         });
     }
+
+    initNews();
 
     // Apply i18n translations to all injected and static content
     if (window.i18n) {
