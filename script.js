@@ -63,16 +63,21 @@ function initNews() {
     if (!list) return;
 
     let cachedItems = null;
+    let loadFailed = false;
     const t = (key) => (window.i18n ? window.i18n.t(key) : key);
     const locale = () => (window.i18n ? window.i18n.getCurrentLocale() : 'en-us');
 
-    const paint = () => {
-        if (cachedItems === null) return;
-        window.ZeitonaNews.renderNewsList(list, cachedItems, locale(), t);
-    };
-
     const showLoadError = () => {
         list.innerHTML = `<p class="news-empty">${window.ZeitonaNews.escapeHtml(t('news.loadError'))}</p>`;
+    };
+
+    const paint = () => {
+        if (cachedItems === null && !loadFailed) return;
+        if (loadFailed) {
+            showLoadError();
+            return;
+        }
+        window.ZeitonaNews.renderNewsList(list, cachedItems, locale(), t);
     };
 
     fetch('news.json', { cache: 'no-store' })
@@ -81,12 +86,13 @@ function initNews() {
             return res.json();
         })
         .then((data) => {
+            loadFailed = false;
             cachedItems = Array.isArray(data && data.items) ? data.items : [];
             paint();
         })
         .catch(() => {
-            cachedItems = [];
-            showLoadError();
+            loadFailed = true;
+            paint();
         });
 
     document.addEventListener('zeitona:locale-changed', paint);
@@ -106,8 +112,9 @@ function init() {
             </button>
 
             <div class="navbar-links" id="nav-links">
-                <a href="index.html#services" data-i18n="nav.services">Services</a>
+                <a href="index.html#initiatives" data-i18n="nav.initiatives">Initiatives</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
+                <a href="whitepaper.html" data-i18n="nav.whitepaper">Whitepaper</a>
                 <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()" data-i18n="nav.getInTouch">
                     Get in Touch
                 </button>
