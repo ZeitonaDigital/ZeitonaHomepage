@@ -112,9 +112,8 @@ function init() {
             </button>
 
             <div class="navbar-links" id="nav-links">
-                <a href="index.html#initiatives" data-i18n="nav.initiatives">Initiatives</a>
+                <a href="index.html#news" data-i18n="nav.news">News</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
-                <a href="whitepaper.html" data-i18n="nav.whitepaper">Whitepaper</a>
                 <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()" data-i18n="nav.getInTouch">
                     Get in Touch
                 </button>
