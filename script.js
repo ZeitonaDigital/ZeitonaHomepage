@@ -35,7 +35,11 @@ window.ZeitonaNews = {
         if (!container) return;
         const sorted = this.sortItems(items);
         if (!sorted.length) {
-            container.innerHTML = `<p class="news-empty">${this.escapeHtml(t('news.empty'))}</p>`;
+            container.innerHTML = `
+                <div class="news-empty">
+                    <h3 class="news-empty-title">${this.escapeHtml(t('news.emptyTitle'))}</h3>
+                    <p class="news-empty-body">${this.escapeHtml(t('news.emptyBody'))}</p>
+                </div>`;
             return;
         }
         container.innerHTML = sorted.map((item) => {
@@ -72,7 +76,11 @@ function initNews() {
     const locale = () => (window.i18n ? window.i18n.getCurrentLocale() : 'en-us');
 
     const showLoadError = () => {
-        list.innerHTML = `<p class="news-empty">${window.ZeitonaNews.escapeHtml(t('news.loadError'))}</p>`;
+        list.innerHTML = `
+            <div class="news-empty">
+                <h3 class="news-empty-title">${window.ZeitonaNews.escapeHtml(t('news.unavailableTitle'))}</h3>
+                <p class="news-empty-body">${window.ZeitonaNews.escapeHtml(t('news.unavailableBody'))}</p>
+            </div>`;
     };
 
     const paint = () => {
@@ -105,19 +113,24 @@ function initNews() {
 function init() {
     // Inject Unified Header
     const headerHTML = `
-    <nav class="header" id="navbar">
+    <nav class="header" id="navbar" aria-label="Primary navigation" data-i18n-aria-label="controls.primaryNav">
         <div class="navbar">
-            <a href="index.html"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
+            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
 
-            <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open navigation" data-i18n-aria-label="nav.openMenu">
+            <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menu" data-i18n-aria-label="controls.menu">
                 <span class="bar" aria-hidden="true"></span>
                 <span class="bar" aria-hidden="true"></span>
                 <span class="bar" aria-hidden="true"></span>
             </button>
 
             <div class="navbar-links" id="nav-links">
+                <a href="company.html" data-i18n="navigation.company">Company</a>
+                <a href="collaboration.html" data-i18n="navigation.collaboration">Collaboration</a>
+                <a href="innovation.html" data-i18n="navigation.innovation">Innovation</a>
+                <a href="news.html" data-i18n="navigation.news">News</a>
+                <a href="contact.html" class="navbar-action-link" data-i18n="navigation.contact">Contact</a>
                 <div class="global-controls">
-                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme">
                         <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
                         <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.4 8.4 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
                     </button>
@@ -130,17 +143,11 @@ function init() {
                         <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
                             <button class="lang-option" type="button" data-locale="en-us" data-language="English (US)" data-flag="assets/flags/us.svg" role="option" aria-selected="false" title="English (US)"><img class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" /><span>English (US)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                             <button class="lang-option" type="button" data-locale="en-gb" data-language="English (UK)" data-flag="assets/flags/gb.svg" role="option" aria-selected="false" title="English (UK)"><img class="flag-icon" src="assets/flags/gb.svg" alt="" aria-hidden="true" /><span>English (UK)</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                            <button class="lang-option" type="button" data-locale="es" data-language="Español" data-flag="assets/flags/es.svg" role="option" aria-selected="false" title="Español"><img class="flag-icon" src="assets/flags/es.svg" alt="" aria-hidden="true" /><span>Español</span><span class="lang-check" aria-hidden="true">✓</span></button>
                             <button class="lang-option" type="button" data-locale="pt-pt" data-language="Português (Portugal)" data-flag="assets/flags/pt.svg" role="option" aria-selected="false" title="Português (Portugal)"><img class="flag-icon" src="assets/flags/pt.svg" alt="" aria-hidden="true" /><span>Português (Portugal)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                             <button class="lang-option" type="button" data-locale="pt-br" data-language="Português (Brasil)" data-flag="assets/flags/br.svg" role="option" aria-selected="false" title="Português (Brasil)"><img class="flag-icon" src="assets/flags/br.svg" alt="" aria-hidden="true" /><span>Português (Brasil)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                         </div>
                     </div>
                 </div>
-                <a href="news.html" data-i18n="nav.news">News</a>
-                <a href="about.html" data-i18n="nav.about">About</a>
-                <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()" data-i18n="nav.getInTouch">
-                    Get in Touch
-                </button>
             </div>
         </div>
     </nav>
@@ -151,85 +158,16 @@ function init() {
         placeholder.outerHTML = headerHTML;
     }
 
-    // Inject Shared Contact Modal
-    const modalHTML = `
-    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" aria-describedby="contact-modal-description">
-        <div class="modal-content">
-            <button class="modal-close" type="button" onclick="closeContactModal()" aria-label="Close contact form" data-i18n-aria-label="modal.close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-            </button>
-            <h3 class="modal-title" id="contact-modal-title" data-i18n="modal.title">Request to be Contacted</h3>
-            <p class="modal-desc" id="contact-modal-description" data-i18n="modal.desc">Please provide your details below and we will reach out to you.</p>
-            
-            <form id="contact-form" class="modal-form" novalidate>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="contact-email" class="form-label"><span data-i18n="modal.email">Email</span> <span class="form-required">*</span></label>
-                        <input type="email" id="contact-email" name="email" class="form-input" placeholder="your@email.com" data-i18n-placeholder="modal.emailPlaceholder" required />
-                        <span class="form-error" id="email-error" data-i18n="modal.emailError">Please enter a valid email address</span>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-phone" class="form-label"><span data-i18n="modal.phone">Phone</span> <span class="form-optional" data-i18n="modal.optional">(optional)</span></label>
-                        <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="+351 912 345 678" data-i18n-placeholder="modal.phonePlaceholder" />
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-subject" class="form-label"><span data-i18n="modal.subject">Subject</span> <span class="form-required">*</span></label>
-                    <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="How can we help you?" data-i18n-placeholder="modal.subjectPlaceholder" required />
-                    <span class="form-error" id="subject-error" data-i18n="modal.subjectError">Please enter a subject</span>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-description" class="form-label"><span data-i18n="modal.description">Description</span> <span class="form-optional" data-i18n="modal.optional">(optional)</span></label>
-                    <textarea id="contact-description" name="description" class="form-input form-textarea" placeholder="Tell us more about your project or inquiry..." data-i18n-placeholder="modal.descriptionPlaceholder" rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-secondary btn-lg flex items-center justify-center gap-2" style="width: 100%; margin-top: 0.5rem;">
-                    <span data-i18n="modal.sendRequest">Send Request</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
-                </button>
-            </form>
-        </div>
-    </div>
-    `;
-
-    if (!document.getElementById('contact-modal')) {
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
-    }
-
     // Inject Shared Footer
     const currentYear = new Date().getFullYear();
     const footerHTML = `
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html">
-                        <img src="assets/azeitona4.png" alt="Zeitona Logo" class="footer-logo" />
-                    </a>
-                    <p class="footer-tagline text-muted" data-i18n="footer.tagline">Technology shaped around real needs.</p>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading" data-i18n="footer.colCompany">Company</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
-                        <li><a href="news.html" data-i18n="footer.news">News</a></li>
-                        <li><a href="index.html#info-cards" data-i18n="footer.explore">Explore</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4 class="footer-heading" data-i18n="footer.colConnect">Connect</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">LinkedIn</a></li>
-                        <li><button type="button" class="footer-link-btn" onclick="openContactModal()" data-i18n="footer.contact">Contact</button></li>
-                    </ul>
-                </div>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <p class="footer-tagline text-muted" data-i18n="footer.tagline">Technology shaped around real needs.</p>
             </div>
             <div class="footer-bottom">
-                <p class="text-muted" style="font-size: 0.8rem; font-weight:300;">
-                    &copy; ${currentYear} Zeitona. <span data-i18n="footer.rights">All rights reserved.</span>
-                </p>
+                <p class="footer-copy">&copy; ${currentYear} Zeitona. <span data-i18n="footer.rights">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -245,8 +183,8 @@ function init() {
     const updateThemeControl = () => {
         if (!themeToggle) return;
         const isDark = document.documentElement.dataset.theme === 'dark';
-        const labelKey = isDark ? 'theme.switchToLight' : 'theme.switchToDark';
-        const fallback = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+        const labelKey = isDark ? 'controls.useLightTheme' : 'controls.useDarkTheme';
+        const fallback = isDark ? 'Use light theme' : 'Use dark theme';
         const label = window.i18n ? window.i18n.t(labelKey) : fallback;
         themeToggle.setAttribute('aria-label', label);
         themeToggle.setAttribute('title', label);
@@ -272,8 +210,7 @@ function init() {
             const isOpen = menuLinks.classList.toggle('active');
             menu.classList.toggle('is-active', isOpen);
             menu.setAttribute('aria-expanded', String(isOpen));
-            const labelKey = isOpen ? 'nav.closeMenu' : 'nav.openMenu';
-            menu.setAttribute('aria-label', window.i18n ? window.i18n.t(labelKey) : (isOpen ? 'Close navigation' : 'Open navigation'));
+            menu.setAttribute('aria-label', window.i18n ? window.i18n.t('controls.menu') : 'Menu');
         });
 
         menu.addEventListener('keydown', function (event) {
@@ -281,7 +218,7 @@ function init() {
                 menuLinks.classList.remove('active');
                 menu.classList.remove('is-active');
                 menu.setAttribute('aria-expanded', 'false');
-                menu.setAttribute('aria-label', window.i18n ? window.i18n.t('nav.openMenu') : 'Open navigation');
+                menu.setAttribute('aria-label', window.i18n ? window.i18n.t('controls.menu') : 'Menu');
             }
         });
     }
@@ -382,157 +319,7 @@ function init() {
 
     const fadeElements = document.querySelectorAll('.fade-up');
     fadeElements.forEach(el => observer.observe(el));
-
-    // Modal Form Logic
-    const contactModal = document.getElementById('contact-modal');
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactModal) {
-        contactModal.addEventListener('click', (e) => {
-            if (e.target === contactModal) {
-                closeContactModal();
-            }
-        });
-    }
-
-    if (contactForm) {
-        const emailInput = document.getElementById('contact-email');
-        const subjectInput = document.getElementById('contact-subject');
-        const phoneInput = document.getElementById('contact-phone');
-        const descriptionInput = document.getElementById('contact-description');
-        const emailError = document.getElementById('email-error');
-        const subjectError = document.getElementById('subject-error');
-
-        [emailInput, subjectInput].forEach(input => {
-            if (input) {
-                input.addEventListener('input', () => {
-                    input.classList.remove('input-error');
-                    const errorEl = input.id === 'contact-email' ? emailError : subjectError;
-                    if (errorEl) errorEl.classList.remove('show');
-                });
-            }
-        });
-
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-
-            const emailVal = emailInput.value.trim();
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailVal || !emailRegex.test(emailVal)) {
-                emailInput.classList.add('input-error');
-                if (emailError) emailError.classList.add('show');
-                isValid = false;
-            }
-
-            const subjectVal = subjectInput.value.trim();
-            if (!subjectVal) {
-                subjectInput.classList.add('input-error');
-                if (subjectError) subjectError.classList.add('show');
-                isValid = false;
-            }
-
-            if (!isValid) return;
-
-            const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalBtnText = submitBtn.innerHTML;
-            const sendingText = window.i18n ? window.i18n.t('modal.sending') : 'Sending';
-            submitBtn.innerHTML = sendingText + ' <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>';
-            submitBtn.disabled = true;
-
-            fetch("https://formsubmit.co/ajax/contact@zeitona.pt", {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    email: emailVal,
-                    _subject: subjectVal,
-                    phone: phoneInput.value.trim() || (window.i18n ? window.i18n.t('modal.notProvided') : 'Not provided'),
-                    message: descriptionInput.value.trim() || (window.i18n ? window.i18n.t('modal.noDescription') : 'No description provided')
-                })
-            })
-                .then(response => response.json())
-                .then(_data => {
-                    const modalBody = document.querySelector('.modal-content');
-
-                    // Hide existing children
-                    Array.from(modalBody.children).forEach(child => {
-                        if (!child.classList.contains('modal-close')) {
-                            child.style.display = 'none';
-                        }
-                    });
-
-                    // Create success message
-                    const successTitle = window.i18n ? window.i18n.t('modal.successTitle') : 'Message Sent!';
-                    const successDesc  = window.i18n ? window.i18n.t('modal.successDesc')  : 'Thank you for reaching out. We will get back to you soon.';
-                    const successDiv = document.createElement('div');
-                    successDiv.className = 'contact-success';
-                    successDiv.id = 'contact-success-message';
-                    successDiv.innerHTML = `
-                        <div class="contact-success-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-                        </div>
-                        <h3 class="modal-title">${successTitle}</h3>
-                        <p class="modal-desc" style="margin-bottom: 0;">${successDesc}</p>
-                    `;
-                    modalBody.appendChild(successDiv);
-
-                    setTimeout(() => {
-                        closeContactModal();
-                        setTimeout(() => {
-                            // Remove success message and restore visibility
-                            const msg = document.getElementById('contact-success-message');
-                            if (msg) msg.remove();
-                            Array.from(modalBody.children).forEach(child => {
-                                child.style.display = '';
-                            });
-                        }, 300);
-                    }, 4000);
-                })
-                .catch(error => {
-                    console.error('Error submitting form:', error);
-                    alert(window.i18n ? window.i18n.t('modal.errorAlert') : 'There was an error sending your message.');
-                })
-                .finally(() => {
-                    submitBtn.innerHTML = originalBtnText;
-                    submitBtn.disabled = false;
-                });
-        });
-    }
-
-    initNews();
-
-    // Apply i18n translations to all injected and static content
-    if (window.i18n) {
-        window.i18n.applyTranslations();
-    }
 }
 
-
-// Run init based on readyState
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-} else {
-    init();
-}
-
-// Global functions for modal UI
-window.openContactModal = () => {
-    const modal = document.getElementById('contact-modal');
-    if (modal) modal.classList.add('open');
-};
-
-window.closeContactModal = () => {
-    const modal = document.getElementById('contact-modal');
-    if (modal) {
-        modal.classList.remove('open');
-        const form = document.getElementById('contact-form');
-        if (form) form.reset();
-
-        // Remove error states if present
-        document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
-        document.querySelectorAll('.form-error').forEach(el => el.classList.remove('show'));
-    }
-};
+initNews();
+init();
