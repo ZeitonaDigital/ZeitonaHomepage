@@ -1,0 +1,112 @@
+{
+  "navigation": {
+    "home": "Home",
+    "company": "Company",
+    "collaboration": "Collaboration",
+    "innovation": "Innovation",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "controls": {
+    "skip": "Skip to main content",
+    "language": "Language",
+    "primaryNav": "Primary navigation",
+    "footerNav": "Footer navigation",
+    "menu": "Menu",
+    "useDarkTheme": "Use dark theme",
+    "useLightTheme": "Use light theme",
+    "darkTheme": "Dark theme",
+    "lightTheme": "Light theme",
+    "homeLabel": "Zeitona home"
+  },
+  "footer": {
+    "note": "Technology, research, development, and collaboration."
+  },
+  "home": {
+    "metaTitle": "Zeitona — Technology shaped around meaningful work",
+    "metaDescription": "Zeitona is a technology company open to complex development, research, innovation, and collaboration across organisational boundaries.",
+    "heroEyebrow": "Zeitona · Technology company",
+    "heroTitle": "Technology shaped around meaningful work.",
+    "heroBody": "We approach technology as a way to understand, develop, test, and connect ideas across organisations—not as a label tied to one market or discipline.",
+    "companyLink": "Learn about Zeitona",
+    "outlookTitle": "Defined by the capacity to understand and build.",
+    "waysTitle": "Independent focus, shared programmes, and the space between.",
+    "developmentTitle": "Technology development",
+    "researchTitle": "Research and innovation",
+    "collaborationTitle": "Collaboration",
+    "contextTitle": "A useful conversation can begin before the project shape is fixed.",
+    "contextLink": "Explore collaboration",
+    "innovationTitle": "Exploration is legitimate work when the answer is not yet known.",
+    "innovationLink": "Visit Innovation",
+    "peopleTitle": "Meet the people behind Zeitona.",
+    "peopleLink": "Meet the founders",
+    "contactTitle": "Bring the context, even if the project is still taking shape.",
+    "contactLink":"Start a conversation","outlookEyebrow":"A broad technical outlook","outlookBodyLead":"Complex work rarely fits neatly inside a fixed catalogue. Zeitona creates room for careful technical inquiry, practical development, and the exchange of knowledge needed to move an idea forward.","outlookBody":"This outlook allows a conversation to begin with the problem and its context. The appropriate technology, working structure, and level of experimentation can follow from what the work actually requires.","waysEyebrow":"Ways of working","developmentBody":"Work that connects analysis and experimentation with the disciplined process of making technology useful.","researchBody":"Technical exploration can be part of the operating model when the right answer is not yet known.","collaborationBody":"Projects may bring together companies, universities, research organisations, institutions, programmes, and consortia.","contextEyebrow":"Start with context","contextBody":"Organisations do not always arrive with a finished brief. A question may need technical definition, research may need an implementation path, or a multi-party initiative may need a technology company able to contribute across boundaries.","innovationEyebrow":"Research and innovation","innovationBody":"Some technical questions require study before implementation. Others need prototypes, experiments, or dialogue between research and practical constraints. Zeitona gives this work a place without presenting unverified initiatives as completed achievements.","peopleEyebrow":"The company","peopleBody":"Zeitona’s two co-founders are presented with their approved photographs and verified identity information on the Company page.","contactEyebrow":"A restrained invitation","contactBody":"Companies, universities, research organisations, institutions, programmes, and consortium partners can begin with the question they are trying to address."
+  },
+  "company": {
+    "metaTitle": "Company — Zeitona",
+    "heroTitle": "A technology company with room to evolve.",
+    "outlookTitle": "Begin with the problem, not a predetermined answer.",
+    "principlesTitle": "Principles that remain useful as the work changes.",
+    "understandTitle": "Understand before defining",
+    "evidenceTitle": "Build with evidence",
+    "boundariesTitle": "Work across boundaries",
+    "foundersTitle": "The founders behind Zeitona.",
+    "founderRole": "Co-founder",
+    "diogenesAlt": "Portrait of Diógenes Vaz Melo",
+    "fabricioAlt": "Portrait of Fabrício Oliveira",
+    "workingTitle":"A company can contribute without needing to own every part of the work.","heroBody":"Zeitona is not defined by a single technical field or present-day catalogue. The company’s durable focus is the work of understanding difficult questions, developing technology, and collaborating where different forms of knowledge need to meet.","outlookEyebrow":"Our outlook","outlookLead":"A technical problem is shaped by more than its specification. People, evidence, institutional requirements, practical constraints, and uncertainty all influence what a responsible answer looks like.","outlookBody":"Zeitona’s identity is broad by design. Research, experimentation, engineering, and collaboration can each have a place when they help the work progress. This leaves room for the company to evolve without rewriting its identity around every new project or technical direction.","principlesEyebrow":"How we think","understandBody":"Good technical decisions depend on the context around the question, not only the first description of it.","evidenceBody":"Claims, milestones, and results belong on the site only when they can be supported. The same care should apply to technical work.","boundariesBody":"Companies, universities, researchers, institutions, programmes, and consortia may contribute different knowledge to a shared objective.","peopleEyebrow":"People","foundersBody":"The company is represented here by the two people identified in its approved, site-hosted founder portraits. Personal details beyond the verified names and founder role are intentionally omitted.","workingEyebrow":"Working with others","workingBody":"Some projects are direct and bilateral. Others are shaped by institutional programmes, university relationships, research questions, or multi-party arrangements. Zeitona’s broad technological identity leaves room for each of these structures.","workingLink":"Explore collaboration"
+  },
+  "collaboration": {
+    "metaTitle": "Collaboration — Zeitona",
+    "heroTitle": "Different organisations can build useful technology together.",
+    "boundariesTitle": "A place for bilateral and multi-party work.",
+    "modelsTitle": "Collaboration should fit the question and the people involved.",
+    "directTitle": "Direct company projects",
+    "universityTitle": "University and company initiatives",
+    "researchTitle": "Applied research",
+    "institutionalTitle": "Institutional programmes",
+    "consortiaTitle": "Consortia and multi-party initiatives",
+    "exploratoryTitle": "Exploratory technical work",
+    "startTitle": "Start with context, constraints, and the open question.",
+    "contactLink":"Prepare a conversation","heroBody":"Collaboration may begin as a direct project, a research question, an institutional programme, or a multi-party initiative. The structure should follow the work rather than force every opportunity into the same model.","boundariesEyebrow":"Working across boundaries","boundariesLead":"Zeitona is open to conversations with companies, universities, research organisations, public and private institutions, innovation programmes, consortia, and other technology or engineering organisations.","boundariesBody":"This is not a list of claimed partnerships or completed projects. It describes the kinds of working relationships the company is prepared to consider, whether the work is led by one organisation or assembled around a shared programme.","modelsEyebrow":"Possible structures","directBody":"A company may need a technology partner to clarify a technical problem, explore an approach, or contribute to development without forcing the work into a predefined service package.","universityBody":"Academic knowledge and practical development can meet around a shared question, with responsibilities defined by what each organisation is equipped to contribute.","researchBody":"Research organisations, laboratories, and technical teams may need a company able to participate in exploration while keeping implementation and real-world constraints in view.","institutionalBody":"Public or private institutions and innovation programme operators may create settings where technology development, research, and organisational objectives need to be coordinated.","consortiaBody":"Consortia can combine complementary capabilities across companies, universities, research organisations, and institutions. Zeitona can be considered where a technology-company contribution is relevant.","exploratoryBody":"A focused initial investigation can help establish the technical question, evidence needs, participants, and next decisions before a broader programme takes shape.","startEyebrow":"A useful beginning","startBody":"A first conversation does not require a final scope. It is more useful to identify why the work matters, what is already known, which organisations are involved, where uncertainty remains, and what decision needs to follow.","startBodyTwo":"That context makes it possible to judge whether a direct project, research-led process, institutional programme, or consortium structure is appropriate."
+  },
+  "innovation": {
+    "metaTitle": "Innovation and Research — Zeitona",
+    "heroTitle": "Make space for questions that do not have settled answers.",
+    "disciplineTitle": "Innovation begins with uncertainty, not decoration.",
+    "structureTitle": "Different forms of exploration need different evidence.",
+    "questionsTitle": "Questions and initiatives",
+    "participationTitle": "Institutional participation",
+    "publicationsTitle": "Publications and technical work",
+    "learningTitle": "Learning through development",
+    "recordTitle": "Evidence should be visible before activity is presented as fact.",
+    "link":"Explore research collaboration","heroEyebrow":"Innovation and research","heroBody":"Research and experimentation are credible parts of technological work. This page will provide a durable home for verified initiatives, studies, programmes, publications, and technical exploration as that material becomes available.","disciplineEyebrow":"A working discipline","disciplineLead":"A technical question may require study, comparison, experimentation, or a prototype before a responsible development direction becomes clear.","disciplineBody":"Giving that work a defined place allows research and practical development to inform one another. It also makes it possible to record what was examined, what evidence was produced, and which questions remain open.","structureEyebrow":"A durable structure","researchLabel":"Research","questionsBody":"Research initiatives and university relationships belong here when the participating organisations, purpose, and status can be verified.","programmesLabel":"Programmes","participationBody":"Innovation programmes, accelerators, and related institutional activity should be presented with enough context to distinguish participation from partnership or endorsement.","studiesLabel":"Studies","publicationsBody":"Publications, technical studies, and experimental projects can communicate substance when their authorship, scope, and availability are documented.","experimentsLabel":"Experiments","learningBody":"Prototypes and experimental work can show how a question was investigated without overstating a result or treating an early exploration as a finished product.","recordEyebrow":"Current record","recordBody":"No named programme, university relationship, accelerator, publication, experimental project, or research result is supported by the current repository. None has been invented to make this page appear busier.","recordBodyTwo":"As verified material becomes available, this structure can accommodate it without changing Zeitona’s broader identity or implying that one field defines the company."
+  },
+  "news": {
+    "metaTitle": "News and Activity — Zeitona",
+    "heroTitle":"Updates should be factual and worth reading.","heroEyebrow":"News and activity","heroBody":"This page is reserved for meaningful company developments rather than an artificial publishing schedule. It will use structured static data without a content-management system or social feed.",
+    "status": "Current status",
+    "emptyTitle": "No verified news items are available yet.",
+    "emptyBody": "We will publish factual company developments here when verified information is available. No placeholder announcements have been created.",
+    "unavailableTitle": "News updates are temporarily unavailable.",
+    "unavailableBody": "The news data could not be loaded. The rest of the website remains available.",
+    "readMore": "Read update"
+  },
+  "contact": {
+    "metaTitle": "Contact — Zeitona",
+    "heroTitle": "Begin with the work you want to understand.",
+    "messageTitle": "Context matters more than a finished brief.",
+    "contextsTitle": "Conversations can begin from several organisational settings.",
+    "companies": "Companies",
+    "universities": "Universities and researchers",
+    "institutions": "Public or private institutions",
+    "programmes": "Programmes and consortia",
+    "includeTitle": "Four points can make the first conversation more useful.",
+    "question": "The question",
+    "context": "The context",
+    "participants": "The participants",
+    "decision": "The next decision",
+    "channelTitle":"Verified contact details are not yet available in this repository.","heroBody":"Relevant conversations may involve a company project, a university or research collaboration, an institutional programme, technical exploration, or the formation of a consortium.","messageEyebrow":"A useful first message","messageLead":"It can be enough to explain the question, the organisations involved, what is already known, and where uncertainty remains.","messageBody":"A first exchange can then establish whether the work is a plausible fit, which information is still needed, and whether a direct project, research process, institutional programme, or multi-party structure makes sense.","contextsEyebrow":"Relevant enquiries","companiesBody":"Technical questions, development work, and collaboration with other organisations.","universitiesBody":"Applied research, technical exploration, and routes between knowledge and implementation.","institutionsBody":"Technology contributions within institutional objectives or programmes.","programmesBody":"Proposals and initiatives that require complementary participants across organisational boundaries.","includeEyebrow":"What to include","questionBody":"Describe the problem, opportunity, or area of uncertainty in practical terms.","contextBody":"Explain why the work matters and what has already been investigated or decided.","participantsBody":"Identify the kinds of organisations already involved or expected to contribute.","decisionBody":"State what the conversation, investigation, or project should help determine.","channelEyebrow":"Contact channel","channelBody":"No email address, telephone number, physical address, or social profile has been inferred from the company domain. A direct contact link can be added here when an approved channel is supplied.","privacyBody":"This website does not submit or process contact data and does not depend on a backend service."
+  }
+}

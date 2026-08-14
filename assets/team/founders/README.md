@@ -13,7 +13,7 @@ Image guidance:
 - minimum dimensions: 800 × 1000 pixels;
 - keep the face reasonably centred so `object-fit: cover` works at desktop and mobile sizes.
 
-After both files are supplied, update the two rendered founder image sources in `about.html` to:
+Both files are rendered in `company.html` from these sources:
 
 - `assets/team/founders/diogenes-vaz-melo.jpg`
 - `assets/team/founders/fabricio-oliveira.jpg`

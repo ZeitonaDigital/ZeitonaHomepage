@@ -1,0 +1,75 @@
+html {
+  background: var(--color-canvas);
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 18rem;
+  min-height: 100vh;
+  overflow-wrap: break-word;
+  background: var(--color-canvas);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+.site-header,
+.site-footer,
+.section--surface,
+.page-intro,
+.statement,
+.empty-state {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+}
+
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  max-width: 22ch;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+}
+
+h1 {
+  font-size: var(--text-display);
+}
+
+h2 {
+  font-size: var(--text-xl);
+}
+
+h3 {
+  font-size: var(--text-lg);
+}
+
+p {
+  max-width: 68ch;
+}
+
+a {
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-color: var(--color-gold);
+}
+
+:focus-visible {
+  outline: 0.18rem solid var(--color-focus);
+  outline-offset: 0.2rem;
+}
+
+::selection {
+  background: var(--color-accent-soft);
+  color: var(--color-text);
+}
