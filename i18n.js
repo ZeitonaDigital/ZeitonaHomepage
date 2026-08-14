@@ -27,7 +27,9 @@
                 title: 'Zeitona',
                 description: 'Zeitona. Growing change through innovation.',
                 aboutTitle: 'About | Zeitona',
-                aboutDescription: 'Meet Zeitona, a technology company focused on practical software and digital solutions.'
+                aboutDescription: 'Meet Zeitona, a technology company focused on practical software and digital solutions.',
+                newsTitle: 'News | Zeitona',
+                newsDescription: 'Selected posts and updates from Zeitona on LinkedIn.'
             },
             nav: {
                 services:      'Services',
@@ -57,10 +59,24 @@
                 text: 'Meet the team behind Zeitona.',
                 link: 'About'
             },
+            infoCards: {
+                aboutTitle: 'About Zeitona',
+                aboutDesc:  'Meet the team behind Zeitona and how we build technology around real needs.',
+                aboutCta:   'Learn more',
+                newsTitle:  'News & updates',
+                newsDesc:   'Selected posts and updates from Zeitona on LinkedIn.',
+                newsCta:    'Read more'
+            },
+            homecards: {
+                eyebrow: 'Explore',
+                title:   'Discover what we do'
+            },
             news: {
                 heading:   'News & updates',
+                heroTitle: 'Selected posts from Zeitona',
                 empty:     'No updates yet.',
-                loadError: 'Unable to load updates.'
+                loadError: 'Unable to load updates.',
+                readMore:  'Read more'
             },
             services: {
                 title:       'Technology Built for',
@@ -113,7 +129,15 @@
                 noDescription:          'No description provided'
             },
             footer: {
-                tagline: 'Technology shaped around real needs.'
+                tagline: 'Technology shaped around real needs.',
+                colCompany: 'Company',
+                about: 'About',
+                news: 'News',
+                explore: 'Explore',
+                colConnect: 'Connect',
+                linkedin: 'LinkedIn',
+                contact: 'Contact',
+                rights: 'All rights reserved.'
             },
             aboutPage: {
                 eyebrow:          'Technology shaped around real needs',
@@ -154,7 +178,9 @@
                 title:          'Zeitona',
                 description:    'Zeitona. Growing change through innovation.',
                 aboutTitle:     'About | Zeitona',
-                aboutDescription:'Meet Zeitona, a technology company focused on practical software and digital solutions.'
+                aboutDescription:'Meet Zeitona, a technology company focused on practical software and digital solutions.',
+                newsTitle: 'News | Zeitona',
+                newsDescription: 'Selected posts and updates from Zeitona on LinkedIn.'
             },
             nav: {
                 services:      'Services',
@@ -184,10 +210,24 @@
                 text: 'Meet the team behind Zeitona.',
                 link: 'About'
             },
+            infoCards: {
+                aboutTitle: 'About Zeitona',
+                aboutDesc:  'Meet the team behind Zeitona and how we build technology around real needs.',
+                aboutCta:   'Learn more',
+                newsTitle:  'News & updates',
+                newsDesc:   'Selected posts and updates from Zeitona on LinkedIn.',
+                newsCta:    'Read more'
+            },
+            homecards: {
+                eyebrow: 'Explore',
+                title:   'Discover what we do'
+            },
             news: {
                 heading:   'News & updates',
+                heroTitle: 'Selected posts from Zeitona',
                 empty:     'No updates yet.',
-                loadError: 'Unable to load updates.'
+                loadError: 'Unable to load updates.',
+                readMore:  'Read more'
             },
             services: {
                 title:       'Technology Built for',
@@ -240,7 +280,15 @@
                 noDescription:          'No description provided'
             },
             footer: {
-                tagline: 'Technology shaped around real needs.'
+                tagline: 'Technology shaped around real needs.',
+                colCompany: 'Company',
+                about: 'About',
+                news: 'News',
+                explore: 'Explore',
+                colConnect: 'Connect',
+                linkedin: 'LinkedIn',
+                contact: 'Contact',
+                rights: 'All rights reserved.'
             },
             aboutPage: {
                 eyebrow:          'Technology shaped around real needs',
@@ -281,7 +329,9 @@
                 title:          'Zeitona',
                 description:    'Zeitona. Impulsando el cambio a través de la innovación.',
                 aboutTitle:     'Acerca de | Zeitona',
-                aboutDescription:'Conoce Zeitona, una empresa tecnológica centrada en software práctico y soluciones digitales.'
+                aboutDescription:'Conoce Zeitona, una empresa tecnológica centrada en software práctico y soluciones digitales.',
+                newsTitle: 'Noticias | Zeitona',
+                newsDescription: 'Publicaciones y actualizaciones seleccionadas de Zeitona en LinkedIn.'
             },
             nav: {
                 services:      'Servicios',
@@ -311,10 +361,24 @@
                 text: 'Conoce al equipo detrás de Zeitona.',
                 link: 'Acerca'
             },
+            infoCards: {
+                aboutTitle: 'Acerca de Zeitona',
+                aboutDesc:  'Conoce al equipo detrás de Zeitona y cómo creamos tecnología en torno a necesidades reales.',
+                aboutCta:   'Saber más',
+                newsTitle:  'Noticias y actualizaciones',
+                newsDesc:   'Publicaciones y actualizaciones seleccionadas de Zeitona en LinkedIn.',
+                newsCta:    'Leer más'
+            },
+            homecards: {
+                eyebrow: 'Explorar',
+                title:   'Descubre lo que hacemos'
+            },
             news: {
                 heading:   'Noticias y actualizaciones',
+                heroTitle: 'Publicaciones seleccionadas de Zeitona',
                 empty:     'Aún no hay actualizaciones.',
-                loadError: 'No se pudieron cargar las actualizaciones.'
+                loadError: 'No se pudieron cargar las actualizaciones.',
+                readMore:  'Leer más'
             },
             services: {
                 title:       'Tecnología Creada para',
@@ -367,7 +431,15 @@
                 noDescription:          'Sin descripción'
             },
             footer: {
-                tagline: 'Tecnología adaptada a necesidades reales.'
+                tagline: 'Tecnología adaptada a necesidades reales.',
+                colCompany: 'Empresa',
+                about: 'Acerca',
+                news: 'Noticias',
+                explore: 'Explorar',
+                colConnect: 'Conectar',
+                linkedin: 'LinkedIn',
+                contact: 'Contacto',
+                rights: 'Todos los derechos reservados.'
             },
             aboutPage: {
                 eyebrow:          'Tecnología adaptada a necesidades reales',
@@ -408,7 +480,9 @@
                 title:          'Zeitona',
                 description:    'Zeitona. A crescer a mudança através da inovação.',
                 aboutTitle:     'Sobre | Zeitona',
-                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
+                newsTitle: 'Notícias | Zeitona',
+                newsDescription: 'Publicações e atualizações selecionadas da Zeitona no LinkedIn.'
             },
             nav: {
                 services:      'Serviços',
@@ -438,10 +512,24 @@
                 text: 'Conheça a equipa por trás da Zeitona.',
                 link: 'Sobre'
             },
+            infoCards: {
+                aboutTitle: 'Sobre a Zeitona',
+                aboutDesc:  'Conheça a equipa por trás da Zeitona e como criamos tecnologia em torno de necessidades reais.',
+                aboutCta:   'Saber mais',
+                newsTitle:  'Notícias e atualizações',
+                newsDesc:   'Publicações e atualizações selecionadas da Zeitona no LinkedIn.',
+                newsCta:    'Ler mais'
+            },
+            homecards: {
+                eyebrow: 'Explorar',
+                title:   'Descubra o que fazemos'
+            },
             news: {
                 heading:   'Notícias e atualizações',
+                heroTitle: 'Publicações selecionadas da Zeitona',
                 empty:     'Ainda sem atualizações.',
-                loadError: 'Não foi possível carregar as atualizações.'
+                loadError: 'Não foi possível carregar as atualizações.',
+                readMore:  'Ler mais'
             },
             services: {
                 title:       'Tecnologia Criada para',
@@ -494,7 +582,15 @@
                 noDescription:          'Sem descrição'
             },
             footer: {
-                tagline: 'Tecnologia adaptada a necessidades reais.'
+                tagline: 'Tecnologia adaptada a necessidades reais.',
+                colCompany: 'Empresa',
+                about: 'Sobre',
+                news: 'Notícias',
+                explore: 'Explorar',
+                colConnect: 'Conectar',
+                linkedin: 'LinkedIn',
+                contact: 'Contacto',
+                rights: 'Todos os direitos reservados.'
             },
             aboutPage: {
                 eyebrow:          'Tecnologia adaptada a necessidades reais',
@@ -535,7 +631,9 @@
                 title:          'Zeitona',
                 description:    'Zeitona. Crescendo a mudança através da inovação.',
                 aboutTitle:     'Sobre | Zeitona',
-                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.'
+                aboutDescription:'Conheça a Zeitona, uma empresa de tecnologia focada em software prático e soluções digitais.',
+                newsTitle: 'Notícias | Zeitona',
+                newsDescription: 'Publicações e atualizações selecionadas da Zeitona no LinkedIn.'
             },
             nav: {
                 services:      'Serviços',
@@ -565,10 +663,24 @@
                 text: 'Conheça a equipe por trás da Zeitona.',
                 link: 'Sobre'
             },
+            infoCards: {
+                aboutTitle: 'Sobre a Zeitona',
+                aboutDesc:  'Conheça a equipe por trás da Zeitona e como criamos tecnologia em torno de necessidades reais.',
+                aboutCta:   'Saber mais',
+                newsTitle:  'Notícias e atualizações',
+                newsDesc:   'Publicações e atualizações selecionadas da Zeitona no LinkedIn.',
+                newsCta:    'Ler mais'
+            },
+            homecards: {
+                eyebrow: 'Explorar',
+                title:   'Descubra o que fazemos'
+            },
             news: {
                 heading:   'Notícias e atualizações',
+                heroTitle: 'Publicações selecionadas da Zeitona',
                 empty:     'Ainda sem atualizações.',
-                loadError: 'Não foi possível carregar as atualizações.'
+                loadError: 'Não foi possível carregar as atualizações.',
+                readMore:  'Ler mais'
             },
             services: {
                 title:       'Tecnologia Criada para',
@@ -621,7 +733,15 @@
                 noDescription:          'Sem descrição'
             },
             footer: {
-                tagline: 'Tecnologia adaptada a necessidades reais.'
+                tagline: 'Tecnologia adaptada a necessidades reais.',
+                colCompany: 'Empresa',
+                about: 'Sobre',
+                news: 'Notícias',
+                explore: 'Explorar',
+                colConnect: 'Conectar',
+                linkedin: 'LinkedIn',
+                contact: 'Contacto',
+                rights: 'Todos os direitos reservados.'
             },
             aboutPage: {
                 eyebrow:          'Tecnologia adaptada a necessidades reais',

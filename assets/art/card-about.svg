@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
+  <!-- About card art -->
+  <rect width="900" height="600" fill="#ECEEF0"/>
+
+  <!-- intersecting grid lines -->
+  <line x1="0" y1="150" x2="900" y2="150" stroke="#16181D" stroke-opacity="0.08" stroke-width="2"/>
+  <line x1="0" y1="300" x2="900" y2="300" stroke="#16181D" stroke-opacity="0.08" stroke-width="2"/>
+  <line x1="0" y1="450" x2="900" y2="450" stroke="#16181D" stroke-opacity="0.08" stroke-width="2"/>
+
+  <!-- central green disc -->
+  <circle cx="450" cy="300" r="150" fill="#003D2E" fill-opacity="0.92"/>
+  <circle cx="450" cy="300" r="150" fill="none" stroke="#FFFFFF" stroke-opacity="0.4" stroke-width="2"/>
+  <circle cx="450" cy="300" r="88" fill="none" stroke="#FFFFFF" stroke-opacity="0.7" stroke-width="2"/>
+
+  <!-- charcoal square offset -->
+  <rect x="90" y="80" width="120" height="120" fill="#16181D" fill-opacity="0.85"/>
+  <rect x="110" y="100" width="80" height="80" fill="none" stroke="#FFFFFF" stroke-opacity="0.5" stroke-width="2"/>
+
+  <!-- light band + accent square -->
+  <rect x="690" y="90" width="150" height="90" fill="#FFFFFF" fill-opacity="0.75"/>
+  <rect x="690" y="420" width="90" height="90" fill="none" stroke="#003D2E" stroke-width="4"/>
+  <circle cx="735" cy="465" r="18" fill="#003D2E"/>
+</svg>

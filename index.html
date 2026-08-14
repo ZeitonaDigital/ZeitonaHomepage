@@ -8,9 +8,9 @@
     <title data-i18n="page.title">Zeitona</title>
     <meta name="description" data-i18n-content="page.description"
         content="Zeitona. Growing change through innovation." />
-    <!-- Load styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="style.css" />
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/azeitona3.png" />
 </head>
 
@@ -19,27 +19,54 @@
     <div id="header-placeholder"></div>
 
     <main>
-        <section class="hero-banner" id="hero">
-            <div class="container">
-                <h1 class="hero-banner-title fade-up" data-i18n="hero.headline">
-                    Growing change through innovation
-                </h1>
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy fade-up">
+                    <p class="eyebrow hero-eyebrow" data-i18n="hero.badge">Technology for Real Needs</p>
+                    <h1 class="hero-title" data-i18n="hero.headline">
+                        Growing change through innovation
+                    </h1>
+                    <p class="hero-lead" data-i18n="hero.description">
+                        Zeitona creates software and digital solutions around real business needs, turning complex challenges into clear, useful technology.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="about.html" class="btn btn-primary btn-lg" data-i18n="hero.exploreBtn">Explore Our Vision</a>
+                    </div>
+                </div>
+                <div class="hero-art fade-up delay-200" aria-hidden="true">
+                    <img src="assets/art/hero-geometry.svg" alt="" />
+                </div>
             </div>
         </section>
 
-        <section class="about-strip" id="about-strip" aria-label="About">
+        <section class="info-cards" id="info-cards" aria-label="Explore">
             <div class="container">
-                <p class="about-strip-text fade-up">
-                    <span data-i18n="aboutStrip.text">Meet the team behind Zeitona.</span>
-                    <a href="about.html" class="about-strip-link" data-i18n="aboutStrip.link">About</a>
-                </p>
-            </div>
-        </section>
-
-        <section class="news-section" id="news" aria-labelledby="news-heading">
-            <div class="container">
-                <h2 id="news-heading" class="news-heading fade-up" data-i18n="news.heading">News &amp; updates</h2>
-                <div id="news-list" class="news-list fade-up delay-100" aria-live="polite"></div>
+                <div class="section-header section-header-left">
+                    <p class="eyebrow" data-i18n="homecards.eyebrow">Explore</p>
+                    <h2 class="section-title" data-i18n="homecards.title">Discover what we do</h2>
+                </div>
+                <div class="info-cards-grid">
+                    <a href="about.html" class="card info-card fade-up">
+                        <div class="info-card-media">
+                            <img src="assets/art/card-about.svg" alt="" />
+                        </div>
+                        <div class="info-card-body">
+                            <h3 class="service-title" data-i18n="infoCards.aboutTitle">About Zeitona</h3>
+                            <p class="service-desc" data-i18n="infoCards.aboutDesc">Meet the team behind Zeitona and how we build technology around real needs.</p>
+                            <span class="card-link" data-i18n="infoCards.aboutCta">Learn more</span>
+                        </div>
+                    </a>
+                    <a href="news.html" class="card info-card fade-up delay-100">
+                        <div class="info-card-media">
+                            <img src="assets/art/card-news.svg" alt="" />
+                        </div>
+                        <div class="info-card-body">
+                            <h3 class="service-title" data-i18n="infoCards.newsTitle">News &amp; updates</h3>
+                            <p class="service-desc" data-i18n="infoCards.newsDesc">Selected posts and updates from Zeitona on LinkedIn.</p>
+                            <span class="card-link" data-i18n="infoCards.newsCta">Read more</span>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -49,13 +76,10 @@
 
     <!-- Load scripts -->
     <script src="i18n.js"></script>
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 
     <script>
-        // Scroll to top on page load (preserve hash deep links, e.g. #news)
-        if (!window.location.hash) {
-            window.scrollTo(0, 0);
-        }
+        window.scrollTo(0, 0);
     </script>
 </body>
 

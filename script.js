@@ -46,6 +46,9 @@ window.ZeitonaNews = {
                 : '';
             const dateLabel = this.escapeHtml(this.formatDate(item.date, locale));
             const url = typeof item.url === 'string' && item.url.trim() ? item.url.trim() : null;
+            const readMore = url
+                ? `<a class="card-link news-item-more" href="${this.escapeHtml(url)}">${this.escapeHtml(t('news.readMore'))}</a>`
+                : '';
             const titleHtml = url
                 ? `<a class="news-item-title" href="${this.escapeHtml(url)}">${title}</a>`
                 : `<span class="news-item-title">${title}</span>`;
@@ -53,6 +56,7 @@ window.ZeitonaNews = {
                 <time class="news-item-date" datetime="${this.escapeHtml(item.date || '')}">${dateLabel}</time>
                 ${titleHtml}
                 ${summary}
+                ${readMore}
             </article>`;
         }).join('');
     }
@@ -112,31 +116,31 @@ function init() {
             </button>
 
             <div class="navbar-links" id="nav-links">
-                <a href="index.html#news" data-i18n="nav.news">News</a>
+                <div class="global-controls">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
+                        <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
+                        <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.4 8.4 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
+                    </button>
+                    <div class="lang-switcher" id="lang-switcher">
+                        <button class="lang-btn" id="lang-btn" type="button" aria-label="Select language: English (US)" aria-haspopup="listbox" aria-expanded="false">
+                            <img id="lang-current-flag" class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" />
+                            <span id="lang-current-label" class="sr-only">English (US)</span>
+                            <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                        </button>
+                        <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
+                            <button class="lang-option" type="button" data-locale="en-us" data-language="English (US)" data-flag="assets/flags/us.svg" role="option" aria-selected="false" title="English (US)"><img class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" /><span>English (US)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                            <button class="lang-option" type="button" data-locale="en-gb" data-language="English (UK)" data-flag="assets/flags/gb.svg" role="option" aria-selected="false" title="English (UK)"><img class="flag-icon" src="assets/flags/gb.svg" alt="" aria-hidden="true" /><span>English (UK)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                            <button class="lang-option" type="button" data-locale="es" data-language="Español" data-flag="assets/flags/es.svg" role="option" aria-selected="false" title="Español"><img class="flag-icon" src="assets/flags/es.svg" alt="" aria-hidden="true" /><span>Español</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                            <button class="lang-option" type="button" data-locale="pt-pt" data-language="Português (Portugal)" data-flag="assets/flags/pt.svg" role="option" aria-selected="false" title="Português (Portugal)"><img class="flag-icon" src="assets/flags/pt.svg" alt="" aria-hidden="true" /><span>Português (Portugal)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                            <button class="lang-option" type="button" data-locale="pt-br" data-language="Português (Brasil)" data-flag="assets/flags/br.svg" role="option" aria-selected="false" title="Português (Brasil)"><img class="flag-icon" src="assets/flags/br.svg" alt="" aria-hidden="true" /><span>Português (Brasil)</span><span class="lang-check" aria-hidden="true">✓</span></button>
+                        </div>
+                    </div>
+                </div>
+                <a href="news.html" data-i18n="nav.news">News</a>
                 <a href="about.html" data-i18n="nav.about">About</a>
                 <button type="button" class="btn btn-primary btn-sm navbar-action" onclick="openContactModal()" data-i18n="nav.getInTouch">
                     Get in Touch
                 </button>
-                <div class="global-controls">
-                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode">
-                    <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
-                    <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.4 8.4 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
-                </button>
-                <div class="lang-switcher" id="lang-switcher">
-                    <button class="lang-btn" id="lang-btn" type="button" aria-label="Select language: English (US)" aria-haspopup="listbox" aria-expanded="false">
-                        <img id="lang-current-flag" class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" />
-                        <span id="lang-current-label" class="sr-only">English (US)</span>
-                        <svg class="lang-chevron" xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Select language">
-                        <button class="lang-option" type="button" data-locale="en-us" data-language="English (US)" data-flag="assets/flags/us.svg" role="option" aria-selected="false" title="English (US)"><img class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" /><span>English (US)</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                        <button class="lang-option" type="button" data-locale="en-gb" data-language="English (UK)" data-flag="assets/flags/gb.svg" role="option" aria-selected="false" title="English (UK)"><img class="flag-icon" src="assets/flags/gb.svg" alt="" aria-hidden="true" /><span>English (UK)</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                        <button class="lang-option" type="button" data-locale="es" data-language="Español" data-flag="assets/flags/es.svg" role="option" aria-selected="false" title="Español"><img class="flag-icon" src="assets/flags/es.svg" alt="" aria-hidden="true" /><span>Español</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                        <button class="lang-option" type="button" data-locale="pt-pt" data-language="Português (Portugal)" data-flag="assets/flags/pt.svg" role="option" aria-selected="false" title="Português (Portugal)"><img class="flag-icon" src="assets/flags/pt.svg" alt="" aria-hidden="true" /><span>Português (Portugal)</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                        <button class="lang-option" type="button" data-locale="pt-br" data-language="Português (Brasil)" data-flag="assets/flags/br.svg" role="option" aria-selected="false" title="Português (Brasil)"><img class="flag-icon" src="assets/flags/br.svg" alt="" aria-hidden="true" /><span>Português (Brasil)</span><span class="lang-check" aria-hidden="true">✓</span></button>
-                    </div>
-                </div>
-                </div>
             </div>
         </div>
     </nav>
@@ -198,17 +202,34 @@ function init() {
     const currentYear = new Date().getFullYear();
     const footerHTML = `
     <footer class="footer">
-        <div class="footer-inner container">
-            <a href="index.html">
-                <img src="assets/azeitona4.png" alt="Zeitona Logo" class="footer-logo" />
-            </a>
-            <p class="text-muted" style="font-size: 0.85rem; font-weight:300;">
-                &copy; ${currentYear} Zeitona. <span data-i18n="footer.tagline">Technology shaped around real needs.</span>
-            </p>
-            <div class="flex gap-6">
-                <a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" class="text-muted hover:text-accent transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/azeitona4.png" alt="Zeitona Logo" class="footer-logo" />
+                    </a>
+                    <p class="footer-tagline text-muted" data-i18n="footer.tagline">Technology shaped around real needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-i18n="footer.colCompany">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-i18n="footer.about">About</a></li>
+                        <li><a href="news.html" data-i18n="footer.news">News</a></li>
+                        <li><a href="index.html#info-cards" data-i18n="footer.explore">Explore</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading" data-i18n="footer.colConnect">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.linkedin.com/company/zeitona/" target="_blank" rel="noopener noreferrer" data-i18n="footer.linkedin">LinkedIn</a></li>
+                        <li><button type="button" class="footer-link-btn" onclick="openContactModal()" data-i18n="footer.contact">Contact</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="text-muted" style="font-size: 0.8rem; font-weight:300;">
+                    &copy; ${currentYear} Zeitona. <span data-i18n="footer.rights">All rights reserved.</span>
+                </p>
             </div>
         </div>
     </footer>
