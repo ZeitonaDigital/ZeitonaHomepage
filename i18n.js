@@ -38,7 +38,9 @@
             "useLightTheme": "Use light theme",
             "darkTheme": "Dark theme",
             "lightTheme": "Light theme",
-            "homeLabel": "Zeitona home"
+            "homeLabel": "Zeitona home",
+            "previous": "Previous",
+            "next": "Next"
         },
         "footer": {
             "note": "Technology, research, development, and collaboration.",
@@ -126,8 +128,8 @@
             "institutionalTitle": "Institutional programmes",
             "consortiaTitle": "Consortia and multi-party initiatives",
             "exploratoryTitle": "Exploratory technical work",
-            "startTitle": "Start with context, constraints, and the open question.",
-            "contactLink": "Prepare a conversation",
+            "startTitle": "Let's talk.",
+            "contactLink": "Get in touch with",
             "heroBody": "Collaboration may begin as a direct project, a research question, an institutional programme, or a multi-party initiative. The structure should follow the work rather than force every opportunity into the same model.",
             "boundariesEyebrow": "Working across boundaries",
             "boundariesLead": "Zeitona is open to conversations with companies, universities, research organizations, public and private institutions, innovation programmes, consortia, and other technology or engineering organizations.",
@@ -140,8 +142,7 @@
             "consortiaBody": "Consortia can combine complementary capabilities across companies, universities, research organizations, and institutions. Zeitona can be considered where a technology-company contribution is relevant.",
             "exploratoryBody": "A focused initial investigation can help establish the technical question, evidence needs, participants, and next decisions before a broader programme takes shape.",
             "startEyebrow": "A useful beginning",
-            "startBody": "A first conversation does not require a final scope. It is more useful to identify why the work matters, what is already known, which organizations are involved, where uncertainty remains, and what decision needs to follow.",
-            "startBodyTwo": "That context makes it possible to judge whether a direct project, research-led process, institutional programme, or consortium structure is appropriate."
+            "startBody": "A first conversation does not require a finished scope. Share the context, the constraints, and the open question."
         },
         "innovation": {
             "metaTitle": "Innovation and Research — Zeitona",
@@ -215,7 +216,16 @@
             "decisionBody": "State what the conversation, investigation, or project should help determine.",
             "channelEyebrow": "Contact channel",
             "channelBody": "No email address, telephone number, physical address, or social profile has been inferred from the company domain. A direct contact link can be added here when an approved channel is supplied.",
-            "privacyBody": "This website does not submit or process contact data and does not depend on a backend service."
+            "privacyBody": "This website does not submit or process contact data and does not depend on a backend service.",
+            "emailEyebrow": "Contact email",
+            "emailTitle": "Write directly to us.",
+            "formEyebrow": "Or send a message",
+            "formTitle": "Send a message",
+            "formName": "Your name",
+            "formEmail": "Your email",
+            "formSubject": "Subject",
+            "formMessage": "Message",
+            "formSubmit": "Send message"
         }
     },
     "en-gb": {
@@ -237,7 +247,9 @@
             "useLightTheme": "Use light theme",
             "darkTheme": "Dark theme",
             "lightTheme": "Light theme",
-            "homeLabel": "Zeitona home"
+            "homeLabel": "Zeitona home",
+            "previous": "Previous",
+            "next": "Next"
         },
         "footer": {
             "note": "Technology, research, development, and collaboration.",
@@ -325,8 +337,8 @@
             "institutionalTitle": "Institutional programmes",
             "consortiaTitle": "Consortia and multi-party initiatives",
             "exploratoryTitle": "Exploratory technical work",
-            "startTitle": "Start with context, constraints, and the open question.",
-            "contactLink": "Prepare a conversation",
+            "startTitle": "Let's talk.",
+            "contactLink": "Get in touch with",
             "heroBody": "Collaboration may begin as a direct project, a research question, an institutional programme, or a multi-party initiative. The structure should follow the work rather than force every opportunity into the same model.",
             "boundariesEyebrow": "Working across boundaries",
             "boundariesLead": "Zeitona is open to conversations with companies, universities, research organisations, public and private institutions, innovation programmes, consortia, and other technology or engineering organisations.",
@@ -339,8 +351,7 @@
             "consortiaBody": "Consortia can combine complementary capabilities across companies, universities, research organisations, and institutions. Zeitona can be considered where a technology-company contribution is relevant.",
             "exploratoryBody": "A focused initial investigation can help establish the technical question, evidence needs, participants, and next decisions before a broader programme takes shape.",
             "startEyebrow": "A useful beginning",
-            "startBody": "A first conversation does not require a final scope. It is more useful to identify why the work matters, what is already known, which organisations are involved, where uncertainty remains, and what decision needs to follow.",
-            "startBodyTwo": "That context makes it possible to judge whether a direct project, research-led process, institutional programme, or consortium structure is appropriate."
+            "startBody": "A first conversation does not require a finished scope. Share the context, the constraints, and the open question."
         },
         "innovation": {
             "metaTitle": "Innovation and Research — Zeitona",
@@ -414,7 +425,16 @@
             "decisionBody": "State what the conversation, investigation, or project should help determine.",
             "channelEyebrow": "Contact channel",
             "channelBody": "No email address, telephone number, physical address, or social profile has been inferred from the company domain. A direct contact link can be added here when an approved channel is supplied.",
-            "privacyBody": "This website does not submit or process contact data and does not depend on a backend service."
+            "privacyBody": "This website does not submit or process contact data and does not depend on a backend service.",
+            "emailEyebrow": "Contact email",
+            "emailTitle": "Write directly to us.",
+            "formEyebrow": "Or send a message",
+            "formTitle": "Send a message",
+            "formName": "Your name",
+            "formEmail": "Your email",
+            "formSubject": "Subject",
+            "formMessage": "Message",
+            "formSubmit": "Send message"
         }
     },
     "pt-pt": {
@@ -436,7 +456,9 @@
             "useLightTheme": "Usar tema claro",
             "darkTheme": "Tema escuro",
             "lightTheme": "Tema claro",
-            "homeLabel": "Página inicial da Zeitona"
+            "homeLabel": "Página inicial da Zeitona",
+            "previous": "Anterior",
+            "next": "Seguinte"
         },
         "footer": {
             "note": "Tecnologia, investigação, desenvolvimento e colaboração.",
@@ -524,8 +546,8 @@
             "institutionalTitle": "Programas institucionais",
             "consortiaTitle": "Consórcios e iniciativas multiparticipadas",
             "exploratoryTitle": "Trabalho técnico exploratório",
-            "startTitle": "Comece pelo contexto, pelas restrições e pela questão em aberto.",
-            "contactLink": "Prepare uma conversa",
+            "startTitle": "Vamos falar.",
+            "contactLink": "Entre em contacto",
             "heroBody": "A colaboração pode começar como um projeto direto, uma questão de investigação, um programa institucional ou uma iniciativa multiparticipada. A estrutura deve acompanhar o trabalho, sem forçar todas as oportunidades ao mesmo modelo.",
             "boundariesEyebrow": "Trabalho entre organizações",
             "boundariesLead": "A Zeitona está aberta a conversas com empresas, universidades, organizações de investigação, instituições públicas e privadas, programas de inovação, consórcios e outras organizações de tecnologia ou engenharia.",
@@ -538,8 +560,7 @@
             "consortiaBody": "Os consórcios podem combinar capacidades complementares de empresas, universidades, organizações de investigação e instituições. A Zeitona pode ser considerada quando a contribuição de uma empresa de tecnologia for relevante.",
             "exploratoryBody": "Uma investigação inicial focada pode ajudar a estabelecer a questão técnica, as evidências necessárias, os participantes e as próximas decisões antes de um programa mais amplo ganhar forma.",
             "startEyebrow": "Um começo útil",
-            "startBody": "Uma primeira conversa não exige um âmbito final. É mais útil identificar por que razão o trabalho importa, o que já se sabe, quais organizações estão envolvidas, onde permanece a incerteza e qual decisão deve seguir-se.",
-            "startBodyTwo": "Esse contexto permite avaliar se é adequado um projeto direto, um processo orientado por investigação, um programa institucional ou uma estrutura de consórcio."
+            "startBody": "Uma primeira conversa não exige um âmbito final. Partilhe o contexto, as restrições e a questão em aberto."
         },
         "innovation": {
             "metaTitle": "Inovação e investigação — Zeitona",
@@ -613,7 +634,16 @@
             "decisionBody": "Indique o que a conversa, investigação ou projeto deverá ajudar a determinar.",
             "channelEyebrow": "Canal de contacto",
             "channelBody": "Nenhum endereço de correio eletrónico, telefone, morada física ou perfil social foi inferido a partir do domínio da empresa. Poderá ser acrescentada uma ligação direta de contacto quando for fornecido um canal aprovado.",
-            "privacyBody": "Este site não envia nem processa dados de contacto e não depende de um serviço de backend."
+            "privacyBody": "Este site não envia nem processa dados de contacto e não depende de um serviço de backend.",
+            "emailEyebrow": "Correio eletrónico de contacto",
+            "emailTitle": "Escreva diretamente para nós.",
+            "formEyebrow": "Ou envie uma mensagem",
+            "formTitle": "Envie uma mensagem",
+            "formName": "O seu nome",
+            "formEmail": "O seu email",
+            "formSubject": "Assunto",
+            "formMessage": "Mensagem",
+            "formSubmit": "Enviar mensagem"
         }
     },
     "pt-br": {
@@ -723,8 +753,8 @@
             "institutionalTitle": "Programas institucionais",
             "consortiaTitle": "Consórcios e iniciativas multiparticipantes",
             "exploratoryTitle": "Trabalho técnico exploratório",
-            "startTitle": "Comece pelo contexto, pelas restrições e pela questão em aberto.",
-            "contactLink": "Prepare uma conversa",
+            "startTitle": "Vamos conversar.",
+            "contactLink": "Entre em contato",
             "heroBody": "A colaboração pode começar como um projeto direto, uma questão de pesquisa, um programa institucional ou uma iniciativa multiparticipante. A estrutura deve acompanhar o trabalho, sem forçar todas as oportunidades ao mesmo modelo.",
             "boundariesEyebrow": "Trabalho entre organizações",
             "boundariesLead": "A Zeitona está aberta a conversas com empresas, universidades, organizações de pesquisa, instituições públicas e privadas, programas de inovação, consórcios e outras organizações de tecnologia ou engenharia.",
@@ -737,8 +767,7 @@
             "consortiaBody": "Consórcios podem combinar capacidades complementares de empresas, universidades, organizações de pesquisa e instituições. A Zeitona pode ser considerada quando a contribuição de uma empresa de tecnologia for relevante.",
             "exploratoryBody": "Uma investigação inicial focada pode ajudar a estabelecer a questão técnica, as evidências necessárias, os participantes e as próximas decisões antes que um programa mais amplo tome forma.",
             "startEyebrow": "Um começo útil",
-            "startBody": "Uma primeira conversa não exige um escopo final. É mais útil identificar por que o trabalho importa, o que já se sabe, quais organizações estão envolvidas, onde permanece a incerteza e qual decisão precisa vir depois.",
-            "startBodyTwo": "Esse contexto permite avaliar se um projeto direto, um processo orientado por pesquisa, um programa institucional ou uma estrutura de consórcio é adequado."
+            "startBody": "Uma primeira conversa não exige um escopo final. Compartilhe o contexto, as restrições e a questão em aberto."
         },
         "innovation": {
             "metaTitle": "Inovação e pesquisa — Zeitona",
@@ -812,7 +841,16 @@
             "decisionBody": "Indique o que a conversa, investigação ou projeto deve ajudar a determinar.",
             "channelEyebrow": "Canal de contato",
             "channelBody": "Nenhum e-mail, telefone, endereço físico ou perfil social foi inferido a partir do domínio da empresa. Um link direto de contato poderá ser adicionado quando um canal aprovado for fornecido.",
-            "privacyBody": "Este site não envia nem processa dados de contato e não depende de um serviço de backend."
+            "privacyBody": "Este site não envia nem processa dados de contato e não depende de um serviço de backend.",
+            "emailEyebrow": "E-mail de contato",
+            "emailTitle": "Escreva diretamente para nós.",
+            "formEyebrow": "Ou envie uma mensagem",
+            "formTitle": "Envie uma mensagem",
+            "formName": "Seu nome",
+            "formEmail": "Seu e-mail",
+            "formSubject": "Assunto",
+            "formMessage": "Mensagem",
+            "formSubmit": "Enviar mensagem"
         }
     }
 };

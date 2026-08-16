@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <script>(function(){try{var t=localStorage.getItem('zeitona-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}}());</script>
+    <script>(function () { try { var t = localStorage.getItem('zeitona-theme'); document.documentElement.dataset.theme = t === 'dark' ? 'dark' : 'light'; } catch (e) { document.documentElement.dataset.theme = 'light'; } }());</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-i18n="collaboration.metaTitle">Collaboration — Zeitona</title>
     <meta name="description" data-i18n-content="collaboration.heroTitle"
@@ -20,81 +20,73 @@
     <main>
         <section class="page-hero" id="hero">
             <div class="container">
-                <p class="eyebrow fade-up" data-i18n="collaboration.boundariesEyebrow">Working across boundaries</p>
+                <p class="eyebrow fade-up" data-i18n="collaboration.boundariesEyebrow"></p>
                 <h1 class="page-hero-title fade-up delay-100" data-i18n="collaboration.heroTitle">
-                    Different organizations can build useful technology together.
+                    Different organizations can build useful technology together
                 </h1>
                 <p class="hero-lead fade-up delay-200" data-i18n="collaboration.heroBody">
-                    Collaboration may begin as a direct project, a research question, an institutional programme, or a multi-party initiative. The structure should follow the work rather than force every opportunity into the same model.
+                    Collaboration may begin as a direct project, an institutional programme, or a multi-party
+                    initiative
                 </p>
             </div>
         </section>
 
-        <section class="about-perspective section" id="boundaries">
-            <div class="container about-perspective-grid">
-                <div class="about-section-heading fade-up">
-                    <p class="about-eyebrow" data-i18n="collaboration.boundariesEyebrow">Working across boundaries</p>
-                    <h2 class="section-title text-left" data-i18n="collaboration.boundariesTitle">A place for bilateral and multi-party work.</h2>
-                </div>
-                <div class="about-copy fade-up delay-100">
-                    <p data-i18n="collaboration.boundariesLead">Zeitona is open to conversations with companies, universities, research organizations, public and private institutions, innovation programmes, consortia, and other technology or engineering organizations.</p>
-                    <p data-i18n="collaboration.boundariesBody">This is not a list of claimed partnerships or completed projects. It describes the kinds of working relationships the company is prepared to consider, whether the work is led by one organization or assembled around a shared programme.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-approach section" id="models">
+        <section class="about-perspective section" id="models">
             <div class="container">
                 <div class="section-header fade-up">
                     <p class="about-eyebrow" data-i18n="collaboration.modelsEyebrow">Possible structures</p>
-                    <h2 class="section-title" data-i18n="collaboration.modelsTitle">Collaboration should fit the question and the people involved.</h2>
                 </div>
-                <div class="about-principles">
-                    <article class="about-principle card fade-up">
-                        <span class="about-principle-number">01</span>
-                        <h3 data-i18n="collaboration.directTitle">Direct company projects</h3>
-                        <p data-i18n="collaboration.directBody">A company may need a technology partner to clarify a technical problem, explore an approach, or contribute to development without forcing the work into a predefined service package.</p>
-                    </article>
-                    <article class="about-principle card fade-up delay-100">
-                        <span class="about-principle-number">02</span>
-                        <h3 data-i18n="collaboration.universityTitle">University and company initiatives</h3>
-                        <p data-i18n="collaboration.universityBody">Academic knowledge and practical development can meet around a shared question, with responsibilities defined by what each organization is equipped to contribute.</p>
-                    </article>
-                    <article class="about-principle card fade-up delay-200">
-                        <span class="about-principle-number">03</span>
-                        <h3 data-i18n="collaboration.researchTitle">Applied research</h3>
-                        <p data-i18n="collaboration.researchBody">Research organizations, laboratories, and technical teams may need a company able to participate in exploration while keeping implementation and real-world constraints in view.</p>
-                    </article>
-                    <article class="about-principle card fade-up">
-                        <span class="about-principle-number">04</span>
-                        <h3 data-i18n="collaboration.institutionalTitle">Institutional programmes</h3>
-                        <p data-i18n="collaboration.institutionalBody">Public or private institutions and innovation programme operators may create settings where technology development, research, and organizational objectives need to be coordinated.</p>
-                    </article>
-                    <article class="about-principle card fade-up delay-100">
-                        <span class="about-principle-number">05</span>
-                        <h3 data-i18n="collaboration.consortiaTitle">Consortia and multi-party initiatives</h3>
-                        <p data-i18n="collaboration.consortiaBody">Consortia can combine complementary capabilities across companies, universities, research organizations, and institutions. Zeitona can be considered where a technology-company contribution is relevant.</p>
-                    </article>
-                    <article class="about-principle card fade-up delay-200">
-                        <span class="about-principle-number">06</span>
-                        <h3 data-i18n="collaboration.exploratoryTitle">Exploratory technical work</h3>
-                        <p data-i18n="collaboration.exploratoryBody">A focused initial investigation can help establish the technical question, evidence needs, participants, and next decisions before a broader programme takes shape.</p>
-                    </article>
+                <div class="carousel" id="models-carousel">
+                    <div class="about-principles about-principles-scroll" id="models-track">
+                        <article class="about-principle card fade-up">
+                            <span class="about-principle-number">01</span>
+                            <h3 data-i18n="collaboration.directTitle">Direct company projects</h3>
+                            <p data-i18n="collaboration.directBody">A company may need a technology partner to clarify a technical problem, explore an approach, or contribute to development without forcing the work into a predefined service package.</p>
+                        </article>
+                        <article class="about-principle card fade-up delay-100">
+                            <span class="about-principle-number">02</span>
+                            <h3 data-i18n="collaboration.universityTitle">University and company initiatives</h3>
+                            <p data-i18n="collaboration.universityBody">Academic knowledge and practical development can meet around a shared question, with responsibilities defined by what each organization is equipped to contribute.</p>
+                        </article>
+                        <article class="about-principle card fade-up delay-200">
+                            <span class="about-principle-number">03</span>
+                            <h3 data-i18n="collaboration.researchTitle">Applied research</h3>
+                            <p data-i18n="collaboration.researchBody">Research organizations, laboratories, and technical teams may need a company able to participate in exploration while keeping implementation and real-world constraints in view.</p>
+                        </article>
+                        <article class="about-principle card fade-up">
+                            <span class="about-principle-number">04</span>
+                            <h3 data-i18n="collaboration.institutionalTitle">Institutional programmes</h3>
+                            <p data-i18n="collaboration.institutionalBody">Public or private institutions and innovation programme operators may create settings where technology development, research, and organizational objectives need to be coordinated.</p>
+                        </article>
+                        <article class="about-principle card fade-up delay-100">
+                            <span class="about-principle-number">05</span>
+                            <h3 data-i18n="collaboration.consortiaTitle">Consortia and multi-party initiatives</h3>
+                            <p data-i18n="collaboration.consortiaBody">Consortia can combine complementary capabilities across companies, universities, research organizations, and institutions. Zeitona can be considered where a technology-company contribution is relevant.</p>
+                        </article>
+                        <article class="about-principle card fade-up delay-200">
+                            <span class="about-principle-number">06</span>
+                            <h3 data-i18n="collaboration.exploratoryTitle">Exploratory technical work</h3>
+                            <p data-i18n="collaboration.exploratoryBody">A focused initial investigation can help establish the technical question, evidence needs, participants, and next decisions before a broader programme takes shape.</p>
+                        </article>
+                    </div>
+                    <button type="button" class="carousel-btn carousel-prev" aria-label="Previous" data-i18n-aria-label="controls.previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="11 17 6 12 11 7"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+                    </button>
+                    <button type="button" class="carousel-btn carousel-next" aria-label="Next" data-i18n-aria-label="controls.next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="13 17 18 12 13 7"/><line x1="6" y1="12" x2="18" y2="12"/></svg>
+                    </button>
+                    <div class="carousel-dots" role="tablist" aria-label="carousel pagination" id="models-dots"></div>
                 </div>
             </div>
         </section>
 
-        <section class="about-perspective section" id="start">
-            <div class="container about-perspective-grid">
-                <div class="about-section-heading fade-up">
-                    <p class="about-eyebrow" data-i18n="collaboration.startEyebrow">A useful beginning</p>
-                    <h2 class="section-title text-left" data-i18n="collaboration.startTitle">Start with context, constraints, and the open question.</h2>
-                </div>
-                <div class="about-copy fade-up delay-100">
-                    <p data-i18n="collaboration.startBody">A first conversation does not require a final scope. It is more useful to identify why the work matters, what is already known, which organizations are involved, where uncertainty remains, and what decision needs to follow.</p>
-                    <p data-i18n="collaboration.startBodyTwo">That context makes it possible to judge whether a direct project, research-led process, institutional programme, or consortium structure is appropriate.</p>
-                    <p class="hero-actions">
-                        <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="collaboration.contactLink">Prepare a conversation</a>
+        <section class="about-approach section" id="start">
+            <div class="container">
+                <div class="start-cta fade-up">
+                    <h2 class="section-title" data-i18n="collaboration.startTitle">Let's talk.</h2>
+                    <p class="start-lead" data-i18n="collaboration.startBody">A first conversation does not require a finished scope. Share the context, the constraints, and the open question.</p>
+                    <p class="start-action">
+                        <a href="contact.html" class="card-link start-action-link" data-i18n="collaboration.contactLink">Get in touch with</a>
                     </p>
                 </div>
             </div>
@@ -107,6 +99,138 @@
     <script src="script.js?v=8"></script>
     <script>
         window.scrollTo(0, 0);
+    </script>
+    <script>
+        (function () {
+            var carousel = document.getElementById('models-carousel');
+            if (!carousel) return;
+
+            var track = carousel.querySelector('.about-principles-scroll');
+            var dotsContainer = carousel.querySelector('.carousel-dots');
+            var prevBtn = carousel.querySelector('.carousel-prev');
+            var nextBtn = carousel.querySelector('.carousel-next');
+
+            var cards = Array.prototype.slice.call(track.children);
+            if (!cards.length) return;
+
+            var gap = parseFloat(getComputedStyle(track).gap) || 0;
+            var cardWidth = 0;
+            var step = 0;
+            var visible = 1;
+            var index = 0;
+
+            function measure() {
+                cardWidth = cards[0].offsetWidth;
+                step = cardWidth + gap;
+                visible = Math.max(1, Math.floor((track.offsetWidth + gap) / step)) || 1;
+            }
+
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                var totalPages = Math.ceil(cards.length / visible);
+                for (var i = 0; i < totalPages; i++) {
+                    var dot = document.createElement('button');
+                    dot.type = 'button';
+                    dot.className = 'carousel-dot';
+                    dot.setAttribute('role', 'tab');
+                    dot.setAttribute('aria-selected', i === 0);
+                    dot.setAttribute('aria-label', 'page ' + (i + 1));
+                    dot.addEventListener('click', function () {
+                        index = Number(this.getAttribute('aria-label').replace('page ', '')) - 1;
+                        scrollTo(index);
+                        restartAuto();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function updateDots() {
+                var dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach(function (dot, i) {
+                    dot.setAttribute('aria-selected', i === index);
+                });
+            }
+
+            function scrollTo(targetIndex) {
+                var clamped = Math.max(0, Math.min(targetIndex, cards.length - visible));
+                index = clamped;
+                var scrollLeft = clamped * step;
+                track.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+                updateDots();
+                toggleArrows();
+            }
+
+            function toggleArrows() {
+                prevBtn.disabled = index === 0;
+                nextBtn.disabled = index >= cards.length - visible;
+                prevBtn.style.opacity = index === 0 ? '0.4' : '1';
+                nextBtn.style.opacity = index >= cards.length - visible ? '0.4' : '1';
+            }
+
+            prevBtn.addEventListener('click', function () { scrollTo(index - 1); restartAuto(); });
+            nextBtn.addEventListener('click', function () { scrollTo(index + 1); restartAuto(); });
+
+            track.addEventListener('scroll', function () {
+                var newIndex = Math.round(track.scrollLeft / step);
+                index = Math.max(0, Math.min(newIndex, cards.length - visible));
+                updateDots();
+                toggleArrows();
+            });
+
+            var resizeRaf = null;
+            window.addEventListener('resize', function () {
+                if (resizeRaf) return;
+                resizeRaf = requestAnimationFrame(function () {
+                    resizeRaf = null;
+                    measure();
+                    index = Math.min(index, Math.max(0, cards.length - visible));
+                    buildDots();
+                    toggleArrows();
+                    track.scrollLeft = index * step;
+                    restartAuto();
+                });
+            });
+
+            function totalPages() {
+                return Math.ceil(cards.length / visible);
+            }
+
+            function next() {
+                var last = cards.length - visible;
+                scrollTo(index >= last ? 0 : index + 1);
+            }
+
+            var timer = null;
+
+            function startAuto() {
+                stopAuto();
+                if (totalPages() < 2) return;
+                if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                timer = setInterval(next, 5000);
+            }
+
+            function stopAuto() {
+                if (timer) {
+                    clearInterval(timer);
+                    timer = null;
+                }
+            }
+
+            function restartAuto() {
+                stopAuto();
+                startAuto();
+            }
+
+            carousel.addEventListener('mouseenter', stopAuto);
+            carousel.addEventListener('mouseleave', startAuto);
+            carousel.addEventListener('focusin', stopAuto);
+            carousel.addEventListener('focusout', startAuto);
+
+            measure();
+            buildDots();
+            toggleArrows();
+            startAuto();
+        })();
     </script>
 </body>
 
