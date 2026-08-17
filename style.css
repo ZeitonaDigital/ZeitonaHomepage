@@ -502,23 +502,23 @@ a {
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
 }
 
-/* Modernist text card in lower-right corner */
+/* Modernist discrete gray text card on the left with no rounded corners */
 .hero-copy {
-  max-width: 580px;
-  width: 100%;
-  margin-left: auto;
-  background-color: rgba(0, 38, 28, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-left: 4px solid var(--brand-red);
-  border-radius: var(--radius);
-  padding: 2.25rem 2.5rem;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.35);
+  max-width: 560px;
+  width: auto;
+  margin-right: auto;
+  margin-left: 0;
+  background-color: rgba(30, 34, 39, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 0;
+  padding: 2.25rem 2.75rem;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
 }
 
 .hero-eyebrow {
@@ -528,11 +528,29 @@ a {
 
 .hero-title {
   font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.18;
+  margin: 0;
+  color: #F7F6EB;
+}
+
+.hero-title .hero-part-a {
   font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 1.1;
-  margin-bottom: 1.25rem;
-  max-width: 18ch;
+}
+
+.hero-title .hero-part-b {
+  font-size: 0.55em;
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.hero-title .hero-part-c {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #7FA800;
 }
 
 .hero-lead {
@@ -540,7 +558,7 @@ a {
   font-size: clamp(0.95rem, 1.6vw, 1.15rem);
   font-weight: 400;
   line-height: 1.65;
-  margin-bottom: 0;
+  margin-top: 1rem;
 }
 
 .hero-actions .btn-primary {
