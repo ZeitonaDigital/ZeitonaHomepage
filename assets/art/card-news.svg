@@ -1,23 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" preserveAspectRatio="xMidYMid slice">
-  <!-- News card art -->
-  <rect width="900" height="600" fill="#F5F6F7"/>
-
-  <!-- diagonal band -->
-  <polygon points="0,470 900,170 900,260 0,560" fill="#16181D" fill-opacity="0.9"/>
-  <line x1="0" y1="515" x2="900" y2="215" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2"/>
-
-  <!-- charcoal arc -->
-  <circle cx="640" cy="210" r="150" fill="none" stroke="#16181D" stroke-width="3"/>
-  <circle cx="640" cy="210" r="70" fill="#003D2E"/>
-
-  <!-- light square + small accents -->
-  <rect x="120" y="90" width="170" height="170" fill="#FFFFFF" fill-opacity="0.9" stroke="#DADFE4" stroke-width="2"/>
-  <rect x="140" y="110" width="40" height="40" fill="#003D2E"/>
-  <rect x="190" y="110" width="80" height="14" fill="#DADFE4"/>
-  <rect x="140" y="134" width="120" height="12" fill="#DADFE4"/>
-
-  <!-- rhythm squares bottom-left -->
-  <rect x="90" y="400" width="20" height="20" fill="#003D2E"/>
-  <rect x="120" y="400" width="20" height="20" fill="#16181D" fill-opacity="0.5"/>
-  <rect x="150" y="400" width="20" height="20" fill="#16181D" fill-opacity="0.2"/>
+  <!-- Background -->
+  <rect width="900" height="600" fill="#F5F6F7" />
+  
+  <!-- Strong diagonal charcoal band -->
+  <polygon points="0,400 900,200 900,600 0,600" fill="#16181D" fill-opacity="0.9" />
+  
+  <!-- White line following the diagonal band edge -->
+  <line x1="0" y1="395" x2="900" y2="195" stroke="#FFFFFF" stroke-width="4" stroke-opacity="0.9" />
+  
+  <!-- Upper area charcoal-stroke circle with filled dark-green core -->
+  <g transform="translate(700, 150)">
+    <circle r="80" fill="none" stroke="#16181D" stroke-width="2" stroke-opacity="0.5" />
+    <circle r="40" fill="#003D2E" />
+  </g>
+  
+  <!-- White card-like rectangle with abstract document metaphor -->
+  <g transform="translate(150, 100)">
+    <rect x="0" y="0" width="280" height="180" fill="#FFFFFF" rx="4" />
+    <rect x="30" y="30" width="24" height="24" fill="#003D2E" />
+    <rect x="70" y="34" width="160" height="6" fill="#ECEEF0" />
+    <rect x="70" y="48" width="120" height="6" fill="#ECEEF0" />
+    <rect x="30" y="80" width="220" height="4" fill="#F5F6F7" />
+    <rect x="30" y="100" width="220" height="4" fill="#F5F6F7" />
+    <rect x="30" y="120" width="180" height="4" fill="#F5F6F7" />
+  </g>
+  
+  <!-- Bottom-left rhythm squares in green and charcoal -->
+  <g transform="translate(100, 500)">
+    <rect x="0" y="0" width="20" height="20" fill="#7FA800" />
+    <rect x="30" y="0" width="20" height="20" fill="#16181D" fill-opacity="0.8" />
+    <rect x="60" y="0" width="20" height="20" fill="#16181D" fill-opacity="0.5" />
+    <rect x="90" y="0" width="20" height="20" fill="#16181D" fill-opacity="0.2" />
+  </g>
 </svg>

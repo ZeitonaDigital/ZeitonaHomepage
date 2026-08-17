@@ -1,47 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 550" preserveAspectRatio="xMidYMid slice">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 400" preserveAspectRatio="xMidYMid slice" width="100%" height="100%">
   <defs>
-    <linearGradient id="hero-base" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#003D2E"/>
-      <stop offset="1" stop-color="#002A20"/>
-    </linearGradient>
+    <style>
+      .bg-cream-1 { fill: #ECE8E1; }
+      .bg-cream-2 { fill: #E4DFD6; }
+      .bg-cream-3 { fill: #F2EFEA; }
+      .bg-gray-1  { fill: #D7D2C7; }
+      .c-dark-green { fill: #003D2E; }
+      .c-forest-green { fill: #328217; }
+      .c-olive-green { fill: #7FA800; }
+      .c-red { fill: #EB0008; }
+      .c-charcoal { fill: #16181D; }
+      .line-dark { stroke: #16181D; stroke-width: 2.2; stroke-linecap: square; }
+      .line-thin { stroke: #16181D; stroke-width: 1.5; }
+    </style>
   </defs>
 
-  <rect width="1600" height="550" fill="url(#hero-base)"/>
+  <!-- ================= BASE CANVAS ================= -->
+  <rect width="1600" height="400" class="bg-cream-1" />
 
-  <!-- subtle horizontal lines -->
-  <g stroke="#FFFFFF" stroke-opacity="0.05">
-    <line x1="0" y1="137" x2="1600" y2="137"/>
-    <line x1="0" y1="275" x2="1600" y2="275"/>
-    <line x1="0" y1="412" x2="1600" y2="412"/>
-  </g>
+  <!-- Background sector panels -->
+  <!-- Top-left background panel (0 to 300, 0 to 180) -->
+  <rect x="0" y="0" width="300" height="180" class="bg-cream-3" />
 
-  <!-- offset square, top-left -->
-  <rect x="150" y="80" width="110" height="110" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="2"/>
-  <rect x="175" y="105" width="60" height="60" fill="#FFFFFF" fill-opacity="0.1"/>
-  <rect x="262" y="192" width="24" height="24" fill="#EB0008"/>
+  <!-- Center-right large warm gray field (780 to 1140, 0 to 280) -->
+  <rect x="780" y="0" width="360" height="280" class="bg-cream-2" />
 
-  <!-- bold red vertical slab -->
-  <rect x="620" y="0" width="14" height="550" fill="#EB0008" fill-opacity="0.85"/>
+  <!-- Far right top panel (1140 to 1600, 0 to 90) -->
+  <rect x="1140" y="0" width="460" height="90" class="bg-cream-3" />
 
-  <!-- concentric rings, offset right -->
-  <circle cx="1200" cy="270" r="220" fill="none" stroke="#FFFFFF" stroke-opacity="0.14" stroke-width="1.5"/>
-  <circle cx="1200" cy="270" r="165" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="1"/>
-  <circle cx="1200" cy="270" r="105" fill="none" stroke="#FFFFFF" stroke-opacity="0.3" stroke-width="1"/>
-  <circle cx="1200" cy="270" r="36" fill="#EB0008"/>
+  <!-- Far right bottom background (1140 to 1600, 90 to 400) -->
+  <rect x="1140" y="90" width="460" height="310" class="bg-cream-1" />
 
-  <!-- red tick on the outer ring -->
-  <line x1="1081" y1="371" x2="1102" y2="350" stroke="#EB0008" stroke-width="5"/>
+  <!-- Bottom-center cream wedge background (300 to 780, 240 to 400) -->
+  <rect x="300" y="240" width="480" height="160" class="bg-cream-3" />
 
-  <!-- small square accent near rings -->
-  <rect x="1030" y="430" width="14" height="14" fill="#FFFFFF" fill-opacity="0.5"/>
-  <rect x="1054" y="430" width="14" height="14" fill="#FFFFFF" fill-opacity="0.2"/>
-  <rect x="1078" y="430" width="14" height="14" fill="#EB0008"/>
 
-  <!-- top-right corner arcs -->
-  <path d="M 1460 0 A 420 420 0 0 1 1600 140" fill="none" stroke="#FFFFFF" stroke-opacity="0.22" stroke-width="3"/>
-  <path d="M 1520 0 A 300 300 0 0 1 1600 80" fill="none" stroke="#EB0008" stroke-opacity="0.85" stroke-width="2.5"/>
+  <!-- ================= TOP-LEFT REGION (FROM REFERENCE ARTWORK) ================= -->
+  <!-- Red focal circle (top left) -->
+  <circle cx="150" cy="62" r="44" class="c-red" />
 
-  <!-- horizontal bands -->
-  <rect x="0" y="510" width="1600" height="6" fill="#FFFFFF" fill-opacity="0.14"/>
-  <rect x="0" y="516" width="1600" height="2" fill="#EB0008" fill-opacity="0.75"/>
+  <!-- Black vertical pillar stem under red circle -->
+  <rect x="122" y="112" width="56" height="68" class="c-charcoal" />
+
+  <!-- Dark green horizontal slab under the black stem -->
+  <rect x="0" y="180" width="160" height="60" class="c-dark-green" />
+
+  <!-- Warm gray rectangle adjacent to dark green -->
+  <rect x="160" y="180" width="140" height="60" class="bg-gray-1" />
+
+
+  <!-- ================= BOTTOM-LEFT REGION ================= -->
+  <!-- Large black semicircular curve at bottom-left -->
+  <path d="M 300 240 A 160 160 0 0 0 140 400 L 300 400 Z" class="c-charcoal" />
+
+  <!-- Olive green vertical block (left of center) -->
+  <rect x="300" y="240" width="120" height="110" class="c-olive-green" />
+
+  <!-- Light gray block underneath olive green block -->
+  <rect x="300" y="350" width="120" height="50" class="bg-gray-1" />
+
+  <!-- Dynamic 45-degree diagonal black line -->
+  <line x1="300" y1="400" x2="620" y2="180" class="line-dark" />
+
+
+  <!-- ================= TOP-CENTER / MIDDLE-TOP REGION ================= -->
+  <!-- Deep dark green tall vertical block at top center -->
+  <rect x="500" y="0" width="180" height="180" class="c-dark-green" />
+
+  <!-- Large sweeping cream quarter-circle in center -->
+  <path d="M 500 180 A 180 180 0 0 1 680 0 L 680 180 Z" class="bg-cream-3" />
+  <path d="M 500 180 A 180 180 0 0 1 680 0" fill="none" class="line-thin" />
+
+  <!-- Middle horizontal olive green block -->
+  <rect x="530" y="180" width="250" height="65" class="c-olive-green" />
+
+  <!-- Small black architectural notch at center intersection -->
+  <rect x="500" y="180" width="30" height="25" class="c-charcoal" />
+
+  <!-- Lower-center forest green rectangle -->
+  <rect x="650" y="280" width="200" height="120" class="c-forest-green" />
+
+
+  <!-- ================= RIGHT REGION ================= -->
+  <!-- Black quarter-circle arc (upper right of center) -->
+  <path d="M 780 0 A 160 160 0 0 1 940 160 L 780 160 Z" class="c-charcoal" />
+
+  <!-- Solid black circle in lower quadrant -->
+  <circle cx="980" cy="340" r="42" class="c-charcoal" />
+
+  <!-- Small black vertical notch on right edge of cream sector -->
+  <rect x="1115" y="230" width="25" height="50" class="c-charcoal" />
+
+  <!-- Bold crimson red tall vertical slab -->
+  <rect x="1140" y="90" width="150" height="310" class="c-red" />
+
+  <!-- Far right top black quarter-circle accent -->
+  <path d="M 1460 0 A 90 90 0 0 1 1550 90 L 1550 0 Z" class="c-charcoal" />
+
+  <!-- Far right dark green vertical balance band -->
+  <rect x="1440" y="180" width="160" height="220" class="c-dark-green" />
+  <circle cx="1500" cy="135" r="24" class="c-olive-green" />
+
+
+  <!-- ================= STRUCTURAL BLACK GRID LINES ================= -->
+  <!-- Main vertical dividing line across left third -->
+  <line x1="300" y1="0" x2="300" y2="400" class="line-dark" />
+
+  <!-- Main horizontal dividing line across midline -->
+  <line x1="0" y1="180" x2="1600" y2="180" class="line-dark" />
+
+  <!-- Vertical line separating center from right -->
+  <line x1="780" y1="0" x2="780" y2="400" class="line-dark" />
+
+  <!-- Vertical line bounding the red pillar -->
+  <line x1="1140" y1="0" x2="1140" y2="400" class="line-dark" />
+
+  <!-- Horizontal line at y=280 in lower right -->
+  <line x1="780" y1="280" x2="1140" y2="280" class="line-dark" />
+
+  <!-- Horizontal line at y=240 in left middle -->
+  <line x1="0" y1="240" x2="300" y2="240" class="line-dark" />
+
+  <!-- Horizontal line at top of red pillar -->
+  <line x1="1140" y1="90" x2="1600" y2="90" class="line-dark" />
+
+  <!-- Outer boundary frame line (2px) -->
+  <rect x="0" y="0" width="1600" height="400" fill="none" stroke="#16181D" stroke-width="2" />
 </svg>
