@@ -25,3 +25,8 @@ dist-ssr
 
 # Local agent scratch (SDD briefs, review packages, progress ledger)
 .superpowers/
+
+# Firebase
+.firebase/
+firebase-debug.log*
+firebase-debug.npm.log*
