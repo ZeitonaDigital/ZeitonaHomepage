@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local agent scratch (SDD briefs, review packages, progress ledger)
+.superpowers/

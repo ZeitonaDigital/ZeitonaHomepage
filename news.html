@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <script>(function(){try{var t=localStorage.getItem('zeitona-theme');document.documentElement.dataset.theme=t==='dark'?'dark':'light';}catch(e){document.documentElement.dataset.theme='light';}}());</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="news.metaTitle">News and Activity — Zeitona</title>
+    <meta name="description" data-i18n-content="news.heroTitle"
+        content="Updates should be factual and worth reading." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="assets/azeitona3.png" />
+</head>
+
+<body>
+    <!-- Nav Placeholder -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="page-hero" id="hero">
+            <div class="container">
+                <p class="eyebrow fade-up" data-i18n="news.heroEyebrow">News and activity</p>
+                <h1 class="page-hero-title fade-up delay-100" data-i18n="news.heroTitle">
+                    Updates should be factual and worth reading.
+                </h1>
+                <p class="hero-lead fade-up delay-200" data-i18n="news.heroBody">
+                    This page is reserved for meaningful company developments rather than an artificial publishing schedule. It will use structured static data without a content-management system or social feed.
+                </p>
+            </div>
+        </section>
+
+        <section class="news-section" id="news" aria-labelledby="news-heading">
+            <div class="container">
+                <h2 id="news-heading" class="news-heading fade-up" data-i18n="news.status">Current status</h2>
+                <div id="news-list" class="news-list fade-up delay-100" aria-live="polite"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Load scripts -->
+    <script src="i18n.js"></script>
+    <script src="script.js?v=8"></script>
+
+    <script>
+        window.scrollTo(0, 0);
+    </script>
+</body>
+
+</html>
