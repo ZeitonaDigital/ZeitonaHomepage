@@ -274,10 +274,6 @@ a {
   transform: scaleX(1);
 }
 
-.navbar-action-link {
-  color: var(--brand-dark-green) !important;
-}
-
 /* Sandwich Menu Icon */
 .menu-toggle {
   display: none;
