@@ -112,10 +112,27 @@ function initNews() {
 
 function init() {
     // Inject Unified Header
+    const navPages = [
+        { href: 'company.html', key: 'navigation.company', label: 'Company' },
+        { href: 'collaboration.html', key: 'navigation.collaboration', label: 'Collaboration' },
+        { href: 'innovation.html', key: 'navigation.innovation', label: 'Innovation' },
+        { href: 'news.html', key: 'navigation.news', label: 'News' },
+        { href: 'contact.html', key: 'navigation.contact', label: 'Contact' }
+    ];
+    const currentPage = (window.location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const navLinksHTML = navPages
+        .map(function (item) {
+            const isActive = currentPage === item.href;
+            return '<a href="' + item.href + '" data-i18n="' + item.key + '"' + (isActive ? ' class="active" aria-current="page"' : '') + '>' + item.label + '</a>';
+        })
+        .join('\n');
+
+    const logoSrc = document.documentElement.dataset.theme === 'dark' ? 'assets/zeitona_logo_header_dark_mode.png' : 'assets/zeitona_logo_header.png';
+
     const headerHTML = `
     <nav class="header" id="navbar" aria-label="Primary navigation" data-i18n-aria-label="controls.primaryNav">
         <div class="navbar">
-            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
+            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="${logoSrc}" alt="Zeitona Logo" class="navbar-logo" id="navbar-logo" /></a>
 
             <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menu" data-i18n-aria-label="controls.menu">
                 <span class="bar" aria-hidden="true"></span>
@@ -124,11 +141,7 @@ function init() {
             </button>
 
             <div class="navbar-links" id="nav-links">
-                <a href="company.html" data-i18n="navigation.company">Company</a>
-                <a href="collaboration.html" data-i18n="navigation.collaboration">Collaboration</a>
-                <a href="innovation.html" data-i18n="navigation.innovation">Innovation</a>
-                <a href="news.html" data-i18n="navigation.news">News</a>
-                <a href="contact.html" class="navbar-action-link" data-i18n="navigation.contact">Contact</a>
+                ${navLinksHTML}
                 <div class="global-controls">
                     <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme">
                         <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
@@ -197,6 +210,10 @@ function init() {
             const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
             document.documentElement.dataset.theme = nextTheme;
             try { localStorage.setItem('zeitona-theme', nextTheme); } catch (_error) { /* Theme still applies for this visit. */ }
+            const navbarLogo = document.getElementById('navbar-logo');
+            if (navbarLogo) {
+                navbarLogo.src = nextTheme === 'dark' ? 'assets/zeitona_logo_header_dark_mode.png' : 'assets/zeitona_logo_header.png';
+            }
             updateThemeControl();
         });
         document.addEventListener('zeitona:locale-changed', updateThemeControl);
