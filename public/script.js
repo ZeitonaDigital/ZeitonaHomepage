@@ -127,10 +127,12 @@ function init() {
         })
         .join('\n');
 
+    const logoSrc = document.documentElement.dataset.theme === 'dark' ? 'assets/zeitona_logo_header_dark_mode.png' : 'assets/zeitona_logo_header.png';
+
     const headerHTML = `
     <nav class="header" id="navbar" aria-label="Primary navigation" data-i18n-aria-label="controls.primaryNav">
         <div class="navbar">
-            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="assets/zeitona_logo_header.png" alt="Zeitona Logo" class="navbar-logo" /></a>
+            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="${logoSrc}" alt="Zeitona Logo" class="navbar-logo" id="navbar-logo" /></a>
 
             <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menu" data-i18n-aria-label="controls.menu">
                 <span class="bar" aria-hidden="true"></span>
@@ -208,6 +210,10 @@ function init() {
             const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
             document.documentElement.dataset.theme = nextTheme;
             try { localStorage.setItem('zeitona-theme', nextTheme); } catch (_error) { /* Theme still applies for this visit. */ }
+            const navbarLogo = document.getElementById('navbar-logo');
+            if (navbarLogo) {
+                navbarLogo.src = nextTheme === 'dark' ? 'assets/zeitona_logo_header_dark_mode.png' : 'assets/zeitona_logo_header.png';
+            }
             updateThemeControl();
         });
         document.addEventListener('zeitona:locale-changed', updateThemeControl);
