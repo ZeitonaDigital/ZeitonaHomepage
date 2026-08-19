@@ -130,7 +130,7 @@ function init() {
     const headerHTML = `
     <nav class="header" id="navbar" aria-label="Primary navigation" data-i18n-aria-label="controls.primaryNav">
         <div class="navbar">
-            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="assets/azeitona4.png" alt="Zeitona Logo" class="navbar-logo" /></a>
+            <a href="index.html" aria-label="Zeitona home" data-i18n-aria-label="controls.homeLabel"><img src="assets/zeitona_logo_header.png" alt="Zeitona Logo" class="navbar-logo" /></a>
 
             <button class="menu-toggle" id="mobile-menu" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Menu" data-i18n-aria-label="controls.menu">
                 <span class="bar" aria-hidden="true"></span>
