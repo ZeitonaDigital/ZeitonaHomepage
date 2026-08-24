@@ -226,7 +226,11 @@
             "formEmail": "Your email",
             "formSubject": "Subject",
             "formMessage": "Message",
-            "formSubmit": "Send message"
+            "formSubmit": "Send message",
+            "formSubmitBusy": "Sending...",
+            "formSending": "Sending your message...",
+            "formSuccess": "Your message has been sent successfully.",
+            "formError": "We could not send your message right now. Please try again later."
         }
     },
     "en-gb": {
@@ -436,7 +440,11 @@
             "formEmail": "Your email",
             "formSubject": "Subject",
             "formMessage": "Message",
-            "formSubmit": "Send message"
+            "formSubmit": "Send message",
+            "formSubmitBusy": "Sending...",
+            "formSending": "Sending your message...",
+            "formSuccess": "Your message has been sent successfully.",
+            "formError": "We could not send your message right now. Please try again later."
         }
     },
     "pt-pt": {
@@ -646,7 +654,11 @@
             "formEmail": "O seu email",
             "formSubject": "Assunto",
             "formMessage": "Mensagem",
-            "formSubmit": "Enviar mensagem"
+            "formSubmit": "Enviar mensagem",
+            "formSubmitBusy": "A enviar...",
+            "formSending": "A enviar a sua mensagem...",
+            "formSuccess": "A sua mensagem foi enviada com sucesso.",
+            "formError": "Não foi possível enviar a sua mensagem agora. Tente novamente mais tarde."
         }
     },
     "pt-br": {
@@ -854,7 +866,11 @@
             "formEmail": "Seu e-mail",
             "formSubject": "Assunto",
             "formMessage": "Mensagem",
-            "formSubmit": "Enviar mensagem"
+            "formSubmit": "Enviar mensagem",
+            "formSubmitBusy": "Enviando...",
+            "formSending": "Enviando sua mensagem...",
+            "formSuccess": "Sua mensagem foi enviada com sucesso.",
+            "formError": "Não foi possível enviar sua mensagem agora. Tente novamente mais tarde."
         }
     }
 };
