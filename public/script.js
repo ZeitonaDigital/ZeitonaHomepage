@@ -147,7 +147,7 @@ function init() {
                         <svg class="theme-icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.42"/></svg>
                         <svg class="theme-icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.4 8.4 0 0 1 9.5 3.5 8.5 8.5 0 1 0 20.5 14.5Z"/></svg>
                     </button>
-                    <div class="lang-switcher" id="lang-switcher">
+                    <!-- <div class="lang-switcher" id="lang-switcher">
                         <button class="lang-btn" id="lang-btn" type="button" aria-label="Select language: English (US)" aria-haspopup="listbox" aria-expanded="false">
                             <img id="lang-current-flag" class="flag-icon" src="assets/flags/us.svg" alt="" aria-hidden="true" />
                             <span id="lang-current-label" class="sr-only">English (US)</span>
@@ -159,7 +159,7 @@ function init() {
                             <button class="lang-option" type="button" data-locale="pt-pt" data-language="Português (Portugal)" data-flag="assets/flags/pt.svg" role="option" aria-selected="false" title="Português (Portugal)"><img class="flag-icon" src="assets/flags/pt.svg" alt="" aria-hidden="true" /><span>Português (Portugal)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                             <button class="lang-option" type="button" data-locale="pt-br" data-language="Português (Brasil)" data-flag="assets/flags/br.svg" role="option" aria-selected="false" title="Português (Brasil)"><img class="flag-icon" src="assets/flags/br.svg" alt="" aria-hidden="true" /><span>Português (Brasil)</span><span class="lang-check" aria-hidden="true">✓</span></button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
