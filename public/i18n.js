@@ -952,12 +952,27 @@
         var htmlEls = document.querySelectorAll('[data-i18n-html]');
         for (var j = 0; j < htmlEls.length; j++) {
             var raw = t(htmlEls[j].getAttribute('data-i18n-html'));
-            // Strip script tags and event-handler attributes before setting innerHTML
-            var safe = raw
-                .replace(/<script[\s\S]*?\/script>/gi, '')
-                .replace(/\s+on\w+\s*=\s*"[^"]*"/gi, '')
-                .replace(/\s+on\w+\s*=\s*'[^']*'/gi, '');
-            htmlEls[j].innerHTML = safe;
+            // Sanitize with DOMParser before setting innerHTML
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(raw, 'text/html');
+
+            var scripts = doc.querySelectorAll('script');
+            for (var s = 0; s < scripts.length; s++) {
+                scripts[s].parentNode.removeChild(scripts[s]);
+            }
+
+            var allElements = doc.querySelectorAll('*');
+            for (var elIdx = 0; elIdx < allElements.length; elIdx++) {
+                var el = allElements[elIdx];
+                for (var attrIdx = el.attributes.length - 1; attrIdx >= 0; attrIdx--) {
+                    var attrName = el.attributes[attrIdx].name;
+                    if (attrName.toLowerCase().indexOf('on') === 0) {
+                        el.removeAttribute(attrName);
+                    }
+                }
+            }
+
+            htmlEls[j].innerHTML = doc.body.innerHTML;
         }
         // placeholder
         var phEls = document.querySelectorAll('[data-i18n-placeholder]');
