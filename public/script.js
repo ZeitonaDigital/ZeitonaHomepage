@@ -56,7 +56,10 @@ window.ZeitonaNews = {
             const summaryRaw = this.localizeField(item.summary, locale);
             const bodyRaw = this.localizeField(item.body, locale);
             const dateLabel = this.escapeHtml(this.formatDate(item.date, locale));
-            const url = typeof item.url === 'string' && item.url.trim() ? item.url.trim() : null;
+            let url = typeof item.url === 'string' && item.url.trim() ? item.url.trim() : null;
+            if (url && /^\s*javascript:/i.test(url)) {
+                url = null;
+            }
             const readMore = url
                 ? `<a class="card-link news-item-more" href="${this.escapeHtml(url)}">${this.escapeHtml(t('news.readMore'))}</a>`
                 : '';
