@@ -15,11 +15,20 @@ window.ZeitonaNews = {
         const ms = Date.parse(isoDate);
         if (!Number.isFinite(ms)) return isoDate || '';
         try {
-            return new Intl.DateTimeFormat(locale || 'en-US', {
+            const d = new Date(ms);
+            // Fixed English short month + year as requested: "Aug, 2026"
+            const fmt = new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
-                month: 'short',
-                day: 'numeric'
-            }).format(new Date(ms));
+                month: 'short'
+            });
+            const parts = typeof fmt.formatToParts === 'function' ? fmt.formatToParts(d) : null;
+            if (parts) {
+                const month = (parts.find(function(p){ return p.type === 'month'; }) || {}).value || '';
+                const year = (parts.find(function(p){ return p.type === 'year'; }) || {}).value || '';
+                if (month && year) return month + ', ' + year;
+            }
+            const raw = fmt.format(d);
+            return raw.indexOf(',') !== -1 ? raw : raw.replace(' ', ', ');
         } catch (_) {
             return isoDate;
         }
@@ -45,9 +54,7 @@ window.ZeitonaNews = {
         container.innerHTML = sorted.map((item) => {
             const title = this.escapeHtml(this.localizeField(item.title, locale));
             const summaryRaw = this.localizeField(item.summary, locale);
-            const summary = summaryRaw
-                ? `<p class="news-item-summary">${this.escapeHtml(summaryRaw)}</p>`
-                : '';
+            const bodyRaw = this.localizeField(item.body, locale);
             const dateLabel = this.escapeHtml(this.formatDate(item.date, locale));
             const url = typeof item.url === 'string' && item.url.trim() ? item.url.trim() : null;
             const readMore = url
@@ -56,10 +63,49 @@ window.ZeitonaNews = {
             const titleHtml = url
                 ? `<a class="news-item-title" href="${this.escapeHtml(url)}">${title}</a>`
                 : `<span class="news-item-title">${title}</span>`;
+            // Image support — site-hosted asset (e.g. assets/news/13_premio_credito_agricola.png)
+            const imageSrc = typeof item.image === 'string' && item.image.trim() ? item.image.trim() : null;
+            const imageAltRaw = this.localizeField(item.imageAlt, locale) || this.localizeField(item.title, locale) || '';
+            const imageAlt = this.escapeHtml(imageAltRaw);
+            const imageHtml = imageSrc
+                ? `<figure class="news-item-media"><img class="news-item-image" src="${this.escapeHtml(imageSrc)}" alt="${imageAlt}" loading="lazy" /></figure>`
+                : '';
+            // Body: full markdown-style paragraphs with **bold** and [link](url) support; split on blank lines
+            let contentHtml = '';
+            const renderRichText = (raw, className) => {
+                const paragraphs = raw.split(/\n\s*\n/).map((p) => p.trim()).filter(Boolean);
+                return paragraphs.map((p) => {
+                    let escaped = this.escapeHtml(p);
+                    // Markdown links: [text](url) -> <a> (supports https:// and site-hosted assets/...)
+                    escaped = escaped.replace(/\[(.+?)\]\(([^\)]+)\)/g, (match, text, url) => {
+                        const safeUrl = this.escapeHtml(url.trim());
+                        const isExternal = /^https?:\/\//i.test(safeUrl);
+                        const attrs = isExternal ? ' target="_blank" rel="noopener noreferrer"' : ' target="_blank" rel="noopener"';
+                        return `<a href="${safeUrl}"${attrs}>${text}</a>`;
+                    });
+                    escaped = escaped.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+                    // Auto-link Gaia word where not already linked (covers both plain Gaia and <strong>Gaia</strong>)
+                    const segments = escaped.split(/(<a\b[^>]*>.*?<\/a>)/g);
+                    escaped = segments.map((segment) => {
+                        if (/^<a\b/.test(segment)) return segment;
+                        let s = segment;
+                        s = s.replace(/<strong>Gaia<\/strong>/g, '<a href="https://www.gaiasd.com/" target="_blank" rel="noopener noreferrer"><strong>Gaia</strong></a>');
+                        s = s.replace(/\bGaia\b/g, '<a href="https://www.gaiasd.com/" target="_blank" rel="noopener noreferrer">Gaia</a>');
+                        return s;
+                    }).join('');
+                    return `<p class="${className}">${escaped}</p>`;
+                }).join('');
+            };
+            if (bodyRaw) {
+                contentHtml = renderRichText(bodyRaw, 'news-item-body');
+            } else if (summaryRaw) {
+                contentHtml = renderRichText(summaryRaw, 'news-item-summary');
+            }
             return `<article class="news-item" data-news-id="${this.escapeHtml(item.id || '')}">
                 <time class="news-item-date" datetime="${this.escapeHtml(item.date || '')}">${dateLabel}</time>
                 ${titleHtml}
-                ${summary}
+                ${imageHtml}
+                ${contentHtml}
                 ${readMore}
             </article>`;
         }).join('');
