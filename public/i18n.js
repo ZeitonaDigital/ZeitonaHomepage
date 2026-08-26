@@ -176,7 +176,7 @@
         },
         "news": {
             "metaTitle": "News and Activity — Zeitona",
-            "heroTitle": "Updates should be factual and worth reading.",
+            "heroTitle": "Stay up to date on our latest initiatives",
             "status": "Current status",
             "emptyTitle": "No verified news items are available yet.",
             "heroEyebrow": "News and activity",
@@ -390,7 +390,7 @@
         },
         "news": {
             "metaTitle": "News and Activity — Zeitona",
-            "heroTitle": "Updates should be factual and worth reading.",
+            "heroTitle": "Stay up to date on our latest initiatives",
             "heroEyebrow": "News and activity",
             "heroBody": "This page is reserved for meaningful company developments rather than an artificial publishing schedule. It will use structured static data without a content-management system or social feed.",
             "status": "Current status",
@@ -604,7 +604,7 @@
         },
         "news": {
             "metaTitle": "Notícias e atividade — Zeitona",
-            "heroTitle": "As atualizações devem ser factuais e valer a leitura.",
+            "heroTitle": "Mantenha-se a par das nossas iniciativas mais recentes",
             "heroEyebrow": "Notícias e atividade",
             "heroBody": "Esta página é reservada a desenvolvimentos relevantes da empresa, não a um calendário artificial de publicações. Utiliza dados estáticos estruturados, sem sistema de gestão de conteúdos ou feed social.",
             "status": "Situação atual",
@@ -816,7 +816,7 @@
         },
         "news": {
             "metaTitle": "Notícias e atividades — Zeitona",
-            "heroTitle": "As atualizações devem ser factuais e valer a leitura.",
+            "heroTitle": "Fique por dentro das nossas iniciativas mais recentes",
             "heroEyebrow": "Notícias e atividades",
             "heroBody": "Esta página é reservada a desenvolvimentos relevantes da empresa, não a um calendário artificial de publicações. Ela usa dados estáticos estruturados, sem sistema de gestão de conteúdo ou feed social.",
             "status": "Situação atual",
